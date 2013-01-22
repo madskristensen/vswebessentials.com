@@ -1,0 +1,93 @@
+﻿@{
+    Response.Cache.SetValidUntilExpires(true);
+    Response.Cache.SetExpires(DateTime.Now.AddDays(1));
+    Response.Cache.SetCacheability(HttpCacheability.Public);
+    
+    string file = Server.MapPath(Request.CurrentExecutionFilePath);
+    Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
+    Response.AddFileDependency(file);
+
+    string title = Page.Title.Contains("Web Essentials") ? Page.Title : Page.Title + " - Web Essentials";
+}
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>@title</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="@Page.Keywords" />
+    <meta name="description" content="@Page.Description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/SoftwareApplication">
+
+    <header>
+        <a href="/" itemprop="url">
+            <img itemprop="image" src="/images/logo_small.png" alt="Web Essentials 2012" width="90" height="90" />
+            <p itemprop="name">Web Essentials</p>
+            <span itemprop="description alternativeHeadline">A Visual Studio extension</span>
+        </a>
+    </header>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/download">Download</a></li>
+            <li><a href="/features" itemprop="featureList">Features</a>
+                <ul>
+                    <li><a href="/features/general">General</a></li>
+                    <li><a href="/features/stylesheets">Stylesheets</a></li>
+                    <li><a href="/features/javascript">JavaScript</a></li>
+                    <li><a href="/features/html">HTML</a></li>
+                    <li><a href="/features/typescript">TypeScript</a></li>
+                    <li><a href="/features/less">LESS</a></li>
+                    <li><a href="/features/coffeescript">CoffeeScript</a></li>
+                </ul>
+            </li>
+            <li><a href="/changelog" itemprop="releaseNotes">Change log</a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <article>
+            <h1>@Page.Title.Split('-')[0].Trim()</h1>
+
+            @RenderBody()
+        </article>
+    </div>
+
+    <footer>
+        <section>
+            <p>Copyright &copy; <span itemprop="copyrightYear">2012</span> - @DateTime.Now.Year</p>
+            <p><a rel="author" href="http://madskristensen.net">Mads Kristensen</a></p>
+        </section>
+
+        <div>
+            <meta itemprop="softwareApplicationCategory" content="Extension" />
+            <meta itemprop="softwareApplicationSubCategory" content="WebTools" />
+            <meta itemprop="inLanguage" content="en-us" />
+            <meta itemprop="fileFormat" content="VSIX" />
+            <meta itemprop="screenshot" content="/images/logo_big.png" />
+        </div>
+
+        <div itemprop="aggregateRating" itemscope="itemscope" itemtype="http://schema.org/AggregateRating">
+            <meta itemprop="ratingValue" content="5" />
+            <meta itemprop="ratingCount" content="103" />
+        </div>
+
+        <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer">
+            <span itemprop="price">0.0</span>
+            <meta itemprop="priceCurrency" content="USD" />
+        </div>
+    </footer>
+
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37343662-1']);
+        _gaq.push(['_trackPageview']);
+    </script>
+    <script src="/ga.js" async="async" defer="defer"></script>
+</body>
+</html>

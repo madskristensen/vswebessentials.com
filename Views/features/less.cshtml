@@ -1,0 +1,86 @@
+﻿@{
+    Page.Title = "LESS";
+    Page.Keywords = "less, scss, sass, compile";
+    Page.Description = "Web Essentials compiles LESS and even gives a preview";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<p>
+    The dynamic stylesheet language. 
+    <br />
+    LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions. 
+</p>
+
+<section>
+    <h2>Features</h2>
+
+    <article>
+        <h3>Preview window</h3>
+
+        <p>
+            LESS comes with a preview window located at the right side of the editor. 
+            It shows the compiled output every time you save the document.
+        </p>
+
+        <img src="/images/less/preview.png" alt="LESS preview" width="450" height="251" />
+    </article>
+
+    <article>
+        <h3>Full editor support</h3>
+
+        <p>
+            The LESS editor in Web Essentials gives full support for all regular CSS capabilities.
+        </p>
+
+        <p>In addition, it provides Intellisense and validation for LESS specifics.</p>
+
+        <img src="/images/less/editor.png" alt="LESS editor" width="391" height="240" />
+    </article>
+
+    <article>
+        <h3>Compiler settings</h3>
+
+        <p>
+            You can set all the compiler settings from Tools -> Options. They include:
+        </p>
+
+        <ul>
+            <li>Compile on save</li>
+            <li>Compile on build</li>
+            <li>Enable minification</li>
+        </ul>
+    </article>
+
+    <article>
+        <h3>Extract to variable</h3>
+
+        <p>
+            Web Essentials makes it easy to convert property values to LESS variables. 
+            Select the text you want extracted, right-click the selection and click "Extract to variable...".
+        </p>
+
+        <p>
+            Colors are special cased and a Smart Tag makes it easy to extract all instances of the 
+            same color in the document into a LESS variable.
+        </p>
+
+        <img src="/images/less/extractvariable.png" alt="Extract variable" width="441" height="179" />
+    </article>
+
+    <article>
+        <h3>Extract to Mixin</h3>
+
+        <p>
+            Select the properties you want to extract. Then right-click the selection and click "Extract to mixin...".
+        </p>
+    </article>
+
+    <article>
+        <h3>Minification</h3>
+
+        <p>
+            When a LESS file is compiled, it can now also be minified to produce a much smaller CSS file.
+        </p>
+    </article>
+</section>
+
