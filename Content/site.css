@@ -63,6 +63,12 @@ body > header {
         text-decoration: none;
     }
 
+aside {
+    float: right;
+    position: relative;
+    top: -20px;
+}
+
 /*#endregion */
 
 /*#region Menu */
@@ -133,7 +139,7 @@ body > header {
         column-gap: 30px;
         -moz-columns: 2;
         -webkit-columns: 2;
-        columns: 2;        
+        columns: 2;
     }
 
         #main section blockquote {
@@ -219,6 +225,7 @@ footer {
 
 /*#endregion */
 
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
 
     @-ms-viewport {
@@ -238,11 +245,19 @@ footer {
         -webkit-columns: auto;
         columns: auto;
     }
+
+    aside{
+        display: none;
+    }
 }
 
 /* iPad */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
     body {
         width: 850px;
+    }
+
+    aside{
+        display: none;
     }
 }

@@ -2,7 +2,7 @@
     Response.Cache.SetValidUntilExpires(true);
     Response.Cache.SetExpires(DateTime.Now.AddDays(1));
     Response.Cache.SetCacheability(HttpCacheability.Public);
-    
+
     string file = Server.MapPath(Request.CurrentExecutionFilePath);
     Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
     Response.AddFileDependency(file);
@@ -29,6 +29,12 @@
             <p itemprop="name">Web Essentials</p>
             <span itemprop="description alternativeHeadline">A Visual Studio extension</span>
         </a>
+
+        <aside>
+            <a href="http://www.winhost.com/a/benet_b_127" target="_blank">
+                <img src="http://www.winhost.com/c/b_127" alt="ASP.NET hosting - click here!" />
+            </a>
+        </aside>
     </header>
 
     <nav>
@@ -44,14 +50,14 @@
                     <li><a href="/features/less">LESS</a></li>
                     <li><a href="/features/coffeescript">CoffeeScript</a></li>
                 </ul>
-            </li>            
+            </li>
             <li><a href="/contribute">Contribute</a>
                 <ul>
                     <li><a href="http://webessentials.uservoice.com/">Suggest features</a></li>
                     <li><a href="https://github.com/madskristensen/vswebessentials.com">Help with this website</a></li>
                     <li><a href="https://github.com/madskristensen/zencoding">ZenCoding on GitHub</a></li>
-                    <li><a href="https://github.com/madskristensen/CssSorter">CssSorter on GitHub</a></li> 
-                    <li><a href="http://madskristensen.net/contact.aspx?subject=Web Essentials 2012 bug">Report bugs</a></li>                   
+                    <li><a href="https://github.com/madskristensen/CssSorter">CssSorter on GitHub</a></li>
+                    <li><a href="http://madskristensen.net/contact.aspx?subject=Web Essentials 2012 bug">Report bugs</a></li>
                 </ul>
             </li>
             <li><a href="/changelog" itemprop="releaseNotes">Change log</a></li>
