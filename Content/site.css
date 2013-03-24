@@ -205,6 +205,10 @@ aside {
         font-size: 1.2em;
     }
 
+#changelog h3 a {
+    font-weight: normal;
+}
+
 /*#endregion */
 
 /*#region Footer */
@@ -246,7 +250,7 @@ footer {
         columns: auto;
     }
 
-    aside{
+    aside {
         display: none;
     }
 }
@@ -257,7 +261,7 @@ footer {
         width: 850px;
     }
 
-    aside{
+    aside {
         display: none;
     }
 }
