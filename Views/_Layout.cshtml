@@ -20,6 +20,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- facebook info -->
+    <meta property="og:title" content="@title" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://vswebessentials.com/" />
+    <meta property="og:image" content="/images/logo_small.png" />
+    <meta property="og:site_name" content="Web Essentials for Visual Studio" />
+
+    <!-- twitter info -->
+    <meta name="twitter:title" content="@title" /> 
+    <meta name="twitter:image" content="/images/logo_small.pn" /> 
+
+    <!-- win8 -->
+    <meta name="application-name" content="@title"/>
+    <meta name="msapplication-TileColor" content="#000000"/> 
+    <meta name="msapplication-TileImage" content="/images/logo_small.png"/>        <!-- apple -->    <link rel="apple-touch-icon" href="/images/logo_small.png"/>
 </head>
 <body itemscope="itemscope" itemtype="http://schema.org/SoftwareApplication">
 
@@ -32,7 +48,7 @@
 
         <aside>
             <a href="http://www.winhost.com/a/benet_b_127" target="_blank">
-                <img src="http://www.winhost.com/c/b_127" alt="ASP.NET hosting - click here!" />
+                <img src="/images/b_127.gif" width="468" height="60" alt="ASP.NET hosting - click here!" />
             </a>
         </aside>
     </header>
@@ -64,7 +80,7 @@
         </ul>
     </nav>
 
-    <div id="main">
+    <div id="main" role="main">
         <article>
             <h1>@Page.Title.Split('-')[0].Trim()</h1>
 
