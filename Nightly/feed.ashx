@@ -30,7 +30,7 @@ public class feed : IHttpHandler
             version = idNode.Attributes["Version"].InnerText;
         }
          
-        context.Response.ContentType = "text/html";
+        context.Response.ContentType = "text/xml";
 
         WriteXml(context, version, updated);
     }
