@@ -439,6 +439,10 @@ body > header {
         text-decoration: none;
     }
 
+    .sidewaffle{
+        float: right;
+    }
+
 aside {
     float: right;
     position: relative;
