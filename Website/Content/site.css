@@ -63,9 +63,10 @@ body > header {
         text-decoration: none;
     }
 
-    .sidewaffle{
-        float: right;
-    }
+.sidewaffle {
+    float: right;
+    margin: 4px 5px 0 0;
+}
 
 aside {
     float: right;
