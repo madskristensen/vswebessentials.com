@@ -25,6 +25,7 @@ public class WhitespaceModule : IHttpModule
     void IHttpModule.Init(HttpApplication context)
     {
         context.PreRequestHandlerExecute += new EventHandler(context_BeginRequest);
+        context.PostRequestHandlerExecute += application_PostRequestHandlerExecute;
         WebPageHttpHandler.DisableWebPagesResponseHeader = true;
     }
 
@@ -37,6 +38,14 @@ public class WhitespaceModule : IHttpModule
         {
             app.Response.Filter = new WhitespaceFilter(app.Response.Filter);
         }
+    }
+
+    void application_PostRequestHandlerExecute(object sender, EventArgs e)
+    {
+        // Flush immediately after the request handler has finished.
+        // This is Before the output cache compression happens.
+        var response = ((HttpApplication)sender).Context.Response;
+        response.Flush();
     }
 
     #region Stream filter
