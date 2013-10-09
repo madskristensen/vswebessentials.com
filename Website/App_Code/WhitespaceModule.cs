@@ -1,20 +1,14 @@
-﻿#region Using
-
-using System;
+﻿using System;
 using System.IO;
-using System.Web;
-using System.IO.Compression;
 using System.Text.RegularExpressions;
+using System.Web;
 using System.Web.WebPages;
 
-#endregion
-
 /// <summary>
-/// Removes whitespace from the webpage.
+/// Removes whitespace from the webpage. Be careful
 /// </summary>
 public class WhitespaceModule : IHttpModule
 {
-
     #region IHttpModule Members
 
     void IHttpModule.Dispose()
@@ -24,23 +18,23 @@ public class WhitespaceModule : IHttpModule
 
     void IHttpModule.Init(HttpApplication context)
     {
-        context.PreRequestHandlerExecute += new EventHandler(context_BeginRequest);
-        context.PostRequestHandlerExecute += application_PostRequestHandlerExecute;
+        context.PreSendRequestHeaders += PreSendRequestHeaders;
+        context.PostRequestHandlerExecute += PostRequestHandlerExecute;
         WebPageHttpHandler.DisableWebPagesResponseHeader = true;
     }
 
     #endregion
 
-    void context_BeginRequest(object sender, EventArgs e)
+    private void PreSendRequestHeaders(object sender, EventArgs e)
     {
         HttpApplication app = sender as HttpApplication;
-        if (app.Request.CurrentExecutionFilePath.EndsWith("/") || app.Request.CurrentExecutionFilePath.EndsWith(".cshtml"))
+        if (app.Response.ContentType.Equals("text/html", StringComparison.OrdinalIgnoreCase))
         {
             app.Response.Filter = new WhitespaceFilter(app.Response.Filter);
         }
     }
 
-    void application_PostRequestHandlerExecute(object sender, EventArgs e)
+    private void PostRequestHandlerExecute(object sender, EventArgs e)
     {
         // Flush immediately after the request handler has finished.
         // This is Before the output cache compression happens.
