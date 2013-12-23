@@ -4,8 +4,8 @@
     Response.Cache.SetCacheability(HttpCacheability.Public);
 
     string file = Server.MapPath(Request.CurrentExecutionFilePath);
-    Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
     Response.AddFileDependency(file);
+	Response.Cache.SetLastModifiedFromFileDependencies();
 
     string title = Page.Title.Contains("Web Essentials") ? Page.Title : Page.Title + " - Web Essentials";
 }
