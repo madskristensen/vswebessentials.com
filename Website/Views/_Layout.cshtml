@@ -4,8 +4,8 @@
     Response.Cache.SetCacheability(HttpCacheability.Public);
 
     string file = Server.MapPath(Request.CurrentExecutionFilePath);
-    Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
     Response.AddFileDependency(file);
+	Response.Cache.SetLastModifiedFromFileDependencies();
 
     string title = Page.Title.Contains("Web Essentials") ? Page.Title : Page.Title + " - Web Essentials";
 }
@@ -32,7 +32,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="@@mkristensen" />
     <meta name="twitter:title" content="@title" /> 
-    <meta name="twitter:description" content="Web Essentials extends Visual Studio 2012 with a lot of new features that web developers have been missing for many years." />
+    <meta name="twitter:description" content="Web Essentials extends Visual Studio with a lot of new features that web developers have been missing for many years." />
     <meta name="twitter:image" content="http://vswebessentials.com/images/logo_small.png" /> 
 
     <!-- win8 -->
@@ -76,7 +76,8 @@
             </li>
             <li><a href="/contribute">Contribute</a>
                 <ul>
-                    <li><a href="https://github.com/madskristensen/WebEssentials2013">Project on GitHub</a></li>
+					<li><a href="https://github.com/madskristensen/WebEssentials2012">WE 2012 on GitHub</a></li>
+					<li><a href="https://github.com/madskristensen/WebEssentials2013">WE 2013 on GitHub</a></li> 
                     <li><a href="http://webessentials.uservoice.com/">Suggest features</a></li>
                     <li><a href="https://github.com/madskristensen/vswebessentials.com">Help with this website</a></li>
                     <li><a href="https://github.com/madskristensen/zencoding">ZenCoding on GitHub</a></li>
@@ -89,7 +90,7 @@
     </nav>
 
     <p class="sidewaffle">
-        Remember to try <a href="http://sidewaffle.com">SideWaffle</a>
+        Remember to try <a href="http://sidewaffle.com">SideWaffle for VS</a>
     </p>
 
     <div id="main" role="main">
