@@ -1,5 +1,6 @@
 ﻿@{
-    if (!Request.IsLocal){
+    if (!Request.IsLocal)
+    {
     Response.Cache.SetValidUntilExpires(true);
     Response.Cache.SetExpires(DateTime.Now.AddDays(1));
     Response.Cache.SetCacheability(HttpCacheability.Public);
@@ -8,7 +9,7 @@
     Response.AddFileDependency(file);
 	Response.Cache.SetLastModifiedFromFileDependencies();
     }
-    
+
     string title = Page.Title.Contains("Web Essentials") ? Page.Title : Page.Title + " - Web Essentials";
 }
 

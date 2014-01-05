@@ -220,7 +220,7 @@ article[data-version]:after{
     content: "Supported in: " attr(data-version);
     margin-top: 10px;
     font-weight: bold;
-    display: inline-block;
+    display: block;
 }
 
 code{
