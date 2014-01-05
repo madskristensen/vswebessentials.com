@@ -11,21 +11,6 @@
     <h2>Features</h2>
 
     <article>
-        <h3>Handlebars, Mustache and JsRender</h3>
-
-        <p>
-            The various different syntaxes used for the flavors of Handlebars are now supported in the HTML editor.
-        </p>
-
-        <img src="/images/html/mustache.png" alt="Mustache/Handlebars/JsRender" width="307" height="277" />
-
-        <p>
-            <strong>Removed</strong> and rolled into 
-            <a href="http://go.microsoft.com/fwlink/?LinkId=282650">Web Tools 2012.2</a>
-        </p>
-    </article>
-
-    <article>
         <h3>Markdown</h3>
 
         <p>See the compiled markdown in a preview window inside Visual Studio.</p>
@@ -35,7 +20,7 @@
         </p>
     </article>
 
-    <article>
+    <article data-version="WE2012, WE2013">
         <h3>ZenCoding</h3>
 
         <p>
@@ -52,14 +37,88 @@
 
     <article>
         <h3>Lorem Ipsum generator</h3>
-
+        pix-200x200-animals
         <p>
             As part of ZenCoding, you can now generate Lorem Ipsum code directly in the HTML editor. 
-            Simply type "lorem" and hit TAB and a 30 word Lorem Ipsum text is inserted. 
-            Type "lorem10" and a 10 word Lorem Ipsum text is inserted.            
+            Simply type <code>lorem</code> and hit TAB and a 30 word Lorem Ipsum text is inserted. 
+            Type <code>lorem10</code> and a 10 word Lorem Ipsum text is inserted.            
         </p>
 
         <p>This can be used in conjuction with ZenCoding like so: ul>li*5>lorem3</p>
     </article>
+
+    <article data-version="WE2012, WE2013">
+        <h3>Lorem Pixel generator</h3>
+
+        <p>
+            As part of ZenCoding, you can also generate Lorem Pixel code directly in the HTML editor.
+            Simply type <code>pix-200x200-animals</code> and hit TAB and a img tag with a 200x200 image of an animal
+            is inserted.
+
+            Read more at <a href="http://lorempixel.com">lorempixel.com</a>
+        </p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Minify Selection</h3>
+        <p>
+            Right-click your selection in the editor and select to have it minified.
+        </p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Minify HTML file</h3>
+        <p>
+            Right-click one or more .html file in Solution Explorer and click Minify HTML File(s).
+            It will create a *.min.html file and automatically keep it in sync when the source file changes.
+        </p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Bundle HTML files</h3>
+        <p>
+            Select 2 or more HTML files in Solution Explorer, then right-click and select 
+            <mark>Create HTML Bundle File</mark>.
+        </p>
+
+        <p>This feature makes it easy to bundle multiple HTML templates for use in SPA's.</p>
+    </article>
 </section>
 
+<section>
+    <article data-version="WE2013">
+        <h3>Surround with tag</h3>
+        <p>In the HTML editor, click <code>Shift+Alt+W</code> to surround the selection with a new tag</p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>#Region support</h3>
+        <p>Collapsable regions</p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Expand selection</h3>
+        <p>Hit <code>Alt+1</code> to expand the selection and <code>Alt+2</code> to contract it.</p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Format on ENTER</h3>
+        <p>Hit <code>ENTER</code> and your HTML is automatically formatted with new lines etc.</p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Find all references</h3>
+        <p>
+            Hit <code>Shift+F12</code> when the cursor is located inside a class attribute.
+            Web Essentials will search all CSS, LESS and SASS files for the class name.
+        </p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Go To Definition</h3>
+        <p>
+            Hit <code>F12</code> when the cursor is located inside a class attribute.
+            Web Essentials will jump to the location inside CSS, LESS and SASS files.
+        </p>
+    </article>
+</section>
