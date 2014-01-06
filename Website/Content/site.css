@@ -216,7 +216,7 @@ aside {
 
 /*#endregion */
 
-article[data-version]:after{
+article[data-version]:after {
     content: "Supported in: " attr(data-version);
     margin-top: 10px;
     font-weight: bold;
@@ -225,7 +225,7 @@ article[data-version]:after{
     color: #333;
 }
 
-code{
+code {
     font: 1.2em monospace;
     background-color: #d2d2d2;
     display: inline-block;
@@ -233,7 +233,7 @@ code{
     border-radius: 2px;
 }
 
-mark{
+mark {
     background: none;
     font-style: italic;
 }
