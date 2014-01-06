@@ -10,16 +10,6 @@
 <section>
     <h2>Features</h2>
 
-    <article>
-        <h3>Markdown</h3>
-
-        <p>See the compiled markdown in a preview window inside Visual Studio.</p>
-
-        <p>
-            The preview window shows the rendered HTML generated from the Markdown file.
-        </p>
-    </article>
-
     <article data-version="WE2012, WE2013">
         <h3>ZenCoding</h3>
 
@@ -35,7 +25,7 @@
         <p>ZenCoding is open source. Find the <a href="https://github.com/madskristensen/ZenCoding">code on GitHub</a></p>
     </article>
 
-    <article>
+    <article data-version="WE2012, WE2013">
         <h3>Lorem Ipsum generator</h3>
         pix-200x200-animals
         <p>
@@ -82,6 +72,12 @@
         </p>
 
         <p>This feature makes it easy to bundle multiple HTML templates for use in SPA's.</p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Image hover preview</h3>
+        <p>See the image when the mouse hovers the &lt;img&gt; tag</p>
+        <img src="/Images/html/imagehover.png" alt="" />
     </article>
 </section>
 
@@ -149,4 +145,73 @@
 
         <img src="/Images/html/dynamicintellisense.png" alt="" />
     </article>
+</section>
+
+<section>
+    <h2>Smart Tags</h2>
+
+    <article data-version="WE2013">
+        <h3>Base64 decoding</h3>
+        <p>Any base64 image can be easily converted back to a file on disk.</p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Extract JavaScript to file</h3>
+        <p>&lt;script&gt; tags can easily be extracted to a .js file on disk.</p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Extract Stylesheets to file</h3>
+        <p>&lt;style&gt; tags can easily be extracted to a .css/.less file on disk.</p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Remove parent tags</h3>
+        <p>Any HTML element containting child elements can easily be removed while keeping the children.</p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>AngularJS controller generation</h3>
+        <p>Any HTML element with a <code>ng-controller</code> attribute has a Smart Tag for generating the .js controller file.</p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Minify CSS and JavaScript</h3>
+        <p>An easy way to minify embedded CSS and JavaScript.</p>
+    </article>
+</section>
+
+<section>
+    <h2>Validation</h2>
+
+    <article data-version="WE2013">
+        <h3>Missing Angular attribute</h3>
+        <p>
+            If you're using certain AngularJS specific attributes, but forgot the <code>ng-app</code> attribute,
+            then you'll be notified by this validator.
+        </p>
+    </article>
+    <article data-version="WE2013">
+        <h3>OpenGraph prefix</h3>
+        <p>
+            When working with Facebook/OpenGraph integration, we need to remember to add the
+            <code>prefix</code> attribute to the <code>&lt;head&gt;</code> element.
+        </p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Missing Bootstrap class</h3>
+        <p>
+            In Bootstrap you need to chain certain class names. For instance, when using
+            <code>btn-primary</code> you also need to include the <code>btn</code> class name.
+            This validator makes sure you don't forget that.
+        </p>
+
+        <p>This validator also checks for missing dependant class names for FontAwesome.</p>
+    </article>
+
+    <article data-version="WE2013">
+        <h3>Microdata</h3>
+        <p>Validates that the <code>itemtype</code> attribute is a valid absolute URL.</p>
+    </article>    
 </section>
