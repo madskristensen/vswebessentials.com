@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="boolType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="true"/>
+      <xs:enumeration value="false"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="fileNameType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(.*)\.([a-z0-9]{1,4})"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="bundle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="file" type="fileNameType" />
+      </xs:sequence>
+      <xs:attribute name="minify" type="boolType" use="required" />
+      <xs:attribute name="runOnBuild" type="boolType" use="required" />
+      <xs:attribute name="output" type="fileNameType" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
