@@ -2,5 +2,5 @@
 <bundle minify="true" runOnBuild="true">
   <!--The order of the <file> elements determines the order of them when bundled.-->
   <file>/Content/normalize.css</file>
-  <file>/Content/site.css</file>  
+  <file>/Content/site.css</file>
 </bundle>

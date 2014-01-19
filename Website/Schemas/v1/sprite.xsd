@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  attributeFormDefault="unqualified"
+  elementFormDefault="qualified"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="boolType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="true"/>
+      <xs:enumeration value="false"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="orientationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="vertical"/>
+      <xs:enumeration value="horizontal"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="imageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="png"/>
+      <xs:enumeration value="gif"/>
+      <xs:enumeration value="jpg"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="settingsType">
+    <xs:all>
+      <xs:element name="optimize" type="boolType" default="true" />
+      <xs:element name="orientation" type="orientationType" default="vertical" />
+      <xs:element name="outputType" type="imageType" default="png" />
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="filesType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="file" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="sprite">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="settings" type="settingsType" />
+        <xs:element name="files" type="filesType" />
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

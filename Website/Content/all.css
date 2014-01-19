@@ -551,7 +551,7 @@ aside {
         #main section:not(#index):nth-child(2n+2) {
             margin: auto -5px;
             padding: 10px 5px 5px 5px;
-            background: #f1f1f1;
+            /*background: #f1f1f1;*/
         }
 
         #main section p {
@@ -591,6 +591,28 @@ aside {
 }
 
 /*#endregion */
+
+article[data-version]:after {
+    content: "Supported in: " attr(data-version);
+    margin-top: 10px;
+    font-weight: bold;
+    display: block;
+    font-size: .9em;
+    color: #333;
+}
+
+code {
+    font: 1.2em monospace;
+    background-color: #d2d2d2;
+    display: inline-block;
+    padding: 0 3px;
+    border-radius: 2px;
+}
+
+mark {
+    background: none;
+    font-style: italic;
+}
 
 /*#region Footer */
 
