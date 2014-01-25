@@ -20,10 +20,24 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion2012" href="#cl_vs12_37">3.6.5 - January 22, 2014</a>
+                        </h4>
+                    </div>
+                    <div id="cl_vs12_37" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <ul>
+                                <li>Option to disable TypeScript preview window</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion2012" href="#cl_vs12_36">3.6 - January 15, 2014</a>
                         </h4>
                     </div>
-                    <div id="cl_vs12_36" class="panel-collapse collapse in">
+                    <div id="cl_vs12_36" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul>
                                 <li>TypeScript preview window</li>
@@ -655,420 +669,443 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_171">
-                                1.7.1 - January 16, 2014
+                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_172">
+                                1.7.2 - January 19, 2014
                             </a>
                         </h4>
                     </div>
-                    <div id="cl_vs13_171" class="panel-collapse in">
+                    <div id="cl_vs13_172" class="panel-collapse in">
                         <div class="panel-body">
                             <ul>
-                                <li>LESS compilation fixes</li>
-                                <li>Image pasting fixes</li>
+                                <li>Better outlining logic</li>
+                                <li>Fixed indentation issue on JSDoc</li>
+                                <li>Support for ~/ image previews in HTML</li>
+                                <li>Fixed SASS editor crash</li>
+                                <li>Fixed LESS show preview without save</li>
+                                <li>Fixed source control issues</li>
+                                <li>Other fixes and tweaks</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group" id="accordion2013">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_171">
+                                    1.7.1 - January 16, 2014
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_171" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>LESS compilation fixes</li>
+                                    <li>Image pasting fixes</li>
+                                </ul>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_17">
-                                1.7 - January 15, 2014
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_17" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul>
-                                <li>
-                                    <strong>Important!</strong><br />
-                                    <span>If you upgrade to v1.7 then check <strong>Tools -> Options -> Web Essentials</strong> to enable all the cool new stuff.</span>
-                                    <br /><br />
-                                </li>
-                                <li>
-                                    TypeScript support is back!!!
-                                    <ul>
-                                        <li>Preview Window is back</li>
-                                        <li>TSLint support (JSHint for TypeScript)</li>
-                                        <li>tslint.json item template in <a href="http://sidewaffle.com">SideWaffle</a></li>
-                                        <li>JSDoc completion for @@keywords</li>
-                                        <li>Comment block completion</li>
-                                        <li>Improved *.d.ts generation from C#/VB</li>
-                                        <li>Brace completion and type-through</li>
-                                        <li>Smart Indent</li>
-                                        <li>Arrow function outlining</li>
-                                        <li>Array and conditionals outlining</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    JavaScript
-                                    <ul>
-                                        <li>Comment block completion</li>
-                                        <li>JSDoc completion for @@keywords</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Markdown
-                                    <ul>
-                                        <li>More file extensions supported</li>
-                                        <li>Button added to compile to .html</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    JSHint
-                                    <ul>
-                                        <li>Ignoring nested .js files</li>
-                                        <li>.jshintrc files fully supported</li>
-                                        <li>.jshintignore files fully supported</li>
-                                        <li>Website Projects supported</li>
-                                        <li>File icons for .jshintrc & .jshintignore</li>
-                                        <li>Item Templates added to <a href="http://sidewaffle.com">SideWaffle</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    SASS
-                                    <ul>
-                                        <li>Full compiler support</li>
-                                        <li>Temporary basic .scss editor</li>
-                                        <li>Preview window</li>
-                                        <li>Source maps and minification</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Image optimization
-                                    <ul>
-                                        <li>Lossless optimization of images</li>
-                                        <li>Supports jpeg, gif and png files</li>
-                                        <li>Removes the need for <a href="http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3">Image Optimizer</a></li>
-                                        <li>Works offline (unlike Image Optimizer)</li>
-                                        <li>SmartTag for CSS and HTML &lt;img&gt; tags</li>
-                                        <li>Works on base64 encoded DataURIs</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Image sprites
-                                    <ul>
-                                        <li>Supports jpeg, gif and png files</li>
-                                        <li>Option to stack vertical or horizontal</li>
-                                        <li>Automatic sprite image optimization</li>
-                                        <li>Generates LESS & SASS mixins</li>
-                                        <li>Generates CSS sample</li>
-                                        <li>Generates JSON file for use in tooling later</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Paste images onto the editor
-                                    <ul>
-                                        <li>Paste image from clipboard</li>
-                                        <li>Paste from browser</li>
-                                        <li>Paste from file system</li>
-                                        <li>Supports HTML, CSS, JS, Markdown etc.</li>
-                                        <li>Automatic optimization on paste</li>
-                                        <li>Great for screenshots</li>
-                                    </ul>
-                                </li>
-                                <li>Issue with non-persistent settings fixed</li>
-                                <li>HTML 5 *.appcache file colorization</li>
-                                <li>.bundle file Intellisense for new bundles</li>
-                                <li>Added missing file icons to Solution Explorers</li>
-                                <li>Huge number of bug fixes and minor tweaks</li>
-                                <li>CoffeeScript source map path issue when compiling to a custom folder. The issue has been reported to the CoffeeScript compiler team.</li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_17">
+                                    1.7 - January 15, 2014
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_17" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>
+                                        <strong>Important!</strong><br />
+                                        <span>If you upgrade to v1.7 then check <strong>Tools -> Options -> Web Essentials</strong> to enable all the cool new stuff.</span>
+                                        <br /><br />
+                                    </li>
+                                    <li>
+                                        TypeScript support is back!!!
+                                        <ul>
+                                            <li>Preview Window is back</li>
+                                            <li>TSLint support (JSHint for TypeScript)</li>
+                                            <li>tslint.json item template in <a href="http://sidewaffle.com">SideWaffle</a></li>
+                                            <li>JSDoc completion for @@keywords</li>
+                                            <li>Comment block completion</li>
+                                            <li>Improved *.d.ts generation from C#/VB</li>
+                                            <li>Brace completion and type-through</li>
+                                            <li>Smart Indent</li>
+                                            <li>Arrow function outlining</li>
+                                            <li>Array and conditionals outlining</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        JavaScript
+                                        <ul>
+                                            <li>Comment block completion</li>
+                                            <li>JSDoc completion for @@keywords</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Markdown
+                                        <ul>
+                                            <li>More file extensions supported</li>
+                                            <li>Button added to compile to .html</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        JSHint
+                                        <ul>
+                                            <li>Ignoring nested .js files</li>
+                                            <li>.jshintrc files fully supported</li>
+                                            <li>.jshintignore files fully supported</li>
+                                            <li>Website Projects supported</li>
+                                            <li>File icons for .jshintrc & .jshintignore</li>
+                                            <li>Item Templates added to <a href="http://sidewaffle.com">SideWaffle</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        SASS
+                                        <ul>
+                                            <li>Full compiler support</li>
+                                            <li>Temporary basic .scss editor</li>
+                                            <li>Preview window</li>
+                                            <li>Source maps and minification</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Image optimization
+                                        <ul>
+                                            <li>Lossless optimization of images</li>
+                                            <li>Supports jpeg, gif and png files</li>
+                                            <li>Removes the need for <a href="http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3">Image Optimizer</a></li>
+                                            <li>Works offline (unlike Image Optimizer)</li>
+                                            <li>SmartTag for CSS and HTML &lt;img&gt; tags</li>
+                                            <li>Works on base64 encoded DataURIs</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Image sprites
+                                        <ul>
+                                            <li>Supports jpeg, gif and png files</li>
+                                            <li>Option to stack vertical or horizontal</li>
+                                            <li>Automatic sprite image optimization</li>
+                                            <li>Generates LESS & SASS mixins</li>
+                                            <li>Generates CSS sample</li>
+                                            <li>Generates JSON file for use in tooling later</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Paste images onto the editor
+                                        <ul>
+                                            <li>Paste image from clipboard</li>
+                                            <li>Paste from browser</li>
+                                            <li>Paste from file system</li>
+                                            <li>Supports HTML, CSS, JS, Markdown etc.</li>
+                                            <li>Automatic optimization on paste</li>
+                                            <li>Great for screenshots</li>
+                                        </ul>
+                                    </li>
+                                    <li>Issue with non-persistent settings fixed</li>
+                                    <li>HTML 5 *.appcache file colorization</li>
+                                    <li>.bundle file Intellisense for new bundles</li>
+                                    <li>Added missing file icons to Solution Explorers</li>
+                                    <li>Huge number of bug fixes and minor tweaks</li>
+                                    <li>CoffeeScript source map path issue when compiling to a custom folder. The issue has been reported to the CoffeeScript compiler team.</li>
+                                </ul>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_16">1.6 - January 2, 2014</a>
-                            <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.6.vsix"><i class="fa fa-download"></i>Download</a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_16" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul>
-                                <li>CSS Media Query Intellisense</li>
-                                <li>CSS Media Query snippets</li>
-                                <li>
-                                    CoffeeScript:
-                                    <ul>
-                                        <li>Compiler now runs in Node.js</li>
-                                        <li>Comment/uncomment support</li>
-                                        <li>Indent on ENTER</li>
-                                        <li>Source Map support</li>
-                                        <li>.iced files supported</li>
-                                    </ul>
-                                </li>
-                                <li>LESS Source Map support</li>
-                                <li>JS/TS Intellisese generation updates</li>
-                                <li>robots.txt and .vtt comment/uncomment</li>
-                                <li>Lots of fixes and tweaks</li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_16">1.6 - January 2, 2014</a>
+                                <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.6.vsix"><i class="fa fa-download"></i>Download</a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_16" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>CSS Media Query Intellisense</li>
+                                    <li>CSS Media Query snippets</li>
+                                    <li>
+                                        CoffeeScript:
+                                        <ul>
+                                            <li>Compiler now runs in Node.js</li>
+                                            <li>Comment/uncomment support</li>
+                                            <li>Indent on ENTER</li>
+                                            <li>Source Map support</li>
+                                            <li>.iced files supported</li>
+                                        </ul>
+                                    </li>
+                                    <li>LESS Source Map support</li>
+                                    <li>JS/TS Intellisese generation updates</li>
+                                    <li>robots.txt and .vtt comment/uncomment</li>
+                                    <li>Lots of fixes and tweaks</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_15">
-                                1.5 - December 21, 2013
-                            </a>
-                            <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.5.vsix"><i class="fa fa-download"></i>Download</a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_15" class="panel-collapse collapse">
-                        <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_15">
+                                    1.5 - December 21, 2013
+                                </a>
+                                <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.5.vsix"><i class="fa fa-download"></i>Download</a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_15" class="panel-collapse collapse">
+                            <div class="panel-body">
 
-                            <ul>
-                                <li>New advanced Markdown editor</li>
-                                <li>CSS variables support</li>
-                                <li>ZenCoding updates</li>
-                                <li>WebVTT editor</li>
-                                <li>LESS compiler error improvements</li>
-                                <li>HTML file minification (.html)</li>
-                                <li>HTML file bundles (.html)</li>
-                                <li>JS/TS Intellisense writer updates</li>
-                                <li>New &lt;input&gt; ID Intellisense</li>
-                                <li>SVG preview window</li>
-                                <li>Perf fixes to NavigateTo for CSS</li>
-                                <li>AngularJS ng-app validator</li>
-                                <li>CSS media query validator improvements</li>
-                                <li>...and a bunch of fixes and tweaks</li>
-                            </ul>
+                                <ul>
+                                    <li>New advanced Markdown editor</li>
+                                    <li>CSS variables support</li>
+                                    <li>ZenCoding updates</li>
+                                    <li>WebVTT editor</li>
+                                    <li>LESS compiler error improvements</li>
+                                    <li>HTML file minification (.html)</li>
+                                    <li>HTML file bundles (.html)</li>
+                                    <li>JS/TS Intellisense writer updates</li>
+                                    <li>New &lt;input&gt; ID Intellisense</li>
+                                    <li>SVG preview window</li>
+                                    <li>Perf fixes to NavigateTo for CSS</li>
+                                    <li>AngularJS ng-app validator</li>
+                                    <li>CSS media query validator improvements</li>
+                                    <li>...and a bunch of fixes and tweaks</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_14">
-                                1.4 - December 1, 2013
-                            </a>
-                            <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.4.1.vsix"><i class="fa fa-download"></i>Download</a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_14" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul>
-                                <li>Markdown can now compile to .html</li>
-                                <li>Markdown settings added</li>
-                                <li>Server code Intellisense in JS/TS. <a href="http://youtu.be/Nug1S9vcR0I">See video</a></li>
-                                <li>Specify output path for LESS/CoffeeScript</li>
-                                <li>Various bug fixes and perf improvements</li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_14">
+                                    1.4 - December 1, 2013
+                                </a>
+                                <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.4.1.vsix"><i class="fa fa-download"></i>Download</a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_14" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Markdown can now compile to .html</li>
+                                    <li>Markdown settings added</li>
+                                    <li>Server code Intellisense in JS/TS. <a href="http://youtu.be/Nug1S9vcR0I">See video</a></li>
+                                    <li>Specify output path for LESS/CoffeeScript</li>
+                                    <li>Various bug fixes and perf improvements</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_13">
-                                1.3 - November 16, 2013
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_13" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul>
-                                <li>LESS compiler now runs in NodeJS</li>
-                                <li>Bootstrap class name validator</li>
-                                <li>ZenCoding updates</li>
-                                <li>Updated the CSS sorter</li>
-                                <li>Various bug fixes and minor tweaks</li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_13">
+                                    1.3 - November 16, 2013
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_13" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>LESS compiler now runs in NodeJS</li>
+                                    <li>Bootstrap class name validator</li>
+                                    <li>ZenCoding updates</li>
+                                    <li>Updated the CSS sorter</li>
+                                    <li>Various bug fixes and minor tweaks</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_12">
-                                1.2 - November 4, 2013
-                            </a>
-                            <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.2.vsix"><i class="fa fa-download"></i>Download</a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_12" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul>
-                                <li>LESS relative paths fix</li>
-                                <li>Various fixes and tweaks</li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_12">
+                                    1.2 - November 4, 2013
+                                </a>
+                                <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.2.vsix"><i class="fa fa-download"></i>Download</a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_12" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>LESS relative paths fix</li>
+                                    <li>Various fixes and tweaks</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_11">
-                                1.1 - October 22, 2013
-                            </a>
-                            <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.1.vsix"><i class="fa fa-download"></i>Download</a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_11" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul>
-                                <li>Fixed a lot of bugs</li>
-                                <li>LESS fixes are planned for next update</li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_11">
+                                    1.1 - October 22, 2013
+                                </a>
+                                <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.1.vsix"><i class="fa fa-download"></i>Download</a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_11" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Fixed a lot of bugs</li>
+                                    <li>LESS fixes are planned for next update</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_10">
-                                1.0 - October 17, 2013
-                            </a>
-                            <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.0.vsix"><i class="fa fa-download"></i>Download</a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_10" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <strong>Important! </strong>
-                            <a href="http://madskristensen.net/post/web-essentials-2013-rtm">Don't mix RC with RTM</a>
-                            <ul>
-                                <li>Supports Visual Studio 2013 RTM</li>
-                                <li>LESS validation fixes</li>
-                                <li>LESS fixes for relative paths</li>
-                                <li>
-                                    Browser Link
-                                    <ul>
-                                        <li>Menu shows up on web pages</li>
-                                        <li>Find unused CSS</li>
-                                        <li>CSS/LESS sync on save</li>
-                                        <li>Browser tools integration</li>
-                                    </ul>
-                                </li>
-                                <li>JSHintIgnore support</li>
-                                <li>...and many more tweaks and fixes</li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_10">
+                                    1.0 - October 17, 2013
+                                </a>
+                                <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-1.0.vsix"><i class="fa fa-download"></i>Download</a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_10" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <strong>Important! </strong>
+                                <a href="http://madskristensen.net/post/web-essentials-2013-rtm">Don't mix RC with RTM</a>
+                                <ul>
+                                    <li>Supports Visual Studio 2013 RTM</li>
+                                    <li>LESS validation fixes</li>
+                                    <li>LESS fixes for relative paths</li>
+                                    <li>
+                                        Browser Link
+                                        <ul>
+                                            <li>Menu shows up on web pages</li>
+                                            <li>Find unused CSS</li>
+                                            <li>CSS/LESS sync on save</li>
+                                            <li>Browser tools integration</li>
+                                        </ul>
+                                    </li>
+                                    <li>JSHintIgnore support</li>
+                                    <li>...and many more tweaks and fixes</li>
+                                </ul>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_07">
-                                0.7 - September 27, 2013
-                            </a>
-                            <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-0.7.vsix"><i class="fa fa-download"></i>Download</a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_07" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul>
-                                <li>Various bug fixes</li>
-                                <li>Last version of WE to support VS2013 RC</li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_07">
+                                    0.7 - September 27, 2013
+                                </a>
+                                <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-0.7.vsix"><i class="fa fa-download"></i>Download</a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_07" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Various bug fixes</li>
+                                    <li>Last version of WE to support VS2013 RC</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_06">
-                                0.6 - September 13, 2013
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_06" class="panel-collapse collapse">
-                        <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_06">
+                                    0.6 - September 13, 2013
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_06" class="panel-collapse collapse">
+                            <div class="panel-body">
 
-                            <ul>
-                                <li>CSS usage no longer auto-runs</li>
-                                <li>TypeScript regions and drag 'n drop are back</li>
-                                <li>Unicode support to LESS compiler</li>
-                                <li>Fixes HTML auto-completion</li>
-                                <li>Fixes robots.txt Intellisense</li>
-                            </ul>
+                                <ul>
+                                    <li>CSS usage no longer auto-runs</li>
+                                    <li>TypeScript regions and drag 'n drop are back</li>
+                                    <li>Unicode support to LESS compiler</li>
+                                    <li>Fixes HTML auto-completion</li>
+                                    <li>Fixes robots.txt Intellisense</li>
+                                </ul>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_05">
-                                0.5 - September 9, 2013
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_05" class="panel-collapse collapse">
-                        <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_05">
+                                    0.5 - September 9, 2013
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_05" class="panel-collapse collapse">
+                            <div class="panel-body">
 
-                            <ul>
-                                <li>Requires VS 2013 RC</li>
-                                <li>
-                                    Browser Link extensions
-                                    <ul>
-                                        <li>Inspect Mode</li>
-                                        <li>Design Mode</li>
-                                        <li>Find unused CSS</li>
-                                        <li>Best practices (Web Dev Checklist)</li>
-                                        <li>CSS browser sync on save</li>
-                                    </ul>
-                                </li>
-                                <li>Dynamic HTML Intellisense</li>
-                                <li>HTML format on ENTER</li>
-                                <li>...and much more</li>
-                            </ul>
+                                <ul>
+                                    <li>Requires VS 2013 RC</li>
+                                    <li>
+                                        Browser Link extensions
+                                        <ul>
+                                            <li>Inspect Mode</li>
+                                            <li>Design Mode</li>
+                                            <li>Find unused CSS</li>
+                                            <li>Best practices (Web Dev Checklist)</li>
+                                            <li>CSS browser sync on save</li>
+                                        </ul>
+                                    </li>
+                                    <li>Dynamic HTML Intellisense</li>
+                                    <li>HTML format on ENTER</li>
+                                    <li>...and much more</li>
+                                </ul>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_022">
-                                0.2.2 - July 19, 2013
-                            </a>
-                            <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-0.2.2.vsix"><i class="fa fa-download"></i>Download</a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_022" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul>
-                                <li>Last version that works with VS2013 Preview</li>
-                                <li>Fixed issue with LESS</li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_022">
+                                    0.2.2 - July 19, 2013
+                                </a>
+                                <a class="btn btn-success btn-nightly-download" href="/nightly/webessentials2013-0.2.2.vsix"><i class="fa fa-download"></i>Download</a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_022" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Last version that works with VS2013 Preview</li>
+                                    <li>Fixed issue with LESS</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_02">
-                                0.2 - July 14, 2013
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="cl_vs13_02" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul>
-                                <li>CSS attribute name and value Intellisense</li>
-                                <li>Sort code lines asc/desc (all languages)</li>
-                                <li>Remove empty lines (all languages)</li>
-                                <li>Remove duplicate lines (all languages)</li>
-                                <li>Updated to latest version of JSHint</li>
-                                <li>Added support for .jshintrc</li>
-                                <li>Updated CoffeeScript to latest version</li>
-                                <li>Extract Styles and Scripts HTML Smart Tags</li>
-                                <li>Added dynamic HTML Intellisense</li>
-                                <li>Go To Definition for &lt;a&gt;, &lt;style&gt;, and &lt;script&gt;</li>
-                                <li>Better color display in LESS</li>
-                                <li>Added HTML minification support</li>
-                                <li>Added HTML region support</li>
-                                <li>...and many bug fixes</li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2013" href="#cl_vs13_02">
+                                    0.2 - July 14, 2013
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="cl_vs13_02" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>CSS attribute name and value Intellisense</li>
+                                    <li>Sort code lines asc/desc (all languages)</li>
+                                    <li>Remove empty lines (all languages)</li>
+                                    <li>Remove duplicate lines (all languages)</li>
+                                    <li>Updated to latest version of JSHint</li>
+                                    <li>Added support for .jshintrc</li>
+                                    <li>Updated CoffeeScript to latest version</li>
+                                    <li>Extract Styles and Scripts HTML Smart Tags</li>
+                                    <li>Added dynamic HTML Intellisense</li>
+                                    <li>Go To Definition for &lt;a&gt;, &lt;style&gt;, and &lt;script&gt;</li>
+                                    <li>Better color display in LESS</li>
+                                    <li>Added HTML minification support</li>
+                                    <li>Added HTML region support</li>
+                                    <li>...and many bug fixes</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 </div>
