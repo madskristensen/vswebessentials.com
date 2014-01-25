@@ -1,0 +1,151 @@
+﻿/*
+    vswebessentials.com
+    Design and implemented by Farzin Seyfolahi - http://seyfolahi.net
+    Version: 1.0
+*/
+
+
+body {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    cursor: default;
+}
+
+i {
+    margin-right: 5px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*[navbar]*/
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-custom {
+    background-color: #0e1316;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color: #636b7a;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #000;
+}
+
+.navbar-custom .dropdown-menu {
+    background-color: #080808;
+}
+
+.navbar-custom .dropdown-menu > li {
+}
+
+.navbar-custom .dropdown-menu > li > a {
+    color: #636b7a;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar-custom .dropdown-menu > li > a:hover {
+    background-color: #080b0d;
+    color: #fff;
+}
+
+.navbar-custom .dropdown-menu > li.active a {
+    color: #fff;
+    background-color: #080b0d !important;
+    padding-left: 25px;
+}
+
+/*[jumbotron]*/
+.jumbotron {
+    background: #2a2b30 url(/content/images/header.png) repeat 0 0;
+    color: #d8d8d8;
+    font-weight: 400 !important;
+    font-size: 14px;
+    padding: 30px 0;
+}
+
+/*[footer]*/
+.footer {
+    background-color: #0e1316;
+    color: #34454f;
+    text-align: center;
+    font-size: 12px;
+    line-height: 55px;
+    border-top: 5px solid #CCC;
+    position: relative;
+    z-index: 99999;
+    height: 60px;
+}
+
+.footer a {
+    color: #34454f;
+    text-decoration: none;
+}
+
+.footer a img {
+    position: relative;
+    top: -1px;
+    margin-left: 2px;
+    -webkit-box-shadow: 0 1px 0px #000;
+    box-shadow: 0 1px 0px #000;
+}
+
+.footer p {
+    margin: 0;
+    -webkit-text-shadow: 0 1px 0px #000;
+    text-shadow: 0 1px 0px #000;
+}
+
+.footer b {
+    font-weight: normal;
+}
+
+.footer p .copyright:after,
+.footer p .license:after,
+.footer p .developer:after {
+    content: "";
+    display: inline-block;
+    background-color: #34454f;
+    width: 4px;
+    height: 4px;
+    margin: 0 7px;
+    border-radius: 8px;
+    position: relative;
+    top: -2px;
+    -webkit-box-shadow: 0 1px 0px #000;
+    box-shadow: 0 1px 0px #000;
+}
+
+/*[public responsive]*/
+@media screen and (max-width:768px) {
+    .footer .license {
+        display: none;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .footer .copyright:after,
+    .footer .developer,
+    .footer .designer {
+        display: none !important;
+    }
+}

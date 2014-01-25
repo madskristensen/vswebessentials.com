@@ -1,51 +1,54 @@
 ﻿@{
     Page.Title = "Markdown";
+    Page.Description = "Web Essentials ships with a Markdown editor.";
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<p>
-    Web Essentials ships with a Markdown editor.
-</p>
+<div class="features-page">
+    <div class="alert alert-info">
+        <p>Web Essentials ships with a Markdown editor.</p>
+    </div>
+    <header class="section-header">
+        <h2><span>Features</span></h2>
+    </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Syntax highlighting</h3><div class="panel-body">
+                    <p>Full colorization for Markdown syntax</p>
+                </div>
+            </article>
 
-<section>
-    <h2>Features</h2>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Syntax highlighting</h3>
-
-        <p>Full colorization for Markdown syntax</p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Preview window</h3>
-
-        <p>See a side-by-side preview window of the rendered HTML</p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>Intellisense for embedded languages</h3>
-
-        <p>
-            GitHub's embedded language feature is fully support by
-            support for the <code>```language</code> syntax.
-        </p>
-
-        <img src="/Images/markdown/embedded-intellisense.png" alt="Embedded languages Intellisense" />
-    </article>
-
-    <article data-version="WE2013">
-        <h3>Compile to HTML</h3>
-
-        <p>
-            Right-click any Markdown file and select <mark>Compile Markdown to HTML</mark>.
-            This will generate a .html file nested under the Markdown file and it will stay in sync as the Markdown
-            file changes.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Custom Stylesheet</h3>
-
-        <p>You can add a solution specific Stylesheet to control the styles of the preview window.</p>
-    </article>
-</section>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Intellisense for embedded languages</h3><div class="panel-body">
+                    <p>
+                        GitHub's embedded language feature is fully support by
+                        support for the <code>```language</code> syntax.
+                    </p>
+                    <img src="/Images/markdown/embedded-intellisense.png" alt="Embedded languages Intellisense" />
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Preview window</h3><div class="panel-body">
+                    <p>See a side-by-side preview window of the rendered HTML</p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Compile to HTML</h3><div class="panel-body">
+                    <p>
+                        Right-click any Markdown file and select <mark>Compile Markdown to HTML</mark>.
+                        This will generate a .html file nested under the Markdown file and it will stay in sync as the Markdown
+                        file changes.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Custom Stylesheet</h3><div class="panel-body">
+                    <p>You can add a solution specific Stylesheet to control the styles of the preview window.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,185 @@
+﻿@{
+    if (!Request.IsLocal)
+    {
+    Response.Cache.SetValidUntilExpires(true);
+    Response.Cache.SetExpires(DateTime.Now.AddDays(1));
+    Response.Cache.SetCacheability(HttpCacheability.Public);
+
+    string file = Server.MapPath(Request.CurrentExecutionFilePath);
+    Response.AddFileDependency(file);
+	Response.Cache.SetLastModifiedFromFileDependencies();
+    }
+
+    string title = Page.Title.Contains("Web Essentials") ? Page.Title : Page.Title + " - Web Essentials";
+}
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>@title</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="@Page.Keywords" />
+    <meta name="description" content="@Page.Description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="@Fingerprint.Tag("/content/css/style.home.min.css")" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- facebook info -->
+    <meta name="og:title" content="@title" />
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content="http://vswebessentials.com/" />
+    <meta name="og:image" content="/images/logo_small.png" />
+    <meta name="og:site_name" content="Web Essentials for Visual Studio" />
+
+    <!-- twitter info -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@@mkristensen" />
+    <meta name="twitter:title" content="@title" />
+    <meta name="twitter:description" content="Web Essentials extends Visual Studio with a lot of new features that web developers have been missing for many years." />
+    <meta name="twitter:image" content="http://vswebessentials.com/images/logo_small.png" />
+
+    <!-- win8 -->
+    <meta name="application-name" content="@title" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-TileImage" content="/images/logo_small.png" />
+
+    <!-- apple -->
+    <link rel="apple-touch-icon" href="/images/logo_small.png" />
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/SoftwareApplication">
+    <header class="header clearfix">
+        <div class="navbar navbar-inverse navbar-static-top navbar-custom" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Web Essentials</a>
+                </div>
+                <nav class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="/download">Download</a></li>
+                        <li class="dropdown">
+                            <a href="#" itemprop="featureList" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown">Features <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="hidden"><a href="/features">Features</a></li>
+                                <li><a href="/features/general">General</a></li>
+                                <li><a href="/features/browserlink">Browser Link</a></li>
+                                <li><a href="/features/stylesheets">Stylesheets</a></li>
+                                <li><a href="/features/javascript">JavaScript</a></li>
+                                <li><a href="/features/html">HTML</a></li>
+                                <li><a href="/features/typescript">TypeScript</a></li>
+                                <li><a href="/features/less">LESS</a></li>
+                                <li><a href="/features/coffeescript">CoffeeScript</a></li>
+                                <li><a href="/features/markdown">Markdown</a></li>
+                                <li><a href="/features/custom-editors">Custom editors</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown">Contribute <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="hidden"><a href="/contribute">Contribute</a></li>
+                                <li><a href="https://github.com/madskristensen/WebEssentials2012" target="_blank">WE 2012 on GitHub</a></li>
+                                <li><a href="https://github.com/madskristensen/WebEssentials2013" target="_blank">WE 2013 on GitHub</a></li>
+                                <li><a href="http://webessentials.uservoice.com/" target="_blank">Suggest features</a></li>
+                                <li><a href="https://github.com/madskristensen/vswebessentials.com" target="_blank">Help with this website</a></li>
+                                <li><a href="https://github.com/madskristensen/zencoding" target="_blank">ZenCoding on GitHub</a></li>
+                                <li><a href="https://github.com/madskristensen/CssSorter" target="_blank">CssSorter on GitHub</a></li>
+                                <li><a href="https://github.com/madskristensen/WebEssentials2013/issues" target="_blank">Report bugs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/changelog" itemprop="releaseNotes">Change log</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <hgroup>
+                            <h1><a itemprop="name" href="http://vswebessentials.com/" itemprop="url"><img class="hidden" itemprop="image" src="/content/images/logo.png" alt="Web Essentials for Visual Studio" width="116" height="131" /> Web Essentials</a></h1>
+                            <h2 itemprop="description alternativeHeadline">A Visual Studio extension  </h2>
+                            <h3>Created by <a rel="author" class="kristensen" data-placement="bottom" target="_blank" title="Program manager at Microsoft" href="http://madskristensen.net">Mads Kristensen</a></h3>
+                        </hgroup>
+                        <div class="btn-social-network">
+                            <ul class="list-inline">
+                                <li class="btn-star-github">
+                                    <iframe src="/github-btn.html?user=MadsKristensen&repo=WebEssentials2013&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="97px" height="20px"></iframe>
+                                </li>
+                                <li class="btn-fork-github">
+                                    <iframe src="/github-btn.html?user=MadsKristensen&repo=WebEssentials2013&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                                </li>
+                                <li class="btn-share-twitter">
+                                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vswebessentials.com/" data-via="mkristensen">Tweet</a>
+                                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+                                </li>
+                                <li class="btn-googleplus">
+                                    <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+                                    <div class="g-plusone" data-size="Medium" data-href="http://vswebessentials.com/"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="description">
+                            <p>Web Essentials extends Visual Studio  with a lot of new features that web developers have been missing for many years.</p>
+                            <p>If you ever write CSS, HTML, JavaScript, TypeScript, CoffeeScript or LESS, then you will find many useful features that make your life as a developer easier.</p>
+                            <p>This is for all Web developers using Visual Studio.</p>
+                        </div>
+                        <p><a itemprop="downloadUrl" class="btn btn-download btn-lg" href="/download"><i class="fa fa-download"></i> Download</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="main" role="main">
+        @RenderBody()
+    </div>
+    <footer class="footer">
+        <p>
+            <span class="copyright">Copyright &copy; <span itemprop="copyrightYear">2012</span> - @DateTime.Now.Year</span>
+            <span class="license">Licensed under Microsoft Reciprocal License (Ms-RL)</span>
+            <span class="developer">Created by <a rel="author" target="_blank" title="Program manager at Microsoft" href="http://madskristensen.net">Mads Kristensen</a></span>
+            <span class="designer"><a title="Design by Farzin Seyfolahi" href="http://seyfolahi.net/" target="_blank">Design by <img src="/content/images/designer.png" alt="Farzin Seyfolahi - Front-End Developer" /></a></span>
+        </p>
+        <div class="hidden">
+            <meta itemprop="softwareApplicationCategory" content="Extension" />
+            <meta itemprop="softwareApplicationSubCategory" content="WebTools" />
+            <meta itemprop="inLanguage" content="en-us" />
+            <meta itemprop="fileFormat" content="VSIX" />
+            <meta itemprop="screenshot" content="/images/logo_big.png" />
+        </div>
+        <div class="hidden" itemprop="aggregateRating" itemscope="itemscope" itemtype="http://schema.org/AggregateRating">
+            <meta itemprop="ratingValue" content="5" />
+            <meta itemprop="ratingCount" content="103" />
+        </div>
+        <div class="hidden" itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer">
+            <span itemprop="price">0.0</span>
+            <meta itemprop="priceCurrency" content="USD" />
+        </div>
+    </footer>
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37343662-1']);
+        _gaq.push(['_trackPageview']);
+    </script>
+    <script src="/ga.js" async="async" defer="defer"></script>
+    <script src="/Content/js/jquery-1.10.2.min.js"></script>
+    <script src="/Content/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(".footer a, .kristensen").tooltip();
+    </script>
+</body>
+</html>

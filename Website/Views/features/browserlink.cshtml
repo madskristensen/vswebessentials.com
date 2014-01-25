@@ -1,82 +1,85 @@
 ﻿@{
     Page.Title = "Browser Link";
+    Page.Description = "Web Essentials ships with a range of Browser Link features that are all available from a menu that is injected onto your website when Browser Link is running.";
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<p>
-    Web Essentials ships with a range of Browser Link features that are all available
-    from a menu that is injected onto your website when Browser Link is running.
-    <br /><br />
-    <img src="/Images/browserlink/menu.png" alt="" />
-</p>
-
-<section>
-    <h2>Features</h2>
-
-    <article data-version="WE2013">
-        <h3>Auto-hide</h3>
-
+<div class="features-page">
+    <div class="alert-info alert">
         <p>
-            If you don't care to see the menu all the time, check this checkbox to make it
-            be invisible by default. To toggle visibility of the menu, just click the
-            <mark>Ctrl</mark> key in the browser.
+            Web Essentials ships with a range of Browser Link features that are all available from a menu that is injected onto your website when Browser Link is running.
         </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>Inspect Mode</h3>
-
         <p>
-            When the mouse hovers DOM elements on the page in any browser, Visual Studio will
-            open the source file and mark the exact location that generated the specific DOM element.
+            <img src="/Images/browserlink/menu.png" alt="browser link" />
         </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>Design Mode</h3>
-
-        <p>
-            Works like <mark>Inspect Mode</mark> but when you finally click a DOM element
-            in the browser, that element becomes editable. Any edits are transered into Visual Studio
-            in real time to update the source file.
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>Save F12 changes</h3>
-
-        <p>
-            When making edits in the various browser's developer tools, you can click
-            <mark>Save F12 changes</mark> to automatically transfer the changes back to their
-            source files in Visual Studio. This works with CSS changes only.
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>F12 auto-sync</h3>
-
-        <p>
-            Instead of manually clicking <mark>Save F12 changes</mark>, you can stream 
-            the changes back to Visual Studio in real time.
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>Find Unused CSS</h3>
-
-        <p>
-            Clicking this button will start recording the different CSS rules used on your site.
-            Simply start navigating around you website, and when you're done, click the button again.
-            This will produce a list of unused CSS in the Error List inside Visual Studio.
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>Check for best practices</h3>
-
-        <p>
-            Web Essentials uses some of the rules from <a href="http://webdevchecklist.com">webdevchecklist.com</a>
-            to scan for best practices. If any violations are found, a message in the Error List shows up.
-        </p>
-    </article>
-</section>
+    </div>
+    <header class="section-header">
+        <h2><span>Features</span></h2>
+    </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Auto-hide</h3><div class="panel-body">
+                    <p>
+                        If you don't care to see the menu all the time, check this checkbox to make it
+                        be invisible by default. To toggle visibility of the menu, just click the
+                        <mark>Ctrl</mark> key in the browser.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Inspect Mode</h3><div class="panel-body">
+                    <p>
+                        When the mouse hovers DOM elements on the page in any browser, Visual Studio will
+                        open the source file and mark the exact location that generated the specific DOM element.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Design Mode</h3><div class="panel-body">
+                    <p>
+                        Works like <mark>Inspect Mode</mark> but when you finally click a DOM element
+                        in the browser, that element becomes editable. Any edits are transered into Visual Studio
+                        in real time to update the source file.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Check for best practices</h3><div class="panel-body">
+                    <p>
+                        Web Essentials uses some of the rules from <a href="http://webdevchecklist.com">webdevchecklist.com</a>
+                        to scan for best practices. If any violations are found, a message in the Error List shows up.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Save F12 changes</h3><div class="panel-body">
+                    <p>
+                        When making edits in the various browser's developer tools, you can click
+                        <mark>Save F12 changes</mark> to automatically transfer the changes back to their
+                        source files in Visual Studio. This works with CSS changes only.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">F12 auto-sync</h3><div class="panel-body">
+                    <p>
+                        Instead of manually clicking <mark>Save F12 changes</mark>, you can stream
+                        the changes back to Visual Studio in real time.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Find Unused CSS</h3><div class="panel-body">
+                    <p>
+                        Clicking this button will start recording the different CSS rules used on your site.
+                        Simply start navigating around you website, and when you're done, click the button again.
+                        This will produce a list of unused CSS in the Error List inside Visual Studio.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

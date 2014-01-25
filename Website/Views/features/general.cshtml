@@ -5,61 +5,44 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<p>
-    A bunch of features are not specific to a specific language or editor. These features are listed here. 
-</p>
-
-<section>
-    <h2>Features</h2>
-
-    <article>
-        <h3>Settings</h3>
-
-        <p>
-            All settings can be found by going to Tools -> Options -> Web Essentials.
-        </p>
-
-        <img src="/images/general/settings.png" alt="Options dialog" width="460" height="266" />
-    </article>
-
-    <article>
-        <h3>Solution scoped settings</h3>
-
-        <p>
-            Settings can either be global or specific to any solution.
-            By scoping settings to individual solution, you can ensure that all team members 
-            are using the same settings.
-        </p>
-
-        <p>
-            To enable solution settings, right-click any item in Solution Explorer and click "Create solution settings".
-        </p>
-    </article>
-
-    <article>
-        <h3>Bundling</h3>
-
-        <p>
-            Any text based file can be bundled using Web Essentials.
-        </p>
-
-        <p>Out of the box, Web Essentials provides shortcuts to produce bundle files for CSS and JavaScript.</p>
-
-        <p>These bundle files are automatically updated whenever one of the source files change.</p>
-
-        <p>Just right-click 2 or more CSS/JS files and click "Create CSS/JS bundle file".</p>
-    </article>
-
-    <article>
-        <h3>Solution wide commands</h3>
-
-        <p>These menu items are shortcuts to solution wide commands.</p>
-
-        <p>
-            They can be found under Build -> Web Essentials.
-        </p>
-
-        <img src="/images/general/build.png" alt="Build menu" width="361" height="130" />
-    </article>
-</section>
-
+<div class="features-page">
+    <header class="section-header">
+        <h2><span>Features</span></h2>
+    </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default">
+                <h3 class="panel-heading">Settings</h3><div class="panel-body">
+                    <p>All settings can be found by going to Tools -> Options -> Web Essentials.</p>
+                    <img src="/images/general/settings.png" alt="Options dialog" width="460" height="266" />
+                </div>
+            </article>
+            <article class="panel panel-default">
+                <h3 class="panel-heading">Solution scoped settings</h3>
+                <div class="panel-body">
+                    <p>Settings can either be global or specific to any solution. By scoping settings to individual solution, you can ensure that all team members  are using the same settings. </p>
+                    <p>To enable solution settings, right-click any item in Solution Explorer and click "Create solution settings".</p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default">
+                <h3 class="panel-heading">Bundling</h3>
+                <div class="panel-body">
+                    <p>Any text based file can be bundled using Web Essentials.</p>
+                    <p>Out of the box, Web Essentials provides shortcuts to produce bundle files for CSS and JavaScript.</p>
+                    <p>These bundle files are automatically updated whenever one of the source files change.</p>
+                    <p>Just right-click 2 or more CSS/JS files and click "Create CSS/JS bundle file".</p>
+                </div>
+            </article>
+            <article class="panel panel-default">
+                <h3 class="panel-heading">Solution wide commands</h3>
+                <div class="panel-body">
+                    <p>These menu items are shortcuts to solution wide commands.</p>
+                    <p>They can be found under Build -> Web Essentials.</p>
+                    <img src="/images/general/build.png" alt="Build menu" width="361" height="130" />
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

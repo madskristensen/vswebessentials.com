@@ -1,47 +1,46 @@
 ﻿@{
-    Page.Title = "Download Web Essentials";
+    Page.Title = "Download";
     Page.Keywords = "download, plugin, vsix, extension";
     Page.Description = "Download Web Essentials from the Visual Studio Gallery";
     Layout = "~/Views/_Layout.cshtml";
 }
-
-<p>
-    Web Essentials is hosted at the Visual Studio gallery.
-</p>
-
-<div>
-    <h2>Web Essentials 2013</h2>
-    <img src="/images/visual-studio-2012.png" alt="Visual Studio 2013" class="right" width="400" height="76" />
-
-    <p>After installing, Visual Studio will automatically notify you of any updates to Web Essentials.</p>
-
-    <a itemprop="downloadUrl" href="http://visualstudiogallery.msdn.microsoft.com/56633663-6799-41d7-9df7-0f2a504ca361">Download Web Essentials 2013</a>
-    <br />
-    <br />
-</div>
-
-<div>    
-    <h2>Web Essentials 2012</h2>    
-    <img src="/images/visual-studio-2012.png" alt="Visual Studio 2012" class="right" width="400" height="76" />
-
-    <p>
-        After installing, Visual Studio will automatically notify you of any updates to Web Essentials.
-    </p>
-
-    <a itemprop="downloadUrl" href="http://visualstudiogallery.msdn.microsoft.com/07d54d12-7133-4e15-becb-6f451ea3bea6">Download Web Essentials 2012</a>
-    <br />
-    <br />
-</div>
-
-<div>    
-    <h2>Web Essentials 2010</h2>
-    <img src="/images/visual-studio-2010.png" alt="Visual Studio 2010" class="right" width="400" height="59" />
-
-    <p>
-        Web Essentials 2010 is the previous version and doesn't have most of the features in the newer Web Essentials 2012.
-    </p>
-
-    <a href="http://visualstudiogallery.msdn.microsoft.com/6ed4c78f-a23e-49ad-b5fd-369af0c2107f">Download Web Essentials 2010</a>
-    <br />
-    <br />
+<div class="download-page">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default text-center panel-download">
+                <h3 class="panel-heading">Web Essentials 2013</h3>
+                <div class="panel-body">
+                    <div class="logo-vs">
+                        <img src="/images/visual-studio-2012.png" alt="Visual Studio 2013" />
+                    </div>
+                    <p class="description-vs">After installing, Visual Studio will automatically notify you of any updates to Web Essentials.</p>
+                    <a itemprop="downloadUrl" target="_blank" class="btn btn-success btn-lg btn-block" href="http://visualstudiogallery.msdn.microsoft.com/56633663-6799-41d7-9df7-0f2a504ca361"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default text-center panel-download">
+                <h3 class="panel-heading">Web Essentials 2012</h3>
+                <div class="panel-body">
+                    <div class="logo-vs">
+                        <img src="/images/visual-studio-2012.png" alt="Visual Studio 2012" />
+                    </div>
+                    <p class="description-vs">After installing, Visual Studio will automatically notify you of any updates to Web Essentials.</p>
+                    <a itemprop="downloadUrl" target="_blank" class="btn btn-success btn-lg btn-block" href="http://visualstudiogallery.msdn.microsoft.com/07d54d12-7133-4e15-becb-6f451ea3bea6"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default text-center panel-download">
+                <h3 class="panel-heading">Web Essentials 2010</h3>
+                <div class="panel-body">
+                    <div class="logo-vs">
+                        <img src="/images/visual-studio-2010.png" alt="Visual Studio 2010" />
+                    </div>
+                    <p class="description-vs">Web Essentials 2010 is the previous version and doesn't have most of the features in the newer Web Essentials 2012.</p>
+                    <a class="btn btn-success btn-lg btn-block" target="_blank" href="http://visualstudiogallery.msdn.microsoft.com/6ed4c78f-a23e-49ad-b5fd-369af0c2107f"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
