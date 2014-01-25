@@ -5,94 +5,90 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<p>
-    The dynamic stylesheet language. 
-    <br />
-    LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions. 
-</p>
-
-<section>
-    <h2>Features</h2>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Preview window</h3>
-
-        <p>
-            LESS comes with a preview window located at the right side of the editor. 
-            It shows the compiled output every time you save the document.
-        </p>
-
-        <img src="/images/less/preview.png" alt="LESS preview" width="450" height="251" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Compiler settings</h3>
-
-        <p>
-            You can set all the compiler settings from Tools -> Options. They include:
-        </p>
-
-        <ul>
-            <li>Compile on save</li>
-            <li>Compile on build</li>
-            <li>Enable minification</li>
-        </ul>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>NodeJS compilation</h3>
-        <p>
-            Web Essentials uses NodeJS to run the compiler. It's the fastest and most accurate
-            compiler for LESS available.
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>Source Maps</h3>
-        <p>
-            Source Map generation is fully supported and will produce .map files.
-            This feature can be enabled in the Options dialog.
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>Compile to custom folder</h3>
-        <p>
-            If you want the compiled output in a separate folder, then you can specify which
-            one in the Options dialog.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Extract to variable</h3>
-
-        <p>
-            Web Essentials makes it easy to convert property values to LESS variables. 
-            Select the text you want extracted, right-click the selection and click "Extract to variable...".
-        </p>
-
-        <p>
-            Colors are special cased and a Smart Tag makes it easy to extract all instances of the 
-            same color in the document into a LESS variable.
-        </p>
-
-        <img src="/images/less/extractvariable.png" alt="Extract variable" width="441" height="179" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Extract to Mixin</h3>
-
-        <p>
-            Select the properties you want to extract. Then right-click the selection and click "Extract to mixin...".
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Minification</h3>
-
-        <p>
-            When a LESS file is compiled, it can now also be minified to produce a much smaller CSS file.
-        </p>
-    </article>
-</section>
-
+<div class="features-page">
+    <div class="alert alert-info">
+        <p>The dynamic stylesheet language. <br /> LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions.</p>
+    </div>
+    <header class="section-header">
+        <h2><span>Features</span></h2>
+    </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Preview window</h3>
+                <div class="panel-body">
+                    <p>
+                        LESS comes with a preview window located at the right side of the editor.
+                        It shows the compiled output every time you save the document.
+                    </p>
+                    <img src="/images/less/preview.png" alt="LESS preview" width="450" height="251" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Compiler settings</h3><div class="panel-body">
+                    <p>
+                        You can set all the compiler settings from Tools -> Options. They include:
+                    </p>
+                    <ul>
+                        <li>Compile on save</li>
+                        <li>Compile on build</li>
+                        <li>Enable minification</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">NodeJS compilation</h3><div class="panel-body">
+                    <p>
+                        Web Essentials uses NodeJS to run the compiler. It's the fastest and most accurate
+                        compiler for LESS available.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Source Maps</h3><div class="panel-body">
+                    <p>
+                        Source Map generation is fully supported and will produce .map files.
+                        This feature can be enabled in the Options dialog.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Compile to custom folder</h3><div class="panel-body">
+                    <p>
+                        If you want the compiled output in a separate folder, then you can specify which
+                        one in the Options dialog.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Extract to variable</h3><div class="panel-body">
+                    <p>
+                        Web Essentials makes it easy to convert property values to LESS variables.
+                        Select the text you want extracted, right-click the selection and click "Extract to variable...".
+                    </p>
+                    <p>
+                        Colors are special cased and a Smart Tag makes it easy to extract all instances of the
+                        same color in the document into a LESS variable.
+                    </p>
+                    <img src="/images/less/extractvariable.png" alt="Extract variable" width="441" height="179" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Extract to Mixin</h3><div class="panel-body">
+                    <p>
+                        Select the properties you want to extract. Then right-click the selection and click "Extract to mixin...".
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Minification</h3><div class="panel-body">
+                    <p>
+                        When a LESS file is compiled, it can now also be minified to produce a much smaller CSS file.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

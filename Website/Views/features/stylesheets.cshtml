@@ -5,472 +5,432 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<p>
-    Most of the CSS features in Web Essentials also applies to LESS.
-</p>
-
-<section>
-    <header>
-        <h2>Intellisense</h2>
+<div class="features-page">
+    <div class="alert alert-info">
+        <p>Most of the CSS features in Web Essentials also applies to LESS.</p>
+    </div>
+    <header class="section-header">
+        <h2><span>Intellisense</span></h2>
     </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">
+                    Generate vendor specifics
+                    <span class="badge data-version-block"></span>
+                </h3>
+                <div class="panel-body">
+                    <p>
+                        A lot of the new CSS 3 properties only work cross-browser if vendor specific
+                        properties are added. These include -moz, -webkit, -ms and -o.
+                    </p>
+                    <img src="/Images/css/Add-missing-vendor.png" alt="Add missing vendor specifics" width="263" height="73" />
+                    <p>
+                        The result is the insertion of the missing vendor specific properties in the right order.
+                    </p>
+                    <img src="/Images/css/vendor-specific2.png" alt="Missing vendor specific result" width="288" height="61" />
+                    <p>
+                        If one or more of the vendor specific properties are already present, then only the missing ones are added.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Add missing standard property</h3><div class="panel-body">
+                    <p>
+                        Invoke the Smart Tag to automatically insert any missing standard properties.
+                    </p>
+                    <img src="/Images/css/Add-missing-standard.png" alt="Add missing standard" width="333" height="79" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Keep vendor specifics in sync</h3><div class="panel-body">
+                    <iframe width="420" height="280" title="Video" src="http://www.youtube.com/embed/9NFKU7CCewE" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">HTML elements, classes and IDs</h3><div class="panel-body">
+                    <img src="/images/css/html-elements.png" alt="HTML element Intellisense" width="149" height="181" />
+                    <img src="/images/css/class-names.png" alt="Class name Intellisense" width="190" height="164" />
+                    <img src="/images/css/ids.png" alt="ID Intellisense" width="190" height="161" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Hacks</h3><div class="panel-body">
+                    <p>
+                        Specific hacks can be used to target specific versions of IE on a selector level. These are all valid according to the W3C
+                    </p>
+                    <img src="/images/css/selector-hacks.png" alt="Selector hacks" width="255" height="136" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">!important</h3><div class="panel-body">
+                    <p>
+                        Intellisense is now provided for !important.
+                    </p>
+                    <img src="/images/css/important.png" alt="!important" width="374" height="90" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Modernizr</h3><div class="panel-body">
+                    <p>
+                        Modernizr class names will now be bolded in the CSS editor, but more importantly,
+                        they will also be respected by the automatic hierarchical indentation feature of VS2012.
+                    </p>
+                    <img src="/images/css/modernizr.png" alt="Modernizr" width="232" height="117" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Add region</h3><div class="panel-body">
+                    <p>
+                        Regions are supported in the VS2012 CSS editor, but now it's even easier to add them.
+                    </p>
+                    <img src="/images/css/add-region.png" alt="Add region" width="139" height="112" />
+                    <p>
+                        Choosing Add region... result in this snippet being inserted.
+                    </p>
+                    <img src="/images/css/add-region-complete.png" alt="Add region result" width="173" height="118" />
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Custom fonts</h3><div class="panel-body">
+                    <img src="/images/css/font-face.png" alt="Font face embedding" width="370" height="245" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">iOS scrollbars</h3><div class="panel-body">
+                    <p>
+                        VS2012 supports the different pseudo elements for customizing the iOS scrollbars.
+                        It can, however, be a little difficult to work with unless you know how to chain the
+                        pseudos correctly. That's no longer a problem.
+                    </p>
+                    <img src="/images/css/webkit-scrollbar.png" alt="Webkit scrollbar" width="422" height="205" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Animation names</h3><div class="panel-body">
+                    <img src="/images/css/animation-name.png" alt="Animation name Intellisense" width="364" height="358" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Inline URL picker</h3><div class="panel-body">
+                    <p>
+                        Just start typing and the file system shows up in Intellisense.
+                    </p>
+                    <img src="/images/css/url-picker.png" alt="Url picker Intellisense" width="435" height="203" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">CSS gradients</h3><div class="panel-body">
+                    <p>
+                        Gradients are really difficult to write, so now examples are automatically inserted for
+                        all the different types of gradients, including the various vendor specific ones.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Hide unsupported properties</h3><div class="panel-body">
+                    <p>
+                        Some of the CSS properties, such as the CSS 3 FlexBox Module are not supported by any
+                        browser yet. Now you can turn all unsupported properties and pseudos off.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Hide inherit/initial</h3><div class="panel-body">
+                    <p>
+                        Sometimes it can feel like these two properties are too noisy in Intellisense.
+                        Though they are completely valid, you might just want to hide them.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Custom color palettes</h3><div class="panel-body">
+                    <p>Coming soon...</p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Media Query expressions</h3><div class="panel-body">
+                    <p>Get Intellisense for everything in a Media Query.</p>
+                    <img src="/Images/css/mediatype.png" alt="Media Type" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Media Query snippets</h3><div class="panel-body">
+                    <p>Snippets for making Media Queries easier to work with.</p>
+                    <img src="/Images/css/mediasnippets.png" alt="Media Query Snippets" />
+                </div>
+            </article>
+        </div>
+    </div>
+    <!-- / -->
 
-    <article data-version="WE2012, WE2013">
-        <h3>Generate vendor specifics</h3>
-
-        <p>
-            A lot of the new CSS 3 properties only work cross-browser if vendor specific
-            properties are added. These include -moz, -webkit, -ms and -o.
-        </p>
-
-        <img src="/Images/css/Add-missing-vendor.png" alt="Add missing vendor specifics" width="263" height="73" />
-
-        <p>
-            The result is the insertion of the missing vendor specific properties in the right order.
-        </p>
-
-        <img src="/Images/css/vendor-specific2.png" alt="Missing vendor specific result" width="288" height="61" />
-
-        <p>
-            If one or more of the vendor specific properties are already present, then only the missing ones are added.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Add missing standard property</h3>
-
-        <p>
-            Invoke the Smart Tag to automatically insert any missing standard properties.
-        </p>
-
-        <img src="/Images/css/Add-missing-standard.png" alt="Add missing standard" width="333" height="79" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Keep vendor specifics in sync</h3>
-
-        <iframe width="420" height="280" title="Video" src="http://www.youtube.com/embed/9NFKU7CCewE" frameborder="0" allowfullscreen></iframe>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>HTML elements, classes and IDs</h3>
-
-        <img src="/images/css/html-elements.png" alt="HTML element Intellisense" width="149" height="181" />
-        <img src="/images/css/class-names.png" alt="Class name Intellisense" width="190" height="164" />
-        <img src="/images/css/ids.png" alt="ID Intellisense" width="190" height="161" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Hacks</h3>
-
-        <p>
-            Specific hacks can be used to target specific versions of IE on a selector level. These are all valid according to the W3C
-        </p>
-
-        <img src="/images/css/selector-hacks.png" alt="Selector hacks" width="255" height="136" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>!important</h3>
-
-        <p>
-            Intellisense is now provided for !important.
-        </p>
-
-        <img src="/images/css/important.png" alt="!important" width="374" height="90" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Modernizr</h3>
-
-        <p>
-            Modernizr class names will now be bolded in the CSS editor, but more importantly,
-            they will also be respected by the automatic hierarchical indentation feature of VS2012.
-        </p>
-
-        <img src="/images/css/modernizr.png" alt="Modernizr" width="232" height="117" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Add region</h3>
-
-        <p>
-            Regions are supported in the VS2012 CSS editor, but now it's even easier to add them.
-        </p>
-
-        <img src="/images/css/add-region.png" alt="Add region" width="139" height="112" />
-
-        <p>
-            Choosing Add region... result in this snippet being inserted.
-        </p>
-
-        <img src="/images/css/add-region-complete.png" alt="Add region result" width="173" height="118" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Custom fonts</h3>
-
-        <img src="/images/css/font-face.png" alt="Font face embedding" width="370" height="245" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>iOS scrollbars</h3>
-
-        <p>
-            VS2012 supports the different pseudo elements for customizing the iOS scrollbars.
-            It can, however, be a little difficult to work with unless you know how to chain the
-            pseudos correctly. That's no longer a problem.
-        </p>
-
-        <img src="/images/css/webkit-scrollbar.png" alt="Webkit scrollbar" width="422" height="205" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Animation names</h3>
-        <img src="/images/css/animation-name.png" alt="Animation name Intellisense" width="364" height="358" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Inline URL picker</h3>
-
-        <p>
-            Just start typing and the file system shows up in Intellisense.
-        </p>
-
-        <img src="/images/css/url-picker.png" alt="Url picker Intellisense" width="435" height="203" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>CSS gradients</h3>
-
-        <p>
-            Gradients are really difficult to write, so now examples are automatically inserted for
-            all the different types of gradients, including the various vendor specific ones.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Hide unsupported properties</h3>
-
-        <p>
-            Some of the CSS properties, such as the CSS 3 FlexBox Module are not supported by any
-            browser yet. Now you can turn all unsupported properties and pseudos off.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Hide inherit/initial</h3>
-
-        <p>
-            Sometimes it can feel like these two properties are too noisy in Intellisense.
-            Though they are completely valid, you might just want to hide them.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Custom color palettes</h3>
-
-        <p>Coming soon...</p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Media Query expressions</h3>
-        <p>Get Intellisense for everything in a Media Query.</p>
-
-        <img src="/Images/css/mediatype.png" alt="Media Type" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Media Query snippets</h3>
-        <p>Snippets for making Media Queries easier to work with.</p>
-
-        <img src="/Images/css/mediasnippets.png" alt="Media Query Snippets" />
-    </article>
-</section>
-@*Document-wide remove duplicate properties*@
-<section>
-    <header>
-        <h2>Visual cues</h2>
+    <header class="section-header">
+        <h2><span>Visual cues</span></h2>
     </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Browser matrix tooltip</h3><div class="panel-body">
+                    <img src="/images/css/hover.png" alt="Browser matrix tooltip" width="415" height="206" />
+                </div>
+            </article>
 
-    <article data-version="WE2012, WE2013">
-        <h3>Browser matrix tooltip</h3>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Color swatches</h3><div class="panel-body">
+                    <p>
+                        All color types are supported, including the new CSS 3 formats.
+                    </p>
+                    <img src="/images/css/colors.png" alt="Color swatches" width="354" height="128" />
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Selector specificity tooltip</h3><div class="panel-body">
+                    <p>
+                        In case you've been wondering why certain styles are never applied in the browser, you can now see the specificity for each individual selector by hovering the mouse over them.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Font and image preview</h3><div class="panel-body">
+                    <img src="/images/css/font-preview.png" alt="Font preview" width="340" height="195" />
+                    <img src="/images/css/image-preview.png" alt="Image preview" width="372" height="102" />
+                </div>
+            </article>
+        </div>
+    </div>
+    <!-- / -->
 
-        <img src="/images/css/hover.png" alt="Browser matrix tooltip" width="415" height="206" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Selector specificity tooltip</h3>
-
-        <p>
-            In case you've been wondering why certain styles are never applied in the browser, you can now see the specificity for each individual selector by hovering the mouse over them.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Color swatches</h3>
-
-        <p>
-            All color types are supported, including the new CSS 3 formats.
-        </p>
-
-        <img src="/images/css/colors.png" alt="Color swatches" width="354" height="128" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Font and image preview</h3>
-
-        <img src="/images/css/font-preview.png" alt="Font preview" width="340" height="195" />
-        <img src="/images/css/image-preview.png" alt="Image preview" width="372" height="102" />
-    </article>
-</section>
-
-<section>
-    <header>
-        <h2>Validation</h2>
+    <header class="section-header">
+        <h2><span>Validation</span></h2>
     </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Browser selector</h3><div class="panel-body">
+                    <p>
+                        Control how validation and Intellisense behaves, based on the browsers you want to support.
+                    </p>
+                    <img src="/images/css/browser-selector.png" alt="Browser selector" width="437" height="154" />
+                    <p>
+                        Just right-click a CSS document and click "Select browsers...".
+                        Note: The CSS document must be part of the open solution.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Best practices & Browser compatibility</h3><div class="panel-body">
+                    <img src="/images/css/message-window.png" alt="Message window" width="448" height="155" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Helpful error messages</h3><div class="panel-body">
+                    <p>
+                        Some errors are very common to make. Web Essentials will now check for those errors
+                        and provide more precise and helpful error messages to help you fix them.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Removes warnings for \9</h3><div class="panel-body">
+                    <p>
+                        The \9 hack isn't supported by the CSS editor and will produce error messages.
+                        Web Essentials removes the errors.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Color values</h3><div class="panel-body">
+                    <p>Color functions such as rgb(1, 2, 3) is validated to make sure the parameters are withing the allowed ranges.</p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Display inline</h3><div class="panel-body">
+                    <p>Using diplay:inline nulls other properties such as with, height and padding-left. Web Essentials checks for this so you can remove redundant code.</p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Duplicate properties</h3><div class="panel-body">
+                    <p>Dublicate properties are common, but should be avoided unless they are used for browser compatibility reasons. If not, Web Essentials will check for them.</p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Duplicate selectors</h3><div class="panel-body">
+                    <p>Selectors should never be duplicated in the same stylesheet</p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Pseudo class/element ordering</h3><div class="panel-body">
+                    <p>
+                        Psuedo classes goes before pseudo elements. It is, however, very difficult to figure out
+                        what pseudos are classes and what are elements. Web Essentials makes sure your psuedos are
+                        correctly sorted.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Unknown vendor specifics</h3><div class="panel-body">
+                    <p>
+                        Since it's very difficult to validate and verify all vendor specific properties,
+                        it becomes easy to make mistakes. The validator will automatically call out any
+                        unknown or deprecated vendor specifics.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">IE10 prefixes</h3><div class="panel-body">
+                    <p>
+                        The IE10 Public Preview introduced new prefixed properties such as -ms-animation.
+                        The final version of IE10 did implement the unprefixed versions of those properties,
+                        rendering the use for the prefixed versions obsolete.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Missing vendor specifics</h3><div class="panel-body">
+                    <p>Forgot any vendor specific properties? Don't worry, Web Essentials will let you know.</p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Vendor specific ordering</h3><div class="panel-body">
+                    <p>Make sure to specify the prefixed properties before the unprefixed standard property.</p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Unknown HTML tag in selectors</h3><div class="panel-body">
+                    <p>
+                        It's easy to make a spelling error for an HTML element without noticing.
+                        This is now checked for using both old and new HTML 5 tag names.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Disallow universal selector</h3><div class="panel-body">
+                    <p>
+                        Optional. The universal selector (*) is expensive for browsers to apply.
+                        Now you can make sure that it is validated.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Over-qualified selectors</h3><div class="panel-body">
+                    <p>Optional. Some selectors are over qualified and slows down browser rendering.</p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Zero-length units</h3><div class="panel-body">
+                    <p>Optional. Don't like 0px and 0em? Flag them to make sure your team member removes the unit type.</p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012">
+                <h3 class="panel-heading">Media Query syntax</h3><div class="panel-body">
+                    <p>Additional validation on logical Media Query separators.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+    <!-- / -->
 
-    <article data-version="WE2012, WE2013">
-        <h3>Browser selector</h3>
-
-        <p>
-            Control how validation and Intellisense behaves, based on the browsers you want to support.
-        </p>
-
-        <img src="/images/css/browser-selector.png" alt="Browser selector" width="437" height="154" />
-
-        <p>
-            Just right-click a CSS document and click "Select browsers...".
-            Note: The CSS document must be part of the open solution.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Best practices & Browser compatibility</h3>
-
-        <img src="/images/css/message-window.png" alt="Message window" width="448" height="155" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Helpful error messages</h3>
-
-        <p>
-            Some errors are very common to make. Web Essentials will now check for those errors
-            and provide more precise and helpful error messages to help you fix them.
-        </p>
-    </article>
-
-    <article data-version="WE2012, VS2013">
-        <h3>Removes warnings for \9</h3>
-
-        <p>
-            The \9 hack isn't supported by the CSS editor and will produce error messages.
-            Web Essentials removes the errors.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Color values</h3>
-
-        <p>Color functions such as rgb(1, 2, 3) is validated to make sure the parameters are withing the allowed ranges.</p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Display inline</h3>
-
-        <p>Using diplay:inline nulls other properties such as with, height and padding-left. Web Essentials checks for this so you can remove redundant code.</p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Duplicate properties</h3>
-
-        <p>Dublicate properties are common, but should be avoided unless they are used for browser compatibility reasons. If not, Web Essentials will check for them.</p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Duplicate selectors</h3>
-
-        <p>Selectors should never be duplicated in the same stylesheet</p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Pseudo class/element ordering</h3>
-
-        <p>
-            Psuedo classes goes before pseudo elements. It is, however, very difficult to figure out
-            what pseudos are classes and what are elements. Web Essentials makes sure your psuedos are
-            correctly sorted.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Unknown vendor specifics</h3>
-
-        <p>
-            Since it's very difficult to validate and verify all vendor specific properties,
-            it becomes easy to make mistakes. The validator will automatically call out any
-            unknown or deprecated vendor specifics.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>IE10 prefixes</h3>
-
-        <p>
-            The IE10 Public Preview introduced new prefixed properties such as -ms-animation.
-            The final version of IE10 did implement the unprefixed versions of those properties,
-            rendering the use for the prefixed versions obsolete.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Missing vendor specifics</h3>
-
-        <p>Forgot any vendor specific properties? Don't worry, Web Essentials will let you know.</p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Vendor specific ordering</h3>
-
-        <p>Make sure to specify the prefixed properties before the unprefixed standard property.</p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Unknown HTML tag in selectors</h3>
-
-        <p>
-            It's easy to make a spelling error for an HTML element without noticing.
-            This is now checked for using both old and new HTML 5 tag names.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Disallow universal selector</h3>
-
-        <p>
-            Optional. The universal selector (*) is expensive for browsers to apply.
-            Now you can make sure that it is validated.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Over-qualified selectors</h3>
-
-        <p>Optional. Some selectors are over qualified and slows down browser rendering.</p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Zero-length units</h3>
-
-        <p>Optional. Don't like 0px and 0em? Flag them to make sure your team member removes the unit type.</p>
-    </article>
-
-    <article data-version="WE2012">
-        <h3>Media Query syntax</h3>
-
-        <p>Additional validation on logical Media Query separators.</p>
-    </article>
-</section>
-
-<section>
-    <header>
-        <h2>Web standards</h2>
+    <header class="section-header">
+        <h2><span>Web standards</span></h2>
     </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Auto-update standards</h3><div class="panel-body">
+                    <p>
+                        Web Essentials checks for updates to the schema files that drives both validation and Intellinsense.
+                        If an update exist, it is being downloaded in the background and immediately applied.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">CSS Variables module</h3><div class="panel-body">
+                    <p>
+                        Get Intellisense and colorization of the new CSS Variable syntaxes.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Vendor specific updates</h3><div class="panel-body">
+                    <p>
+                        When new browsers are released, they often introduce new vendor specific properties.
+                        Web Essentials automatically updates the schema files with new browser specific capabilities.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+    <!-- / -->
 
-    <article data-version="WE2012, WE2013">
-        <h3>Auto-update standards</h3>
-
-        <p>
-            Web Essentials checks for updates to the schema files that drives both validation and Intellinsense.
-            If an update exist, it is being downloaded in the background and immediately applied.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Vendor specific updates</h3>
-
-        <p>
-            When new browsers are released, they often introduce new vendor specific properties.
-            Web Essentials automatically updates the schema files with new browser specific capabilities.
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>CSS Variables module</h3>
-
-        <p>
-            Get Intellisense and colorization of the new CSS Variable syntaxes.
-        </p>
-    </article>
-</section>
-
-<section>
-    <header>
-        <h2>Converters</h2>
+    <header class="section-header">
+        <h2><span>Converters</span></h2>
     </header>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Darken/lighten colors</h3>
-
-        <p>
-            Place the cursor in a hex color value and hit SHIFT+CTRL+ARROW UP/DOWN to darken or lighten the color.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Convert color formats</h3>
-
-        <p>
-            Use Smart Tags to easily convert colors between the different formats
-        </p>
-
-        <img src="/images/css/convert-color.png" alt="Color converter" width="211" height="98" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Sort properties</h3>
-
-        <p>
-            A Smart Tag on every selector enables you to easily sort all the properties within the rule.
-        </p>
-
-        <img src="/images/css/sort-properties.png" alt="Sort properties" width="249" height="155" />
-
-        <p>CSS sorting is open source. Find the <a href="https://github.com/madskristensen/CssSorter">code on GitHub</a></p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>DataURIs and background images</h3>
-
-        <p>
-            This will take the referenced image and base64 encode it directly into your stylesheet. You have then eliminated an HTTP requst.
-        </p>
-
-        <img src="/images/css/base64.png" alt="base64 encode DataURI" width="240" height="77" />
-
-        <p>
-            If the base64 string becomes to long, you can easily collapse it.
-        </p>
-
-        <img src="/images/css/base64-complete.png" alt="Base64 encoding complete" width="395" height="27" />
-
-        <p>
-            Remember to optimize your image files before embeding them. Use the
-            <a href="http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3">Image Optimizer extension</a>
-            to make it effortless.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Minification</h3>
-
-        <p>
-            You can minify CSS directly in the editor. Just select a valid range of CSS and right-click the selection.
-            Now click the option "Minify selection".
-        </p>
-
-        <p>
-            You can also minify and bundle entire CSS files.
-            That is described in the <a href="/features/general">General</a> section.
-        </p>
-    </article>
-</section>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Darken/lighten colors</h3><div class="panel-body">
+                    <p>
+                        Place the cursor in a hex color value and hit SHIFT+CTRL+ARROW UP/DOWN to darken or lighten the color.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Convert color formats</h3><div class="panel-body">
+                    <p>
+                        Use Smart Tags to easily convert colors between the different formats
+                    </p>
+                    <img src="/images/css/convert-color.png" alt="Color converter" width="211" height="98" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Sort properties</h3><div class="panel-body">
+                    <p>
+                        A Smart Tag on every selector enables you to easily sort all the properties within the rule.
+                    </p>
+                    <img src="/images/css/sort-properties.png" alt="Sort properties" width="249" height="155" />
+                    <p>CSS sorting is open source. Find the <a href="https://github.com/madskristensen/CssSorter">code on GitHub</a></p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">DataURIs and background images</h3><div class="panel-body">
+                    <p>
+                        This will take the referenced image and base64 encode it directly into your stylesheet. You have then eliminated an HTTP requst.
+                    </p>
+                    <img src="/images/css/base64.png" alt="base64 encode DataURI" width="240" height="77" />
+                    <p>
+                        If the base64 string becomes to long, you can easily collapse it.
+                    </p>
+                    <img src="/images/css/base64-complete.png" alt="Base64 encoding complete" width="395" height="27" />
+                    <p>
+                        Remember to optimize your image files before embeding them. Use the
+                        <a href="http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3">Image Optimizer extension</a>
+                        to make it effortless.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Minification</h3><div class="panel-body">
+                    <p>
+                        You can minify CSS directly in the editor. Just select a valid range of CSS and right-click the selection.
+                        Now click the option "Minify selection".
+                    </p>
+                    <p>
+                        You can also minify and bundle entire CSS files.
+                        That is described in the <a href="/features/general">General</a> section.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+    <!-- / -->
+</div>

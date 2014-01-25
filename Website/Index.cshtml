@@ -2,56 +2,66 @@
     Page.Title = "Web Essentials 2013 RTM now available - A Visual Studio extension";
     Page.Keywords = "vsix, plugin, extension";
     Page.Description = "Web Essentials is a free extension for Visual Studio. Download it here!";
-    Layout = "~/Views/_Layout.cshtml";
+    Layout = "~/Views/_HomeLayout.cshtml";
 }
 
-<section id="index">
-    <img src="/images/css/hover.png" alt="Web Essentials features" width="415" height="206" />
+<div class="features-list ">
+    <div class="container">
+        <ul class="row-features clearfix list-unstyled">
+            <li class="item-feature item-feature-01"><a href="/features/general"><span></span><h4>General</h4><p>General features of Web Essentials. A bunch of features are not specific to a specific language or editor.</p></a></li>
+            <li class="item-feature item-feature-02"><a href="/features/browserlink"><span></span><h4>Browser Link</h4><p>Web Essentials ships with a range of Browser Link features that are all available from a menu that is injected onto your website when Browser Link is running.</p></a></li>
+            <li class="item-feature item-feature-03"><a href="/features/stylesheets"><span></span><h4>Stylesheets</h4><p>Stylesheets are difficult to work with for many developers. With Web Essentials it has never been easier.</p></a></li>
+            <li class="item-feature item-feature-04"><a href="/features/javascript"><span></span><h4>JavaScript</h4><p>Improve productivity and code quality for any JavaScript developer.</p></a></li>
+            <li class="item-feature item-feature-05"><a href="/features/html"><span></span><h4>HTML</h4><p>Lots of useful shortcuts and productivity features that makes it fun to work with HTML.</p></a></li>
+            <li class="item-feature item-feature-06"><a href="/features/typescript"><span></span><h4>TypeScript</h4><p>Provides additional features to the TypeScript editing experience. Writing TypeScript has never been easier using Web Essentials.</p></a></li>
+            <li class="item-feature item-feature-07"><a href="/features/less"><span></span><h4>LESS</h4><p>Builds upon Visual Studio’s amazing LESS editor and provides compilation and other useful tools.</p></a></li>
+            <li class="item-feature item-feature-08"><a href="/features/coffeescript"><span></span><h4>CoffeeScript</h4><p>Prefer Iced CoffeScript? No problem. Web Essentials handles both flavors equally well.</p></a></li>
+            <li class="item-feature item-feature-09"><a href="/features/markdown"><span></span><h4>Markdown</h4><p>Full immersive Markdown editing experience with previews, file generation and more.</p></a></li>
+            <li class="item-feature item-feature-10"><a href="/features/custom-editors"><span></span><h4>Custom editors</h4><p>Who would have thought to add Intellisense and syntax highlighting for robots.txt files? Yep, we did.</p></a></li>
+        </ul>
+    </div>
+</div>
 
-    <p>
-        Web Essentials extends Visual Studio  with a lot of new features that web developers
-        have been missing for many years.
-    </p>
-    <p>
-        If you ever write CSS, HTML, JavaScript, TypeScript, CoffeeScript or LESS, then you will find
-        many useful features that make your life as a developer easier.
-    </p>
-    <p>
-        This is for <strong>all Web developers</strong> using Visual Studio.
-    </p>
-    <p>
-        <a itemprop="downloadUrl" href="/download">Download now</a>
-    </p>
-</section>
-
-<section>
-    <h2 class="big">What people are saying...</h2>
-
-    <article itemprop="reviews" itemscope itemtype="http://schema.org/Review">
-        <blockquote itemprop="reviewBody">ZenCoding with #WebEssentials is a sweet productivity enhancement! CSS as a template language for expansion is awesome!</blockquote>
-        <cite itemscope itemtype="http://schema.org/Person" itemprop="author">
-            <a href="http://www.west-wind.com/weblog/" itemprop="name url">Rick Strahl</a>
-        </cite>
-    </article>
-
-    <article itemprop="reviews" itemscope itemtype="http://schema.org/Review">
-        <blockquote itemprop="reviewBody">If you're a web developer using VS2012 and haven't installed Web Essentials, you're doing it wrong. Fav new feature: Zen Coding support!</blockquote>
-        <cite itemscope itemtype="http://schema.org/Person" itemprop="author">
-            <a href="http://bradwilson.typepad.com/" itemprop="name url">Brad Wilson</a>
-        </cite>
-    </article>
-
-    <article itemprop="reviews" itemscope itemtype="http://schema.org/Review">
-        <blockquote itemprop="reviewBody">Absolutely essential plug in! Web Essentials is a huge productivity enhancer helping me write CSS, HTML and JS faster and with less mistakes.</blockquote>
-        <cite itemscope itemtype="http://schema.org/Person" itemprop="author">
-            <a href="http://www.johnpapa.net/" itemprop="name url">John Papa</a>
-        </cite>
-    </article>
-
-    <article itemprop="reviews" itemscope itemtype="http://schema.org/Review">
-        <blockquote itemprop="reviewBody">Web Essentials is just that - essential. It's the Web Team's most important feature playground. It's a peek into the future of Visual Studio.</blockquote>
-        <cite itemscope itemtype="http://schema.org/Person" itemprop="author">
-            <a href="http://www.hanselman.com/blog/" itemprop="name url">Scott Hanselman</a>
-        </cite>
-    </article>
-</section>
+<div class="reviews-list">
+    <div class="container">
+        <h4><span>What people are saying...</span></h4>
+        <div class="reviews-content">
+            <div class="row">
+                <div class="col-sm-6">
+                    <article class="blockquote-item blockquote-rickstrahl" itemprop="reviews" itemscope itemtype="http://schema.org/Review">
+                        <cite itemscope itemtype="http://schema.org/Person" itemprop="author">
+                            <a href="http://www.west-wind.com/weblog/" target="_blank" rel="nofollow external" itemprop="name url">Rick Strahl</a>
+                        </cite>
+                        <blockquote itemprop="reviewBody">ZenCoding with #WebEssentials is a sweet productivity enhancement! CSS as a template language for expansion is awesome!</blockquote>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <article class="blockquote-item blockquote-bradwilson" itemprop="reviews" itemscope itemtype="http://schema.org/Review">
+                        <cite itemscope itemtype="http://schema.org/Person" itemprop="author">
+                            <a href="http://bradwilson.typepad.com/" target="_blank" rel="nofollow external" itemprop="name url">Brad Wilson</a>
+                        </cite>
+                        <blockquote itemprop="reviewBody">If you're a web developer using VS2012 and haven't installed Web Essentials, you're doing it wrong. Fav new feature: Zen Coding support!</blockquote>
+                    </article>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <article class="blockquote-item blockquote-jhonpapa" itemprop="reviews" itemscope itemtype="http://schema.org/Review">
+                        <cite itemscope itemtype="http://schema.org/Person" itemprop="author">
+                            <a href="http://www.johnpapa.net/" target="_blank" rel="nofollow external" itemprop="name url">John Papa</a>
+                        </cite>
+                        <blockquote itemprop="reviewBody">Absolutely essential plug in! Web Essentials is a huge productivity enhancer helping me write CSS, HTML and JS faster and with less mistakes.</blockquote>
+                    </article>
+                </div>
+                <div class="col-sm-6">
+                    <article class="blockquote-item blockquote-scotthanselman" itemprop="reviews" itemscope itemtype="http://schema.org/Review">
+                        <cite itemscope itemtype="http://schema.org/Person" itemprop="author">
+                            <a href="http://www.hanselman.com/blog/" target="_blank" rel="nofollow external" itemprop="name url">Scott Hanselman</a>
+                        </cite>
+                        <blockquote itemprop="reviewBody">Web Essentials is just that - essential. It's the Web Team's most important feature playground. It's a peek into the future of Visual Studio.</blockquote>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

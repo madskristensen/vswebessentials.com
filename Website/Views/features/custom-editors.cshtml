@@ -1,80 +1,95 @@
 ﻿@{
     Page.Title = "Custom editors";
+    Page.Description = "Web Essentials ships with a few extra editors.";
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<p>
-    Web Essentials ships with a few extra editors.
-</p>
-
-<section>
-    <header>
-        <h2>Robots.txt</h2>
-    </header>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Syntax highlighting</h3>
-
-        <p>Full colorization for comments and keywords in robots.txt.</p>
-        <img src="/Images/custom-editors/robotstxt-colorizer.png" alt="robots.txt colorizer" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Comment/uncomment</h3>
-
+<div class="features-page">
+    <div class="alert alert-info">
         <p>
-            Two very useful commands is <mark>comment</mark> and <mark>uncomment</mark>.
-            They are fully supported for WebVTT.
+            Web Essentials ships with a few extra editors.
         </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Intellisense</h3>
-
-        <p>Intellisense is also provided to make it easy to remember those different keywords.</p>
-        <img src="/Images/custom-editors/robotstxt-intellisense.png" alt="robots.txt Intellisense" />
-    </article>
-</section>
-
-<section>
-    <header>
-        <h2>HTML5 App Cache (.appcache)</h2>
+    </div>
+    <header class="section-header">
+        <h2><span>Robots.txt</span></h2>
     </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Syntax highlighting</h3><div class="panel-body">
+                    <p>Full colorization for comments and keywords in robots.txt.</p>
+                    <img src="/Images/custom-editors/robotstxt-colorizer.png" alt="robots.txt colorizer" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Comment/uncomment</h3><div class="panel-body">
+                    <p>
+                        Two very useful commands is <mark>comment</mark> and <mark>uncomment</mark>.
+                        They are fully supported for WebVTT.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Intellisense</h3><div class="panel-body">
+                    <p>Intellisense is also provided to make it easy to remember those different keywords.</p>
+                    <img src="/Images/custom-editors/robotstxt-intellisense.png" alt="robots.txt Intellisense" />
+                </div>
+            </article>
+        </div>
+    </div>
+    <!-- / -->
 
-    <article data-version="WE2012, WE2013">
-        <h3>Syntax highlighting</h3>
+    <header class="section-header">
+        <h2><span>HTML5 App Cache (.appcache)</span></h2>
+    </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Syntax highlighting</h3><div class="panel-body">
+                    <p>Full colorization for timestamps, custom markup and comments for .appcache files.</p>
+                    <img src="/Images/custom-editors/appcache-colorizer.png" alt="App Cache colorizer" />
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">File icon</h3><div class="panel-body">
+                    <p>A nice icon is used for .appcache files in Solution Explorer.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+    <!-- / -->
 
-        <p>Full colorization for timestamps, custom markup and comments for .appcache files.</p>
-        <img src="/Images/custom-editors/appcache-colorizer.png" alt="App Cache colorizer" />
-    </article>
-
-    <article data-version="WE2013">
-        <h3>File icon</h3>
-        <p>A nice icon is used for .appcache files in Solution Explorer.</p>
-    </article>
-</section>
-
-<section>
-    <header><h2>WebVTT - HTML5 subtitles</h2></header>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Syntax highlighting</h3>
-
-        <p>Full colorization for timestamps, custom markup and comments for .vtt files.</p>
-        <img src="/Images/custom-editors/webvtt-colorizer.png" alt="WebVTT colorizer" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Comment/uncomment</h3>
-
-        <p>
-            Two very useful commands is <mark>comment</mark> and <mark>uncomment</mark>.
-            They are fully supported for WebVTT.
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>File icon</h3>
-        <p>A nice icon is used for <mark>.iced</mark> files in Solution Explorer.</p>
-    </article>
-</section>
+    <header class="section-header">
+        <h2><span>WebVTT - HTML5 subtitles</span></h2>
+    </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Syntax highlighting</h3><div class="panel-body">
+                    <p>Full colorization for timestamps, custom markup and comments for .vtt files.</p>
+                    <img src="/Images/custom-editors/webvtt-colorizer.png" alt="WebVTT colorizer" />
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Comment/uncomment</h3><div class="panel-body">
+                    <p>
+                        Two very useful commands is <mark>comment</mark> and <mark>uncomment</mark>.
+                        They are fully supported for WebVTT.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">File icon</h3><div class="panel-body">
+                    <p>A nice icon is used for <mark>.iced</mark> files in Solution Explorer.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+    <!-- / -->
+</div>

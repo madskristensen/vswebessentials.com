@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle minify="true" runOnBuild="true">
+
+  <!-- Public CSS -->
+  <file>/content/css/bootstrap.min.css</file>
+  <file>/content/css/font-awesome.min.css</file>
+  <file>/content/css/public.css</file>
+
+  <!-- Home CSS -->
+  <file>/content/css/home.css</file>
+
+</bundle>

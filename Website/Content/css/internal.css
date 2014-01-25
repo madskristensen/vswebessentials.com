@@ -1,0 +1,136 @@
+﻿#wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -100px;
+    padding: 0 0 100px;
+}
+
+.footer {
+    margin-top: 40px;
+}
+
+.navbar > .container .navbar-brand {
+    color: #e54d26;
+}
+
+/*[internal-header]*/
+.jumbotron-internal {
+    padding-bottom: 50px;
+    padding-top: 38px;
+}
+
+.jumbotron-internal h1 {
+    font-size: 38px;
+    color: #fff;
+    margin-bottom: 10px;
+    -webkit-text-shadow: 0 1px 1px #000;
+    text-shadow: 0 1px 1px #000;
+}
+
+.jumbotron-internal h2 {
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    line-height: 22px;
+}
+
+/*[section-header]*/
+.section-header {
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.section-header h2 {
+    font-size: 28px;
+    margin: 0;
+    color: #e54d26;
+}
+
+.section-header h2 span {
+    display: inline-block;
+    border-bottom: 1px solid #e54d26;
+    position: relative;
+    top: 1px;
+}
+
+/*[download-page]*/
+.download-page {
+    margin-top: 30px;
+}
+
+.download-page .panel-download h3 {
+    font-size: 20px;
+}
+
+.download-page .panel-download .logo-vs {
+    min-height: 150px;
+    padding: 40px 0;
+}
+
+.download-page .panel-download .description-vs {
+    margin-bottom: 45px;
+    min-height: 60px;
+}
+
+/*[changelog-page]*/
+.changelog-page .panel-heading {
+    position: relative;
+    padding: 0;
+}
+
+.changelog-page .panel-heading:hover {
+    background-color: #fff;
+}
+
+.changelog-page .panel-heading a[data-toggle="collapse"] {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none !important;
+    outline: none;
+}
+
+.changelog-page .btn-nightly-download {
+    position: absolute;
+    right: 7px;
+    font-size: 12px;
+    top: 7px;
+    color: #fff !important;
+    padding: 2px 5px;
+}
+
+/*[features-page]*/
+.features-page .panel {
+    position: relative;
+}
+
+.features-page .panel .panel-heading {
+    font-size: 18px;
+}
+
+.features-page article[data-version]:after {
+    content: "Supported in: " attr(data-version);
+    display: block;
+    border-radius: 3px;
+    line-height: 20px;
+    font-size: 10px;
+    color: #bbb;
+    position: absolute;
+    right: 8px;
+    top: 11px;
+    padding: 0 3px;
+    text-transform: uppercase;
+}
+
+/*[responsive internal]*/
+@media screen and (max-width:640px) {
+    .jumbotron-internal {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .features-page article[data-version]:after {
+        display: none;
+    }
+}

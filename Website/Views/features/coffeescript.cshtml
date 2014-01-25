@@ -5,96 +5,96 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 
-<p>
-    CoffeeScript is a little language that compiles into JavaScript. 
-    Underneath all those awkward braces and semicolons, JavaScript has always had a gorgeous object model at its heart. 
-    CoffeeScript is an attempt to expose the good parts of JavaScript in a simple way. 
-</p>
-
-<section>
-    <h2>Features</h2>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Preview window</h3>
-
+<div class="features-page">
+    <div class="alert alert-info">
         <p>
-            When a CoffeeScirpt file (.coffee) is saved in Visual Studio, Web Essentials will compile it automatically and generate a preview.
+            CoffeeScript is a little language that compiles into JavaScript.
+            Underneath all those awkward braces and semicolons, JavaScript has always had a gorgeous object model at its heart.
+            CoffeeScript is an attempt to expose the good parts of JavaScript in a simple way.
         </p>
-
-        <img src="/images/coffee/preview.png" alt="CoffeeScript preview" width="460" height="322" />
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Compiler settings</h3>
-
-        <p>
-            You can set all the compiler settings from Tools -> Options
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Iced CoffeeScript compiler</h3>
-
-        <p>
-            You can also use the Iced CoffeeScript compiler for added features.
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>.iced file support</h3>
-
-        <p>
-            To run Iced CoffeeScript, simple use the <mark>.iced</mark> file extension
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>NodeJS compilation</h3>
-        <p>
-            Web Essentials uses NodeJS to run the compiler. It's the fastest and most accurate
-            compiler for CoffeScript and Iced CoffeeScript available.
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>Source Maps</h3>
-        <p>
-            Source Map generation is fully supported and will produce .map files.
-            This feature can be enabled in the Options dialog.
-        </p>
-    </article>
-
-    <article data-version="WE2013">
-        <h3>Compile to custom folder</h3>
-        <p>
-            If you want the compiled output in a separate folder, then you can specify which
-            one in the Options dialog.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Minification</h3>
-
-        <p>
-            When a CoffeeScript file is compiled, it can now also be minified to produce a much smaller JavaScript file.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Comment/uncomment</h3>
-
-        <p>
-            Two very useful commands is <mark>comment</mark> and <mark>uncomment</mark>. 
-            They are fully supported for CoffeeScript.
-        </p>
-    </article>
-
-    <article data-version="WE2012, WE2013">
-        <h3>Smart Indent</h3>
-
-        <p>
-            Indentation is handled on <mark>ENTER</mark> so you don't have to hit TAB so many times.
-        </p>
-    </article>
-</section>
-
+    </div>
+    <header class="section-header">
+        <h2><span>Features</span></h2>
+    </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Preview window</h3><div class="panel-body">
+                    <p>
+                        When a CoffeeScirpt file (.coffee) is saved in Visual Studio, Web Essentials will compile it automatically and generate a preview.
+                    </p>
+                    <img src="/images/coffee/preview.png" alt="CoffeeScript preview" width="460" height="322" />
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Compiler settings</h3><div class="panel-body">
+                    <p>
+                        You can set all the compiler settings from Tools -> Options
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Iced CoffeeScript compiler</h3><div class="panel-body">
+                    <p>
+                        You can also use the Iced CoffeeScript compiler for added features.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">.iced file support</h3><div class="panel-body">
+                    <p>
+                        To run Iced CoffeeScript, simple use the <mark>.iced</mark> file extension
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">NodeJS compilation</h3><div class="panel-body">
+                    <p>
+                        Web Essentials uses NodeJS to run the compiler. It's the fastest and most accurate
+                        compiler for CoffeScript and Iced CoffeeScript available.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Source Maps</h3><div class="panel-body">
+                    <p>
+                        Source Map generation is fully supported and will produce .map files.
+                        This feature can be enabled in the Options dialog.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2013">
+                <h3 class="panel-heading">Compile to custom folder</h3><div class="panel-body">
+                    <p>
+                        If you want the compiled output in a separate folder, then you can specify which
+                        one in the Options dialog.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Minification</h3><div class="panel-body">
+                    <p>
+                        When a CoffeeScript file is compiled, it can now also be minified to produce a much smaller JavaScript file.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Comment/uncomment</h3><div class="panel-body">
+                    <p>
+                        Two very useful commands is <mark>comment</mark> and <mark>uncomment</mark>.
+                        They are fully supported for CoffeeScript.
+                    </p>
+                </div>
+            </article>
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Smart Indent</h3><div class="panel-body">
+                    <p>
+                        Indentation is handled on <mark>ENTER</mark> so you don't have to hit TAB so many times.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
