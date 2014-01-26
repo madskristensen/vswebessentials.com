@@ -4,6 +4,17 @@
     Version: 1.0
 */
 
+@media only screen and (max-width : 1280px) {
+    @-ms-viewport {
+        width: 1200px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    @-ms-viewport {
+        width: 768px;
+    }
+}
 
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
