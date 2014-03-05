@@ -1,0 +1,27 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="5fb7364d-2e8c-44a4-95eb-2a382e30fec8" Version="1.9.4" Language="en-US" Publisher="Mads Kristensen" />
+    <DisplayName>Web Essentials 2013</DisplayName>
+    <Description xml:space="preserve">Adds many useful features to Visual Studio for web developers.</Description>
+    <MoreInfo>http://vswebessentials.com/</MoreInfo>
+    <License>License.txt</License>
+    <GettingStartedGuide>http://vswebessentials.com/changelog</GettingStartedGuide>
+    <ReleaseNotes>http://vswebessentials.com/changelog</ReleaseNotes>
+    <Icon>Resources/Images/WebEssentials2012logo.png</Icon>
+    <PreviewImage>Resources/Images/preview.png</PreviewImage>
+    <Tags>css, javascript, html, less, coffeescript, json</Tags>
+  </Metadata>
+  <Installation InstalledByMsi="false">
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="4.5" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.12.0" DisplayName="Visual Studio MPF 12.0" Version="[12.0,13.0)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="WebEssentials2013.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="registry.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="WebEssentials2013.dll" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="CSS\Snippets\snippets.pkgdef" />
+  </Assets>
+</PackageManifest>
