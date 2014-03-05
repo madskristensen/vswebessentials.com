@@ -5,7 +5,7 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 <div class="download-page">
-    <div class="row">
+    <section class="row">
         <div class="col-md-4">
             <div class="panel panel-default text-center panel-download">
                 <h3 class="panel-heading">Web Essentials 2013</h3>
@@ -42,5 +42,55 @@
                 </div>
             </div>
         </div>
-    </div>
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <h3 class="panel-heading">Nightly builds</h3>
+                <div class="panel-body">
+                    <p class="description-vs">
+                        You can now get the latest nightly builds of Web Essentials 2013 automatically delivered
+                        in Visual Studio. These builds aren't actual nightly builds, but will be updated several times a week.
+                    </p>
+
+                    <p>
+                        This is recommended if you need specific bug fixes and can't wait till the next official release.
+                    </p>
+
+                    <p>
+                        The purpose of the nightly builds is to make sure that you always have the latest and greatest,
+                        as well as help the Web Essentials team to find bugs earlier, so they can be fixed before
+                        the next official release is published.
+                    </p>
+
+                    <p>
+                        You will still be notified by Visual Studio to update to the official builds. The nightly builds
+                        simply gives you more updates between the official releases.
+                    </p>
+
+                    <br />
+                    <h4>Setup</h4>
+                    <p>
+                        In Visual Studio go to <strong>Tools -> Options -> Environment -> Extensions and Updates</strong>.
+                    </p>
+
+                    <br />
+                    <img src="/images/nightly2013.png" alt="" />
+                    <br />
+
+                    <p>Click the <strong>Add</strong> button and fill in the name and URL fields</p>
+
+                    <p><strong>Name: </strong>Web Essentiasl 2013</p>
+                    <p><strong>URL: </strong><a href="http://vswebessentials.com/nightly/2013">http://vswebessentials.com/nightly/2013</a></p>
+
+                    <p>
+                        That's it. You have now added the nightly feed to Visual Studio and updates will start
+                        to show up in <strong>Tools -> Extensions and Updates</strong> dialog
+                    </p>
+
+                    <br />
+                    <img src="Images/ExtensionsAndUpdates.png" alt="Extensions and Updates" />
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
