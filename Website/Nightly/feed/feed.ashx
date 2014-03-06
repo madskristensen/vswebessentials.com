@@ -18,7 +18,7 @@ public class feed : IHttpHandler
         xnm.AddNamespace("t", "http://schemas.microsoft.com/developer/vsx-schema/2011");
         xnm.AddNamespace("d", "http://schemas.microsoft.com/developer/vsx-schema-design/2011");
 
-        var idNode = doc.XPathSelectElement("//t:Identitya", xnm);
+        var idNode = doc.XPathSelectElement("//t:Identity", xnm);
 
         if (idNode == null)
             throw new HttpException(500, "Could not load the VSIX manifest file");
