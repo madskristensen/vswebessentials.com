@@ -38,7 +38,7 @@ public class feed : IHttpHandler
         context.Response.Cache.SetLastModified(updated);
         context.Response.Cache.SetCacheability(HttpCacheability.ServerAndPrivate);
         context.Response.Cache.SetValidUntilExpires(true);
-        context.Response.AddFileDependency(manifest);
+        context.Response.AddCacheDependency(new System.Web.Caching.CacheDependency(manifest));
     }
 
     private void WriteXml(HttpContext context, string version, string id, DateTime updated)
