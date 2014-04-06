@@ -26,7 +26,7 @@ public class feed : IHttpHandler
         string version = idNode.Attribute("Version").Value;
         string id = idNode.Attribute("Id").Value;
         string vsix = context.Server.MapPath("webessentials2013.vsix");
-        DateTime updated = File.GetLastAccessTimeUtc(vsix);
+        DateTime updated = File.GetLastWriteTimeUtc(manifest);
 
         SetHeaders(context, manifest, updated);
         WriteXml(context, version, id, updated);
@@ -43,7 +43,12 @@ public class feed : IHttpHandler
 
     private void WriteXml(HttpContext context, string version, string id, DateTime updated)
     {
-        using (XmlWriter writer = XmlWriter.Create(context.Response.OutputStream))
+        XmlWriterSettings settings = new XmlWriterSettings
+        {
+            Indent = true
+        };
+        
+        using (XmlWriter writer = XmlWriter.Create(context.Response.OutputStream, settings))
         {
             writer.WriteStartElement("feed", "http://www.w3.org/2005/Atom");
 
