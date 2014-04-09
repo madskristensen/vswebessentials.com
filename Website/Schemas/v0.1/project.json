@@ -1,0 +1,64 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+  "definitions": {
+    "compilationOptions": {
+      "properties": {
+        "define": {
+          "type": "array",
+          "items" : {
+              "enum" : ["TRACE", "DEBUG", "RELEASE"]
+          }
+        }
+      },
+      "type": "object"
+    },
+    "dependencies": {
+      "additionalProperties": {
+          "type": "string"
+      },
+      "type": "object"
+    },
+    "configType": {
+      "properties": {
+        "dependencies": {
+          "$ref": "#/definitions/dependencies"
+        }
+      },
+      "required": ["dependencies"],
+      "type": "object"
+    },
+    "configurations": {
+      "properties": {
+        "net45": {
+          "$ref": "#/definitions/configType"
+        },
+        "k10": {
+          "$ref": "#/definitions/configType"
+        }
+      },
+      "type": "object"
+    },
+    "Project": {
+      "properties": {
+        "compilationOptions": {
+          "$ref": "#/definitions/compilationOptions"
+        },
+        "dependencies": {
+          "$ref": "#/definitions/dependencies"
+        },
+        "configurations": {
+          "$ref": "#/definitions/configurations"
+        }
+      },
+      "type": "object"
+    }
+  },
+
+  "allOf": [
+    {
+      "$ref": "#/definitions/Project"
+    }
+  ],
+  "type": "object"
+}
