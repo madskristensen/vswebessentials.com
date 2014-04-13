@@ -8,6 +8,7 @@
     },
     "coffeelint": {
       "type": "object",
+      "additionalProperties": true,
       "properties": {
         "arrow_spacing": {
           "description": "This rule checks to see that there is spacing before and after the arrow operator that declares a function.",

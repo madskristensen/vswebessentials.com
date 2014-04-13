@@ -3,6 +3,8 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "Bower": {
+      "type": "object",
+      "additionalProperties": true,
       "properties": {
         "name": {
           "description": "The name of your package.",
@@ -85,8 +87,7 @@
           "type": "boolean"
         }
       },
-      "required": [ "name" ],
-      "type": "object"
+      "required": [ "name" ]
     }
   },
   "oneOf": [ { "$ref": "#/definitions/Bower" } ],

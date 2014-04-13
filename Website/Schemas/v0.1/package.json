@@ -2,6 +2,8 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "Package": {
+      "type": "object",
+      "additionalProperties": true,
       "properties": {
         "name": {
           "type": "string"
@@ -66,10 +68,9 @@
         "preferGlobal": {
           "type": "boolean"
         }
-      },
-      "type": "object"
+      }
     }
   },
-  "anyOf": [ { "$ref": "#/definitions/Package" } ],
+  "oneOf": [ { "$ref": "#/definitions/Package" } ],
   "type": "object"
 }

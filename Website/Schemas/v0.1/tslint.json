@@ -167,18 +167,15 @@
       "type": "object"
     },
     "rules": {
+      "type": "object",
+      "additionalProperties": true,
       "properties": {
         "rules": {
           "$ref": "#/definitions/ruledefinitions"
         }
-      },
-      "type": "object"
+      }
     }
   },
-  "allOf": [
-    {
-      "$ref": "#/definitions/rules"
-    }
-  ],
+  "oneOf": [ { "$ref": "#/definitions/rules" } ],
   "type": "object"
 }

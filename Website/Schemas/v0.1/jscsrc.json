@@ -4,6 +4,7 @@
     "validateJSDoc": {
       "description": "Enables JSDoc validation.",
       "type": "object",
+      "additionalProperties": true,
       "properties": {
         "checkParamNames": {
           "description": "Ensures param names in jsdoc and in function declaration are equal",
@@ -334,6 +335,6 @@
     }
   },
 
-  "allOf": [ { "$ref": "#/definitions/jscsrc" } ],
+  "oneOf": [ { "$ref": "#/definitions/jscsrc" } ],
   "type": "object"
 }

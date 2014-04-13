@@ -3,13 +3,14 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "bowerrc": {
+      "type": "object",
+      "additionalProperties": true,
       "properties": {
         "directory": {
           "type": "string"
         }
       },
-      "required": [ "directory" ],
-      "type": "object"
+      "required": [ "directory" ]
     }
   },
 
