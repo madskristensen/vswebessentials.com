@@ -222,25 +222,25 @@
           }
         },
         "validateQuoteMarks": {
-          "type": ["object", "string", "boolean"],
-          "enum": [true, "\"", "'"],
+          "type": [ "object", "string", "boolean" ],
+          "enum": [ true, "\"", "'" ],
           "properties": {
             "escape": {
               "type": "boolean"
             },
             "mark": {
               "type": "string",
-              "enum": ["\"", "'"]
+              "enum": [ "\"", "'" ]
             }
           }
         },
         "validateIndentation": {
-          "type": ["string", "integer"],
-          "enum": ["\t"]
+          "type": [ "string", "integer" ],
+          "enum": [ "\t" ]
         },
         "disallowMixedSpacesAndTabs": {
-          "type": ["boolean", "string"],
-          "enum": [true, false, "smart"]
+          "type": [ "boolean", "string" ],
+          "enum": [ true, false, "smart" ]
         },
         "disallowTrailingWhitespace": {
           "type": "boolean"
@@ -267,7 +267,7 @@
           "type": "boolean"
         },
         "safeContextKeyword": {
-          "type": ["array", "string"]
+          "type": [ "array", "string" ]
         },
         "requireDotNotation": {
           "type": "boolean"
@@ -277,6 +277,25 @@
         },
         "validateJSDoc": {
           "$ref": "#/definitions/validateJSDoc"
+        },
+        "excludeFiles": {
+          "description": "Disables style checking for specified paths.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "additionalRules": {
+          "description": "Path to load additional rules",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "preset": {
+          "description": "Extends defined rules with preset rules.",
+          "type": "string",
+          "enum": [ "jquery", "google" ]
         }
       },
       "type": "object"
