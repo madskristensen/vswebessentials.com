@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "level": {
-      "description": "Determins the error level",
+      "description": "Determines the error level",
       "type": "string",
       "enum": [ "warn", "error", "ignore" ]
     },
