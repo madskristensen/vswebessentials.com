@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "ruledefinitions": {
+      "properties": {
+        "ban": {
+          "type": "array",
+          "items": {
+            "enum": ["object", "function"]
+          }
+        },
+        "class-name": {
+          "type": "boolean"
+        },
+        "comment-format": {
+          "type": "array",
+          "items": {
+            "enum": ["check-space", "check-lowercase"]
+          }
+        },
+        "curly": {
+          "type": "boolean"
+        },
+        "eofline": {
+          "type": "boolean"
+        },
+        "forin": {
+          "type": "boolean"
+        },
+        "indent": {
+          "type": "array",
+          "items": {
+            "type": ["boolean", "integer"],
+            "enum": [true, false]
+          }
+        },
+        "interface-name": {
+          "type": "boolean"
+        },
+        "jsdoc-format": {
+          "type": "boolean"
+        },
+        "label-position": {
+          "type": "boolean"
+        },
+        "label-undefined": {
+          "type": "boolean"
+        },
+        "max-line-length": {
+          "type": "array"
+        },
+        "no-arg": {
+          "type": "boolean"
+        },
+        "no-bitwise": {
+          "type": "boolean"
+        },
+        "no-console": {
+          "type": "array",
+          "items": {
+            "enum": [true, false, "debug", "info", "time", "timeEnd", "trace"]
+          }
+        },
+        "no-consecutive-blank-lines": {
+          "type": "boolean"
+        },
+        "no-construct": {
+          "type": "boolean"
+        },
+        "no-debugger": {
+          "type": "boolean"
+        },
+        "no-duplicate-key": {
+          "type": "boolean"
+        },
+        "no-duplicate-variable": {
+          "type": "boolean"
+        },
+        "no-empty": {
+          "type": "boolean"
+        },
+        "no-eval": {
+          "type": "boolean"
+        },
+        "no-string-literal": {
+          "type": "boolean"
+        },
+        "no-trailing-comma": {
+          "type": "boolean"
+        },
+        "no-trailing-whitespace": {
+          "type": "boolean"
+        },
+        "no-unused-expression": {
+          "type": "boolean"
+        },
+        "no-unused-variable": {
+          "type": "array",
+          "items": {
+            "enum": [true, false, "check-parameters"]
+          }
+        },
+        "no-unreachable": {
+          "type": "boolean"
+        },
+        "no-use-before-declare": {
+          "type": "boolean"
+        },
+        "no-var-requires": {
+          "type": "boolean"
+        },
+        "one-line": {
+          "type": "array",
+          "items": {
+            "enum": [true, false, "check-open-brace", "check-catch", "check-else", "check-whitespace"]
+          }
+        },
+        "quotemark": {
+          "type": "array",
+          "items": {
+            "enum": [true, false, "double", "single"]
+          }
+        },
+        "radix": {
+          "type": "boolean"
+        },
+        "semicolon": {
+          "type": "boolean"
+        },
+        "triple-equals": {
+          "type": "array",
+          "items": {
+            "enum": [true, false, "allow-null-check"]
+          }
+        },
+        "typedef": {
+          "type": "array",
+          "items": {
+            "enum": ["callSignature", "catchClause", "indexSignature", "parameter", "propertySignature", "variableDeclarator"]
+          }
+        },
+        "typedef-whitespace": {
+          "type": "array",
+          "items": {
+            "enum": [true, false, "callSignature", "catchClause", "indexSignature"]
+          }
+        },
+        "use-strict": {
+          "type": "array",
+          "items": {
+            "enum": [true, false, "check-module", "check-function"]
+          }
+        },
+        "variable-name": {
+          "type": "array",
+          "items": {
+            "enum": [true, false, "allow-leading-underscore"]
+          }
+        },
+        "whitespace": {
+          "type": "array",
+          "items": {
+            "enum": [true, false, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"]
+          }
+        }
+      },
+      "type": "object"
+    },
+    "rules": {
+      "properties": {
+        "rules": {
+          "$ref": "#/definitions/ruledefinitions"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/rules"
+    }
+  ],
+  "type": "object"
+}

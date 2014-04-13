@@ -1,0 +1,287 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "validateJSDoc": {
+      "properties": {
+        "checkParamNames": {
+          "type": "boolean"
+        },
+        "checkRedundantParams": {
+          "type": "boolean"
+        },
+        "requireParamTypes": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "braceRules": {
+      "type": "object",
+      "properties": {
+        "beforeOpeningRoundBrace": {
+          "type": "boolean"
+        },
+        "beforeOpeningCurlyBrace": {
+          "type": "boolean"
+        }
+      }
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "enum": [ "break", "case", "catch", "continue", "debugger", "default", "delete", "do", "else", "finally", "for", "function", "if", "in", "instanceof", "new", "return", "switch", "this", "throw", "try", "typeof", "var", "void", "while", "with" ]
+      }
+    },
+    "operators": {
+      "type": "array",
+      "items": {
+        "enum": [ "?", "+", "-", "/", "*", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<=" ]
+      }
+    },
+    "unaryOperators": {
+      "type": "array",
+      "items": {
+        "enum": [ "++", "--", "+", "-", "~", "!" ]
+      }
+    },
+    "jscsrc": {
+      "properties": {
+        "requireCurlyBraces": {
+          "$ref": "#/definitions/keywords"
+        },
+        "requireSpaceAfterKeywords": {
+          "$ref": "#/definitions/keywords"
+        },
+        "disallowSpaceAfterKeywords": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/keywords"
+          }
+        },
+        "requireSpaceBeforeBlockStatements": {
+          "type": "boolean"
+        },
+        "disallowSpaceBeforeBlockStatements": {
+          "type": "boolean"
+        },
+        "requireParenthesesAroundIIFE": {
+          "type": "boolean"
+        },
+        "requireSpacesInFunctionExpression": {
+          "type": "object",
+          "properties": {
+            "beforeOpeningRoundBrace": {
+              "type": "boolean"
+            },
+            "beforeOpeningCurlyBrace": {
+              "type": "boolean"
+            }
+          }
+        },
+        "requireSpacesInAnonymousFunctionExpression": {
+          "$ref": "#/definitions/braceRules"
+        },
+        "disallowSpacesInAnonymousFunctionExpression": {
+          "$ref": "#/definitions/braceRules"
+        },
+        "requireSpacesInNamedFunctionExpression": {
+          "$ref": "#/definitions/braceRules"
+        },
+        "disallowSpacesInNamedFunctionExpression": {
+          "$ref": "#/definitions/braceRules"
+        },
+        "requireSpacesInFunctionDeclaration": {
+          "$ref": "#/definitions/braceRules"
+        },
+        "disallowSpacesInFunctionDeclaration": {
+          "$ref": "#/definitions/braceRules"
+        },
+        "disallowMultipleVarDecl": {
+          "type": "boolean"
+        },
+        "requireMultipleVarDecl": {
+          "type": [ "boolean", "string" ],
+          "enum": [ true, false, "onevar" ]
+        },
+        "requireBlocksOnNewline": {
+          "type": [ "boolean", "integer" ]
+        },
+        "requirePaddingNewlinesInBlock": {
+          "type": [ "boolean", "integer" ]
+        },
+        "disallowPaddingNewlinesInBlock": {
+          "type": "boolean"
+        },
+        "disallowEmptyBlocks": {
+          "type": "boolean"
+        },
+        "disallowSpacesInsideObjectBrackets": {
+          "type": "boolean"
+        },
+        "disallowSpacesInsideArrayBrackets": {
+          "type": "boolean"
+        },
+        "disallowSpacesInsideParentheses": {
+          "type": "boolean"
+        },
+        "requireSpacesInsideObjectBrackets": {
+          "type": "string",
+          "enum": [ "all", "allButNested" ]
+        },
+        "requireSpacesInsideArrayBrackets": {
+          "type": "string",
+          "enum": [ "all", "allButNested" ]
+        },
+        "disallowQuotedKeysInObjects": {
+          "type": [ "string", "boolean" ],
+          "enum": [ true, false, "allButReserved" ]
+        },
+        "disallowDanglingUnderscores": {
+          "type": "boolean"
+        },
+        "disallowSpaceAfterObjectKeys": {
+          "type": "boolean"
+        },
+        "requireSpaceAfterObjectKeys": {
+          "type": "boolean"
+        },
+        "disallowCommaBeforeLineBreak": {
+          "type": "boolean"
+        },
+        "requireCommaBeforeLineBreak": {
+          "type": "boolean"
+        },
+        "requireAlignedObjectValues": {
+          "type": "string",
+          "enum": [ "all", "skipWithFunction", "skipWithLineBreak" ]
+        },
+        "requireOperatorBeforeLineBreak": {
+          "$ref": "#/definitions/operators"
+        },
+        "disallowLeftStickedOperators": {
+          "$ref": "#/definitions/operators"
+        },
+        "requireRightStickedOperators": {
+          "$ref": "#/definitions/operators"
+        },
+        "disallowRightStickedOperators": {
+          "$ref": "#/definitions/operators"
+        },
+        "requireLeftStickedOperators": {
+          "type": "array",
+          "items": {
+            "enum": [ "," ]
+          }
+        },
+        "disallowSpaceAfterPrefixUnaryOperators": {
+          "$ref": "#/definitions/unaryOperators"
+        },
+        "requireSpaceAfterPrefixUnaryOperators": {
+          "$ref": "#/definitions/unaryOperators"
+        },
+        "disallowSpaceBeforePostfixUnaryOperators": {
+          "$ref": "#/definitions/unaryOperators"
+        },
+        "requireSpaceBeforePostfixUnaryOperators": {
+          "$ref": "#/definitions/unaryOperators"
+        },
+        "disallowSpaceBeforeBinaryOperators": {
+          "$ref": "#/definitions/Operators"
+        },
+        "requireSpaceBeforeBinaryOperators": {
+          "$ref": "#/definitions/Operators"
+        },
+        "disallowSpaceAfterBinaryOperators": {
+          "$ref": "#/definitions/Operators"
+        },
+        "requireSpaceAfterBinaryOperators": {
+          "$ref": "#/definitions/Operators"
+        },
+        "disallowImplicitTypeConversion": {
+          "type": "array",
+          "items": {
+            "enum": [ "numeric", "boolean", "binary", "string" ]
+          }
+        },
+        "requireCamelCaseOrUpperCaseIdentifiers": {
+          "type": "boolean"
+        },
+        "disallowKeywords": {
+          "$ref": "#/definitions/keywords"
+        },
+        "disallowMultipleLineStrings": {
+          "type": "boolean"
+        },
+        "disallowMultipleLineBreaks": {
+          "type": "boolean"
+        },
+        "validateLineBreaks": {
+          "type": "array",
+          "items": {
+            "enum": [ "CR", "LF", "CRLF" ]
+          }
+        },
+        "validateQuoteMarks": {
+          "type": ["object", "string", "boolean"],
+          "enum": [true, "\"", "'"],
+          "properties": {
+            "escape": {
+              "type": "boolean"
+            },
+            "mark": {
+              "type": "string",
+              "enum": ["\"", "'"]
+            }
+          }
+        },
+        "validateIndentation": {
+          "type": ["string", "integer"],
+          "enum": ["\t"]
+        },
+        "disallowMixedSpacesAndTabs": {
+          "type": ["boolean", "string"],
+          "enum": [true, false, "smart"]
+        },
+        "disallowTrailingWhitespace": {
+          "type": "boolean"
+        },
+        "disallowTrailingComma": {
+          "type": "boolean"
+        },
+        "requireTrailingComma": {
+          "type": "boolean"
+        },
+        "disallowKeywordsOnNewLine": {
+          "$ref": "#/definitions/keywords"
+        },
+        "requireKeywordsOnNewLine": {
+          "$ref": "#/definitions/keywords"
+        },
+        "requireLineFeedAtFileEnd": {
+          "type": "boolean"
+        },
+        "maximumLineLength": {
+          "type": "integer"
+        },
+        "requireCapitalizedConstructors": {
+          "type": "boolean"
+        },
+        "safeContextKeyword": {
+          "type": ["array", "string"]
+        },
+        "requireDotNotation": {
+          "type": "boolean"
+        },
+        "disallowYodaConditions": {
+          "type": "boolean"
+        },
+        "validateJSDoc": {
+          "$ref": "#/definitions/validateJSDoc"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "allOf": [ { "$ref": "#/definitions/jscsrc" } ],
+  "type": "object"
+}
