@@ -1,0 +1,75 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "Package": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "licenses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "url"
+              }
+            }
+          }
+        },
+        "repository": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string",
+              "format": "url"
+            }
+          }
+        },
+        "main": {
+          "type": "string"
+        },
+        "homepage": {
+          "type": "string"
+        },
+        "dependencies": {
+          "type": "object"
+        },
+        "devDependencies": {
+          "type": "object"
+        },
+        "engines": {
+          "type": "object"
+        },
+        "scripts": {
+          "type": "object"
+        },
+        "bin": {
+          "type": "string"
+        },
+        "preferGlobal": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "anyOf": [ { "$ref": "#/definitions/Package" } ],
+  "type": "object"
+}

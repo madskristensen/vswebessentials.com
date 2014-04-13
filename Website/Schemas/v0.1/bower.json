@@ -1,0 +1,34 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "Bower": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "main": {
+          "type": "string"
+        },
+        "ignore": {
+          "type": "array"
+        },
+        "dependencies": {
+          "type": "object"
+        },
+        "devDependencies": {
+          "type": "object"
+        }
+      },
+      "type": "object"
+    }
+  },
+
+  "anyOf": [ { "$ref": "#/definitions/Bower" } ],
+  "type": "object"
+}

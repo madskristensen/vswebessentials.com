@@ -1,0 +1,20 @@
+﻿{
+  "id": "http://vswebessentials.com/schemas/v1/bowerrc.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "UnknownObject": {
+      "properties": {
+        "directory": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/UnknownObject"
+    }
+  ],
+  "type": "object"
+}
