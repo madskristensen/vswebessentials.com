@@ -46,10 +46,12 @@
               "type": "object",
               "properties": {
                 "left": {
-                  "type": "integer"
+                  "type": "integer",
+                  "enum": [0, 1]
                 },
                 "right": {
-                  "type": "integer"
+                  "type": "integer",
+                  "enum": [0, 1]
                 }
               }
             }
@@ -93,7 +95,8 @@
               "$ref": "#/definitions/level"
             },
             "value": {
-              "type": "integer"
+              "type": "integer",
+              "enum": [2, 4]
             }
           }
         },
@@ -140,6 +143,10 @@
           "properties": {
             "level": {
               "$ref": "#/definitions/level"
+            },
+            "value": {
+              "type": "integer",
+              "enum": [0, 1, 2]
             }
           }
         },
