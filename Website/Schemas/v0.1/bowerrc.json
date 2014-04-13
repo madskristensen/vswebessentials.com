@@ -1,20 +1,18 @@
 ﻿{
-  "id": "http://vswebessentials.com/schemas/v1/bowerrc.json",
+  "title": "JSON schema for .bowerrc files",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
-    "UnknownObject": {
+    "bowerrc": {
       "properties": {
         "directory": {
           "type": "string"
         }
       },
+      "required": [ "directory" ],
       "type": "object"
     }
   },
-  "allOf": [
-    {
-      "$ref": "#/definitions/UnknownObject"
-    }
-  ],
+
+  "oneOf": [ { "$ref": "#/definitions/bowerrc" } ],
   "type": "object"
 }
