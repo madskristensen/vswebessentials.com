@@ -46,7 +46,7 @@
           }
         },
         "homepage": {
-          "description": "URL to learn more about the package. Falls back to GitHub project if not specified and it’s a GitHub endpoint.",
+          "description": "URL to learn more about the package. Falls back to GitHub project if not specified and it's a GitHub endpoint.",
           "type": "string"
         },
         "repository": {
