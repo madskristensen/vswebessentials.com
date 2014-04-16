@@ -1,4 +1,5 @@
 {
+  "title": "JSON schema for coffeelint.json files",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "level": {
