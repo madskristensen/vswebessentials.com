@@ -32,12 +32,17 @@
       <xs:element name="optimize" type="boolType" default="true" />
       <xs:element name="orientation" type="orientationType" default="vertical" />
       <xs:element name="outputType" type="imageType" default="png" />
+      <xs:element name="fullPathForIdentifierName" type="boolType" default="true" />
+      <xs:element name="useAbsoluteUrl" type="boolType" default="false" />
+      <xs:element name="outputDirectoryForCss" type="xs:string" />
+      <xs:element name="outputDirectoryForLess" type="xs:string" />
+      <xs:element name="outputDirectoryForScss" type="xs:string" />
     </xs:all>
   </xs:complexType>
 
   <xs:complexType name="filesType">
     <xs:sequence>
-      <xs:element maxOccurs="unbounded" name="file" type="xs:string" />
+      <xs:element name="file" type="xs:string" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
 
