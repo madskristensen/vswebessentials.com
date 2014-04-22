@@ -1,4 +1,5 @@
 ﻿{
+  "title": "JSON schema for ASP.NET project.json files",
   "$schema": "http://json-schema.org/draft-04/schema#",
 
   "definitions": {
@@ -55,10 +56,6 @@
     }
   },
 
-  "allOf": [
-    {
-      "$ref": "#/definitions/Project"
-    }
-  ],
+  "oneOf": [ { "$ref": "#/definitions/Project" } ],
   "type": "object"
 }
