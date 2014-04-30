@@ -18,6 +18,7 @@ Content/all*.css
 # Build results
 [Dd]ebug/
 [Rr]elease/
+bin/
 *_i.c
 *_p.c
 *.ilk
@@ -39,7 +40,7 @@ Content/all*.css
 *.pubxml
 
 ## TODO: If you have NuGet Package Restore enabled, uncomment this
-#packages/
+packages/
 
 # Visual C++ cache files
 ipch/
