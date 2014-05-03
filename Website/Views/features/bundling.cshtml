@@ -42,12 +42,14 @@
                         </li>
                     </ol>
                     <svg width="100%" height="310">
+                        <defs>
+                            <polygon id="arrowOrigin" fill="gray" stroke="black" stroke-width="1"
+                                     points="0,10 100,10 100,0
+                                            120,20
+                                        100,40 100,30 0,30" />
+                        </defs>
 
-                        @*<rect x="0" y="0" width="100%" height="100%"
-                              rx="5" fill="none" stroke="black" stroke-width="1" />*@
-
-                        @*Recipe*@
-
+                        @* Recipe *@
                         <text x="5" y="15"
                               font-family="Verdana" font-size="14" fill="black">
                             When a recipe is saved,
@@ -56,9 +58,6 @@
                               font-family="Verdana" font-size="14" fill="black">
                             recreate bundle
                         </text>
-
-
-
                         <text x="60" y="58"
                               font-family="Verdana" font-size="16" fill="black">
                             RECIPE
@@ -67,7 +66,6 @@
                               rx="5" fill="none" stroke="black" stroke-width="1" />
 
                         @* Ingredients *@
-
                         <text x="51%" y="25"
                               font-family="Verdana" font-size="16" fill="black">
                             INGREDIENTS
@@ -79,71 +77,59 @@
                         <circle cx="68%" cy="60" r="20" fill="none" stroke="gray" stroke-width="1"></circle>
                         <circle cx="80%" cy="60" r="20" fill="none" stroke="gray" stroke-width="1"></circle>
                         <circle cx="92%" cy="60" r="20" fill="none" stroke="gray" stroke-width="1"></circle>
-
                         <text x="51%" y="120"
                               font-family="Verdana" font-size="14" fill="black">
                             When any ingredient is changed,
                         </text>
-
                         <text x="51%" y="138"
                               font-family="Verdana" font-size="14" fill="black">
-                          recreate all bundles containing  
+                            recreate all bundles containing
                         </text>
-
                         <text x="51%" y="156"
                               font-family="Verdana" font-size="14" fill="black">
-                             this asset
+                            this asset
                         </text>
 
+                        @* ARROWS *@
+                        <use x="0" y="0" transform="translate(117,28) rotate(-180 60 20) scale(0.75)" xlink:href="#arrowOrigin" />
+                        <use x="0" y="0" transform="translate(50,110) rotate(60 60 20) scale(0.5)" xlink:href="#arrowOrigin" />
 
                         @* Bundled items *@
-
                         <circle cx="30%" cy="200" r="80" fill="none" stroke="gray" stroke-width="1" />
                         <circle cx="30%" cy="200" r="70" fill="none" stroke="gray" stroke-width="1" />
                         <text x="17%" y="300"
                               font-family="Verdana" font-size="16" fill="black">
                             BUNDLED ASSET
                         </text>
-
                         <rect x="21%" y="170" width="40" height="20"
                               rx="3" fill="none" stroke="gray" stroke-width="1" />
                         <text x="23%" y="185"
                               font-family="Verdana" font-size="14" fill="black">
                             JS
                         </text>
-
                         <rect x="30%" y="150" width="40" height="20"
                               rx="3" fill="none" stroke="gray" stroke-width="1" />
                         <text x="31%" y="165"
                               font-family="Verdana" font-size="14" fill="black">
                             CSS
                         </text>
-
                         <rect x="30%" y="200" width="50" height="20"
                               rx="3" fill="none" stroke="gray" stroke-width="1" />
                         <text x="31%" y="215"
                               font-family="Verdana" font-size="14" fill="black">
                             HTML
                         </text>
-
                         <rect x="23%" y="230" width="65" height="20"
                               rx="3" fill="none" stroke="gray" stroke-width="1" />
                         <text x="24%" y="245"
                               font-family="Verdana" font-size="14" fill="black">
                             Images
                         </text>
-
                     </svg>
-
                 </div>
             </article>
-
-
-
-
         </div>
     </div>
-
 
     <div class="row">
         <div class="col-md-12">
