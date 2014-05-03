@@ -1,0 +1,224 @@
+﻿@{
+    Page.Title = "Bundling";
+    Page.Description = "Describe all bundling fonctionalities of WebEssentials.";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="features-page">
+    <div class="alert alert-info">
+        <p>The HTML editor has been extended with extra functionality.</p>
+    </div>
+    <header class="section-header">
+        <h2><span>Features</span></h2>
+    </header>
+    <div class="row">
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">What is a bundle</h3>
+                <div class="panel-body">
+                    <p>A bundle file is essentially an XML file, which defines a  <i>recipe</i> of bundle. By parsing it, we can tell how the bundled asset in question was formed.</p>
+                    <p>So far, Web Essentials offers two bundling types:</p>
+                    <ol>
+                        <li> .bundle : for CSS and JS files. It outputs a destination CSS or JS file with a V3 source-map, a minified version of source and a V3 source-map of that min.</li>
+                        <li>.sprite : for images (PNG, JPG and GIF). It spits out a sprite image, CSS with example code for all the possible coordinates in background property, LESS and SASS files with mixins holding the same background properties and a custom map file (JSON) with all those coordinates (for future software use: designer mode, browsers, etc.).</li>
+                    </ol>
+                    <p>
+                        The third one was proposed by @@DerAlbertCom via #303 for TypeScript files.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">How it works</h3>
+                <div class="panel-body">
+                    <p>
+                        Basically, there is two way to update bundled assets.
+                    </p>
+                    <ol>
+                        <li>Changing an <i>ingredient,</i>&nbsp;such as .js, .css or image.</li>
+                        <li>
+                            Updating a bundle <i>recipe</i> file.
+                        </li>
+                    </ol>
+                    <svg width="100%" height="310">
+
+                        @*<rect x="0" y="0" width="100%" height="100%"
+                              rx="5" fill="none" stroke="black" stroke-width="1" />*@
+
+                        @*Recipe*@
+
+                        <text x="5" y="15"
+                              font-family="Verdana" font-size="14" fill="black">
+                            When a recipe is saved,
+                        </text>
+                        <text x="32" y="33"
+                              font-family="Verdana" font-size="14" fill="black">
+                            recreate bundle
+                        </text>
+
+
+
+                        <text x="60" y="58"
+                              font-family="Verdana" font-size="16" fill="black">
+                            RECIPE
+                        </text>
+                        <rect x="55" y="40" width="70" height="26"
+                              rx="5" fill="none" stroke="black" stroke-width="1" />
+
+                        @* Ingredients *@
+
+                        <text x="51%" y="25"
+                              font-family="Verdana" font-size="16" fill="black">
+                            INGREDIENTS
+                        </text>
+                        <rect x="50%" y="5" width="48%" height="100"
+                              rx="5" fill="none" stroke="black" stroke-width="1" />
+
+                        <circle cx="56%" cy="60" r="20" fill="none" stroke="gray" stroke-width="1"></circle>
+                        <circle cx="68%" cy="60" r="20" fill="none" stroke="gray" stroke-width="1"></circle>
+                        <circle cx="80%" cy="60" r="20" fill="none" stroke="gray" stroke-width="1"></circle>
+                        <circle cx="92%" cy="60" r="20" fill="none" stroke="gray" stroke-width="1"></circle>
+
+                        <text x="51%" y="120"
+                              font-family="Verdana" font-size="14" fill="black">
+                            When any ingredient is changed,
+                        </text>
+
+                        <text x="51%" y="138"
+                              font-family="Verdana" font-size="14" fill="black">
+                          recreate all bundles containing  
+                        </text>
+
+                        <text x="51%" y="156"
+                              font-family="Verdana" font-size="14" fill="black">
+                             this asset
+                        </text>
+
+
+                        @* Bundled items *@
+
+                        <circle cx="30%" cy="200" r="80" fill="none" stroke="gray" stroke-width="1" />
+                        <circle cx="30%" cy="200" r="70" fill="none" stroke="gray" stroke-width="1" />
+                        <text x="17%" y="300"
+                              font-family="Verdana" font-size="16" fill="black">
+                            BUNDLED ASSET
+                        </text>
+
+                        <rect x="21%" y="170" width="40" height="20"
+                              rx="3" fill="none" stroke="gray" stroke-width="1" />
+                        <text x="23%" y="185"
+                              font-family="Verdana" font-size="14" fill="black">
+                            JS
+                        </text>
+
+                        <rect x="30%" y="150" width="40" height="20"
+                              rx="3" fill="none" stroke="gray" stroke-width="1" />
+                        <text x="31%" y="165"
+                              font-family="Verdana" font-size="14" fill="black">
+                            CSS
+                        </text>
+
+                        <rect x="30%" y="200" width="50" height="20"
+                              rx="3" fill="none" stroke="gray" stroke-width="1" />
+                        <text x="31%" y="215"
+                              font-family="Verdana" font-size="14" fill="black">
+                            HTML
+                        </text>
+
+                        <rect x="23%" y="230" width="65" height="20"
+                              rx="3" fill="none" stroke="gray" stroke-width="1" />
+                        <text x="24%" y="245"
+                              font-family="Verdana" font-size="14" fill="black">
+                            Images
+                        </text>
+
+                    </svg>
+
+                </div>
+            </article>
+
+
+
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <article class="panel panel-default" data-version="WE2012, WE2013">
+                <h3 class="panel-heading">Differences between sprite and bundle</h3>
+                <div class="panel-body">
+                    @*<p>These are the differences in sprite and bundle features:</p>*@<p></p>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Sprite</th>
+                                <th>Bundles</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-striped">
+                            <tr>
+                                <td>Specify Output directory for generated file</td>
+                                <td>
+                                    Yes <br><em>(for all CSS, LESS and SCSS separately)</em>
+                                </td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Relative URL in generated file <br><em>(otherwise use website-root absolute)</em>
+                                </td>
+                                <td>Yes</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Ability to update individually when recipe changes</td>
+                                <td>
+                                    Yes <em>(manual; via menu item)</em>
+                                </td>
+                                <td>
+                                    Yes <em>(automatic; on save)</em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ability to update individually when any of the ingredient / asset changes</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Relative URL in generated file <br><em>(otherwise keep URLs as they are)</em>
+                                </td>
+                                <td>No</td>
+                                <td>
+                                    Yes <em>(only for CSS)</em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Run On Build</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Specify Output directory for map file</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                        </tbody>
+                    </table><p>Relative URL usage in <code>.bundle</code> requires two things:</p>
+
+                    <ul>
+                        <li>If its off, it should use absolute w.r.t website root.</li>
+
+                    </ul><p>Regarding <code>Specify Output directory for map file</code>, if this option is supposed to be implemented for bundles, then it should be implemented for compilers / linters too (add to <code>ISourceMapSettings</code>).</p>
+
+                </div>
+            </article>
+
+        </div>
+    </div>
+</div>
