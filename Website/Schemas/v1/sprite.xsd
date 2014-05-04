@@ -32,6 +32,7 @@
       <xs:element name="optimize" type="boolType" default="true" />
       <xs:element name="orientation" type="orientationType" default="vertical" />
       <xs:element name="outputType" type="imageType" default="png" />
+      <xs:element name="runOnBuild" type="boolType" default="false" />
       <xs:element name="fullPathForIdentifierName" type="boolType" default="true" />
       <xs:element name="useAbsoluteUrl" type="boolType" default="false" />
       <xs:element name="outputDirectoryForCss" type="xs:string" />
@@ -40,17 +41,17 @@
     </xs:all>
   </xs:complexType>
 
-  <xs:complexType name="filesType">
-    <xs:sequence>
-      <xs:element name="file" type="xs:string" maxOccurs="unbounded" />
-    </xs:sequence>
-  </xs:complexType>
+  <xs:simpleType name="fileNameType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(.*)\.([a-z0-9]+)"/>
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:element name="sprite">
     <xs:complexType>
       <xs:all>
         <xs:element name="settings" type="settingsType" />
-        <xs:element name="files" type="filesType" />
+        <xs:element name="files" type="fileNameType" />
       </xs:all>
     </xs:complexType>
   </xs:element>
