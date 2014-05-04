@@ -281,6 +281,15 @@ img {
     font-size: 18px;
 }
 
+.panel .panel-body .video-container {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+    .panel .panel-body .video-container p {
+        text-align: left;
+    }
+
 .features-page article[data-version]:after {
     content: "Supported in: " attr(data-version);
     display: block;
@@ -307,4 +316,3 @@ img {
         display: none;
     }
 }
-
