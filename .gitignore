@@ -19,8 +19,6 @@ Content/all*.css
 [Dd]ebug/
 [Rr]elease/
 #bin/
-Website/[Bb]in/*.dll
-Website/[Bb]in/*.xml
 *_i.c
 *_p.c
 *.ilk
