@@ -41,11 +41,17 @@
     </xs:all>
   </xs:complexType>
 
-  <xs:simpleType name="fileNameType">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="(.*)\.([a-z0-9]+)"/>
-    </xs:restriction>
-  </xs:simpleType>
+  <xs:complexType name="fileNameType">
+    <xs:sequence>
+      <xs:element name="file" maxOccurs="unbounded">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="(.*)\.([a-z0-9]+)"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
 
   <xs:element name="sprite">
     <xs:complexType>
