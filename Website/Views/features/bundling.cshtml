@@ -1,6 +1,6 @@
 ﻿@{
     Page.Title = "Bundling";
-    Page.Description = "Describe all bundling fonctionalities of WebEssentials.";
+    Page.Description = "Describe all bundling fonctionalities of Web Essentials.";
     Layout = "~/Views/_Layout.cshtml";
 }
 
@@ -8,12 +8,12 @@
     <div class="alert alert-info">
         <p>The HTML editor has been extended with extra functionality.</p>
     </div>
-    <header class="section-header">
-        <h2><span>Features</span></h2>
-    </header>
+    @*<header class="section-header">
+            <h2><span>Features</span></h2>
+        </header>*@
     <div class="row">
         <div class="col-md-6">
-            <article class="panel panel-default" data-version="WE2012, WE2013">
+            <article class="panel panel-default">
                 <h3 class="panel-heading">What is a bundle</h3>
                 <div class="panel-body">
                     <p>A bundle file is essentially an XML file, which defines a  <i>recipe</i> of bundle. By parsing it, we can tell how the bundled asset in question was formed.</p>
@@ -22,14 +22,14 @@
                         <li> .bundle : for CSS and JS files. It outputs a destination CSS or JS file with a V3 source-map, a minified version of source and a V3 source-map of that min.</li>
                         <li>.sprite : for images (PNG, JPG and GIF). It spits out a sprite image, CSS with example code for all the possible coordinates in background property, LESS and SASS files with mixins holding the same background properties and a custom map file (JSON) with all those coordinates (for future software use: designer mode, browsers, etc.).</li>
                     </ol>
-                    <p>
-                        The third one was proposed by @@DerAlbertCom via #303 for TypeScript files.
-                    </p>
+                    @*<p>
+                            The third one was proposed by @@DerAlbertCom via #303 for TypeScript files.
+                        </p>*@
                 </div>
             </article>
         </div>
         <div class="col-md-6">
-            <article class="panel panel-default" data-version="WE2012, WE2013">
+            <article class="panel panel-default">
                 <h3 class="panel-heading">How it works</h3>
                 <div class="panel-body">
                     <p>
@@ -133,12 +133,12 @@
 
     <div class="row">
         <div class="col-md-12">
-            <article class="panel panel-default" data-version="WE2012, WE2013">
+            <article class="panel panel-default">
                 <h3 class="panel-heading">Differences between sprite and bundle</h3>
                 <div class="panel-body">
                     @*<p>These are the differences in sprite and bundle features:</p>*@<p></p>
 
-                    <table class="table">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th>Feature</th>
@@ -146,11 +146,11 @@
                                 <th>Bundles</th>
                             </tr>
                         </thead>
-                        <tbody class="table-striped">
+                        <tbody>
                             <tr>
                                 <td>Specify Output directory for generated file</td>
                                 <td>
-                                    Yes <br><em>(for all CSS, LESS and SCSS separately)</em>
+                                    Yes<sup>1</sup>
                                 </td>
                                 <td>No</td>
                             </tr>
@@ -162,12 +162,12 @@
                                 <td>No</td>
                             </tr>
                             <tr>
-                                <td>Ability to update individually when recipe changes</td>
+                                <td>Ability to update individually when recipe changes </td>
                                 <td>
-                                    Yes <em>(manual; via menu item)</em>
+                                    Yes
                                 </td>
                                 <td>
-                                    Yes <em>(automatic; on save)</em>
+                                    Yes
                                 </td>
                             </tr>
                             <tr>
@@ -181,7 +181,7 @@
                                 </td>
                                 <td>No</td>
                                 <td>
-                                    Yes <em>(only for CSS)</em>
+                                    Yes<sup>2</sup>
                                 </td>
                             </tr>
                             <tr>
@@ -195,16 +195,48 @@
                                 <td>No</td>
                             </tr>
                         </tbody>
-                    </table><p>Relative URL usage in <code>.bundle</code> requires two things:</p>
+                    </table>
 
-                    <ul>
-                        <li>If its off, it should use absolute w.r.t website root.</li>
+                    <sup>1</sup>&nbsp;For all CSS, LESS and SCSS separately <br />
+                    <sup>2</sup>&nbsp;Only for CSS
+                    @*<p>Relative URL usage in <code>.bundle</code> requires two things:</p>
 
-                    </ul><p>Regarding <code>Specify Output directory for map file</code>, if this option is supposed to be implemented for bundles, then it should be implemented for compilers / linters too (add to <code>ISourceMapSettings</code>).</p>
+                        <ul>
+                            <li>If its off, it should use absolute w.r.t website root.</li>
+
+                        </ul><p>Regarding <code>Specify Output directory for map file</code>, if this option is supposed to be implemented for bundles, then it should be implemented for compilers / linters too (add to <code>ISourceMapSettings</code>).</p>*@
 
                 </div>
             </article>
 
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-6">
+
+
+            <article class="panel panel-default">
+                <h3 class="panel-heading">Example - Sprite</h3>
+                <div class="panel-body">
+                    <p>
+                        Code example, with screen shot, of sprite usage.
+                    </p>
+                    <p>Adding note about that: use the file system to generate the list of pictures to include in the sprite.</p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+
+            <article class="panel panel-default">
+                <h3 class="panel-heading">Example - Bundle</h3>
+                <div class="panel-body">
+                    <p>
+                        Code example, with screen shot, of bundle usage.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
 </div>
