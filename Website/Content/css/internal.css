@@ -117,6 +117,14 @@
         text-align: left;
     }
 
+.features-page .panel .codeAsHtml {
+    font-family: Consolas;
+    border: none;
+    padding: 0;
+    color: black;
+    background: white;
+}
+
 .features-page article[data-version]:after {
     content: "Supported in: " attr(data-version);
     display: block;
