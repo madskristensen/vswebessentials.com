@@ -277,10 +277,11 @@ img {
     position: relative;
 }
 
-.features-page .panel .panel-heading {
-    font-size: 18px;
-}
+    .features-page .panel .panel-heading {
+        font-size: 18px;
+    }
 
+<<<<<<< HEAD
 .panel .panel-body .video-container {
     text-align: center;
     margin-bottom: 1em;
@@ -290,13 +291,26 @@ img {
         text-align: left;
     }
 
-.features-page .panel .codeAsHtml {
-    font-family: Consolas;
-    border: none;
-    padding: 0;
-    color: black;
-    background: white;
-}
+    .features-page .panel .svgDiagram {
+        margin: auto;
+    }
+
+        .features-page .panel .svgDiagram svg {
+            height: 310px;
+            display: block;
+            border: 1px solid #ccc;
+            position: relative;
+            background: #fff;
+            min-height: 310px;
+        }
+
+    .features-page .panel .codeAsHtml {
+        font-family: Consolas;
+        border: none;
+        padding: 0;
+        color: black;
+        background: white;
+    }
 
 .features-page article[data-version]:after {
     content: "Supported in: " attr(data-version);
