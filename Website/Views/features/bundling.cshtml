@@ -16,11 +16,52 @@
             <article class="panel panel-default">
                 <h3 class="panel-heading">What is a bundle</h3>
                 <div class="panel-body">
-                    <p>A bundle file is essentially an XML file, which defines a  <i>recipe</i> of bundle. By parsing it, we can tell how the bundled asset in question was formed.</p>
-                    <p>So far, Web Essentials offers two bundling types:</p>
+                    @*<p>
+                            A bundle is a set of files of the same type are grouped together, and
+                            ideally compressed to limit the number and size of files to be downloaded
+                            by the browser.
+                        </p>*@
+
+                    <p>
+                        A Web Essentials bundle file is a recipe for grouping, and usually
+                        compressing, a set of files of the same type to limit the number and the
+                        size of files to be downloaded by the browser.
+                    </p>
+
+                    @*<p>
+                            WE create and maintain bundles informations in XML file
+
+                        </p>
+
+                        <p>2 types of bundles so far</p>
+
+                        <p>
+                            A bundle file is essentially an XML file, which defines a <i>recipe</i> of bundle.
+                            By parsing it, we can tell how the bundled asset in question was formed.
+                        </p>*@
+
+                    @*<p>Starting with version 2.0.8 of Web Essentials, bundling fonctionally was rewrite to unify </p>*@
+
+                    <p>Web Essentials offers two bundling types:</p>
                     <ol>
-                        <li> .bundle : for CSS and JS files. It outputs a destination CSS or JS file with a V3 source-map, a minified version of source and a V3 source-map of that min.</li>
-                        <li>.sprite : for images (PNG, JPG and GIF). It spits out a sprite image, CSS with example code for all the possible coordinates in background property, LESS and SASS files with mixins holding the same background properties and a custom map file (JSON) with all those coordinates (for future software use: designer mode, browsers, etc.).</li>
+                        <li>
+                            .bundle : for CSS and JS files
+                            <p>
+                                For CSS, it outputs a XML bundle recipe file, a destination CSS file
+                                and a minified version of source if you turn on the minify option on
+                                the recipe.
+                            </p>
+                            <p>
+                                For JavaScript files, it outputs a destination JS file, a minified
+                                version of sources and a source-map of that min.
+                            </p>
+                        </li>
+                        <li>
+                            .sprite : for images (PNG, JPG and GIF). It generates a sprite image,
+                            CSS with example code for all the possible coordinates in background
+                            property, LESS and SASS files with mixins holding the same background
+                            properties and a custom map file (JSON) with all those coordinates.
+                        </li>
                     </ol>
                     @*<p>
                             The third one was proposed by @@DerAlbertCom via #303 for TypeScript files.
@@ -28,6 +69,9 @@
                 </div>
             </article>
         </div>
+
+
+
         <div class="col-md-6">
             <article class="panel panel-default">
                 <h3 class="panel-heading">How it works</h3>
@@ -134,6 +178,41 @@
         </div>
     </div>
 
+
+    <header class="section-header">
+        <h2><span>Examples</span></h2>
+    </header>
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <article class="panel panel-default">
+                <h3 class="panel-heading">Bundle</h3>
+                <div class="panel-body">
+                    <p>
+                        Code example, with screen shot, of bundle usage.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="col-md-6">
+
+
+            <article class="panel panel-default">
+                <h3 class="panel-heading">Sprite</h3>
+                <div class="panel-body">
+                    <p>
+                        Code example, with screen shot, of sprite usage.
+                    </p>
+                    <p>Adding note about that: use the file system to generate the list of pictures to include in the sprite.</p>
+                </div>
+            </article>
+        </div>
+
+    </div>
+
+
     <div class="row">
         <div class="col-md-12">
             <article class="panel panel-default">
@@ -212,33 +291,6 @@
                 </div>
             </article>
 
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-
-
-            <article class="panel panel-default">
-                <h3 class="panel-heading">Example - Sprite</h3>
-                <div class="panel-body">
-                    <p>
-                        Code example, with screen shot, of sprite usage.
-                    </p>
-                    <p>Adding note about that: use the file system to generate the list of pictures to include in the sprite.</p>
-                </div>
-            </article>
-        </div>
-        <div class="col-md-6">
-
-            <article class="panel panel-default">
-                <h3 class="panel-heading">Example - Bundle</h3>
-                <div class="panel-body">
-                    <p>
-                        Code example, with screen shot, of bundle usage.
-                    </p>
-                </div>
-            </article>
         </div>
     </div>
 </div>
