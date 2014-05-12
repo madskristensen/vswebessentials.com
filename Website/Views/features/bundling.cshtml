@@ -10,8 +10,13 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <article class="panel panel-default">
-                <h3 class="panel-heading">What is a bundle</h3>
+            <article id="what-is-bundle" class="panel panel-default">
+                <h3 class="panel-heading">
+                    <a href="#what-is-bundle">
+                        <span class="fa fa-link"></span>
+                    </a>
+                    What is a bundle?
+                </h3>
                 <div class="panel-body">
                     <p>
                         A Web Essentials bundle file is a recipe for grouping, and usually
@@ -43,8 +48,13 @@
                 </div>
             </article>
 
-            <article class="panel panel-default">
-                <h3 class="panel-heading">How to create a bundle</h3>
+            <article id="making-bundle" class="panel panel-default">
+                <h3 class="panel-heading">
+                    <a href="#making-bundle">
+                        <span class="fa fa-link"></span>
+                    </a>
+                    How to make a bundle?
+                </h3>
                 <div class="panel-body">
                     <p>
                         The procedure to create a bundle is the same for all types of files.
@@ -68,8 +78,13 @@
         </div>
 
         <div class="col-md-6">
-            <article class="panel panel-default">
-                <h3 class="panel-heading">How it works</h3>
+            <article id="bundle-working" class="panel panel-default">
+                <h3 class="panel-heading">
+                    <a href="#bundle-working">
+                        <span class="fa fa-link"></span>
+                    </a>
+                    How it works?
+                </h3>
                 <div class="panel-body">
                     <p>
                         Basically, there are two ways to update bundled assets.
@@ -188,8 +203,13 @@
 
     <div class="row">
         <div class="col-md-12">
-            <article class="panel panel-default">
-                <h3 class="panel-heading">Bundle</h3>
+            <article id="bundle-example" class="panel panel-default">
+                <h3 class="panel-heading">
+                    <a href="#bundle-example">
+                        <span class="fa fa-link"></span>
+                    </a>
+                    Bundle
+                </h3>
                 <div class="panel-body">
                     <div class="codeAsHtml">
                         <span style="color:blue;">&lt;?</span><span style="color:#a31515;">xml</span><span style="color:blue;">&nbsp;</span><span style="color:red;">version</span><span style="color:blue;">=</span>&quot;<span style="color:blue;">1.0</span>&quot;<span style="color:blue;">&nbsp;</span><span style="color:red;">encoding</span><span style="color:blue;">=</span>&quot;<span style="color:blue;">utf-8</span>&quot;<span style="color:blue;">?&gt;</span><br /><span style="color:blue;">&lt;</span><span style="color:#a31515;">bundle</span><span style="color:blue;">&nbsp;</span><span style="color:red;">xmlns:xsi</span><span style="color:blue;">=</span>&quot;<span style="color:blue;">http://www.w3.org/2001/XMLSchema-instance</span>&quot;<span style="color:blue;">&nbsp;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:red;">xsi:noNamespaceSchemaLocation</span><span style="color:blue;">=</span>&quot;<span style="color:blue;">http://vswebessentials.com/schemas/v1/bundle.xsd</span>&quot;<span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">settings</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">Determines&nbsp;if&nbsp;the&nbsp;sprite&nbsp;image&nbsp;should&nbsp;be&nbsp;automatically&nbsp;optimized&nbsp;after&nbsp;creation/update.</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">minify</span><span style="color:blue;">&gt;</span>true<span style="color:blue;">&lt;/</span><span style="color:#a31515;">minify</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">Determin&nbsp;whether&nbsp;to&nbsp;generate/re-generate&nbsp;this&nbsp;sprite&nbsp;on&nbsp;building&nbsp;the&nbsp;solution.</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">runOnBuild</span><span style="color:blue;">&gt;</span>false<span style="color:blue;">&lt;/</span><span style="color:#a31515;">runOnBuild</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;Use&nbsp;absolute&nbsp;path&nbsp;in&nbsp;the&nbsp;generated&nbsp;CSS&nbsp;files.&nbsp;By&nbsp;default,&nbsp;the&nbsp;URLs&nbsp;are&nbsp;relative&nbsp;to&nbsp;generated&nbsp;</span><br /><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bundled&nbsp;CSS&nbsp;file.</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">adjustRelativePaths</span><span style="color:blue;">&gt;</span>true<span style="color:blue;">&lt;/</span><span style="color:#a31515;">adjustRelativePaths</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;Specifies&nbsp;a&nbsp;custom&nbsp;subfolder&nbsp;to&nbsp;save&nbsp;files&nbsp;to.&nbsp;By&nbsp;default,&nbsp;compiled&nbsp;output&nbsp;will&nbsp;be&nbsp;placed&nbsp;</span><br /><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;the&nbsp;same&nbsp;folder&nbsp;and&nbsp;nested&nbsp;under&nbsp;the&nbsp;original&nbsp;file.</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">outputDirectory</span><span style="color:blue;">&nbsp;/&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&lt;/</span><span style="color:#a31515;">settings</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&lt;!--</span><span style="color:green;">The&nbsp;order&nbsp;of&nbsp;the&nbsp;&lt;file&gt;&nbsp;elements&nbsp;determines&nbsp;the&nbsp;order&nbsp;of&nbsp;the&nbsp;images&nbsp;in&nbsp;the&nbsp;bundle.</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">files</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">file</span><span style="color:blue;">&gt;</span>/Content/bootstrap.css<span style="color:blue;">&lt;/</span><span style="color:#a31515;">file</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">file</span><span style="color:blue;">&gt;</span>/Content/Site.css<span style="color:blue;">&lt;/</span><span style="color:#a31515;">file</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&lt;/</span><span style="color:#a31515;">files</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&lt;/</span><span style="color:#a31515;">bundle</span><span style="color:blue;">&gt;</span>
@@ -197,8 +217,13 @@
                 </div>
             </article>
 
-            <article class="panel panel-default">
-                <h3 class="panel-heading">Sprite</h3>
+            <article id="sprite-example" class="panel panel-default">
+                <h3 class="panel-heading">
+                    <a href="#sprite-example">
+                        <span class="fa fa-link"></span>
+                    </a>
+                    Sprite
+                </h3>
                 <div class="panel-body ">
                     <div class="codeAsHtml">
                         <span style="color:blue;">&lt;?</span><span style="color:#a31515;">xml</span><span style="color:blue;">&nbsp;</span><span style="color:red;">version</span><span style="color:blue;">=</span>&quot;<span style="color:blue;">1.0</span>&quot;<span style="color:blue;">&nbsp;</span><span style="color:red;">encoding</span><span style="color:blue;">=</span>&quot;<span style="color:blue;">utf-8</span>&quot;<span style="color:blue;">?&gt;</span><br /><span style="color:blue;">&lt;</span><span style="color:#a31515;">sprite</span><span style="color:blue;">&nbsp;</span><span style="color:red;">xmlns:xsi</span><span style="color:blue;">=</span>&quot;<span style="color:blue;">http://www.w3.org/2001/XMLSchema-instance</span>&quot;<span style="color:blue;">&nbsp;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:red;">xsi:noNamespaceSchemaLocation</span><span style="color:blue;">=</span>&quot;<span style="color:blue;">http://vswebessentials.com/schemas/v1/sprite.xsd</span>&quot;<span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">settings</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;Determines&nbsp;if&nbsp;the&nbsp;sprite&nbsp;image&nbsp;should&nbsp;be&nbsp;automatically&nbsp;optimized&nbsp;after&nbsp;creation/update.&nbsp;</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">optimize</span><span style="color:blue;">&gt;</span>true<span style="color:blue;">&lt;/</span><span style="color:#a31515;">optimize</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;Determines&nbsp;the&nbsp;orientation&nbsp;of&nbsp;images&nbsp;to&nbsp;form&nbsp;this&nbsp;sprite.&nbsp;The&nbsp;value&nbsp;must&nbsp;be&nbsp;vertical&nbsp;or&nbsp;</span><br /><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;horizontal.&nbsp;</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">orientation</span><span style="color:blue;">&gt;</span>vertical<span style="color:blue;">&lt;/</span><span style="color:#a31515;">orientation</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;File&nbsp;extension&nbsp;of&nbsp;sprite&nbsp;image.&nbsp;</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">outputType</span><span style="color:blue;">&gt;</span>jpg<span style="color:blue;">&lt;/</span><span style="color:#a31515;">outputType</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;Determin&nbsp;whether&nbsp;to&nbsp;generate/re-generate&nbsp;this&nbsp;sprite&nbsp;on&nbsp;building&nbsp;the&nbsp;solution.&nbsp;</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">runOnBuild</span><span style="color:blue;">&gt;</span>false<span style="color:blue;">&lt;/</span><span style="color:#a31515;">runOnBuild</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;Use&nbsp;full&nbsp;path&nbsp;to&nbsp;generate&nbsp;unique&nbsp;class&nbsp;or&nbsp;mixin&nbsp;name&nbsp;in&nbsp;CSS,&nbsp;LESS&nbsp;and&nbsp;SASS&nbsp;files.&nbsp;</span><br /><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consider&nbsp;disabling&nbsp;this&nbsp;if&nbsp;you&nbsp;want&nbsp;class&nbsp;names&nbsp;to&nbsp;be&nbsp;filename&nbsp;only.&nbsp;</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">fullPathForIdentifierName</span><span style="color:blue;">&gt;</span>true<span style="color:blue;">&lt;/</span><span style="color:#a31515;">fullPathForIdentifierName</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;Use&nbsp;absolute&nbsp;path&nbsp;in&nbsp;the&nbsp;generated&nbsp;CSS-like&nbsp;files.&nbsp;By&nbsp;default,&nbsp;the&nbsp;URLs&nbsp;are&nbsp;relative&nbsp;to&nbsp;</span><br /><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sprite&nbsp;image&nbsp;file&nbsp;(and&nbsp;the&nbsp;location&nbsp;of&nbsp;CSS,&nbsp;LESS&nbsp;and&nbsp;SCSS).&nbsp;</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">useAbsoluteUrl</span><span style="color:blue;">&gt;</span>false<span style="color:blue;">&lt;/</span><span style="color:#a31515;">useAbsoluteUrl</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;Specifies&nbsp;a&nbsp;custom&nbsp;subfolder&nbsp;to&nbsp;save&nbsp;CSS&nbsp;files&nbsp;to.&nbsp;By&nbsp;default,&nbsp;compiled&nbsp;output&nbsp;will&nbsp;be&nbsp;</span><br /><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placed&nbsp;in&nbsp;the&nbsp;same&nbsp;folder&nbsp;and&nbsp;nested&nbsp;under&nbsp;the&nbsp;original&nbsp;file.&nbsp;</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">outputDirectoryForCss</span><span style="color:blue;">&nbsp;/&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;Specifies&nbsp;a&nbsp;custom&nbsp;subfolder&nbsp;to&nbsp;save&nbsp;LESS&nbsp;files&nbsp;to.&nbsp;By&nbsp;default,&nbsp;compiled&nbsp;output&nbsp;will&nbsp;be&nbsp;</span><br /><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placed&nbsp;in&nbsp;the&nbsp;same&nbsp;folder&nbsp;and&nbsp;nested&nbsp;under&nbsp;the&nbsp;original&nbsp;file.&nbsp;</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">outputDirectoryForLess</span><span style="color:blue;">&nbsp;/&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;Specifies&nbsp;a&nbsp;custom&nbsp;subfolder&nbsp;to&nbsp;save&nbsp;SCSS&nbsp;files&nbsp;to.&nbsp;By&nbsp;default,&nbsp;compiled&nbsp;output&nbsp;will&nbsp;be&nbsp;</span><br /><span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placed&nbsp;in&nbsp;the&nbsp;same&nbsp;folder&nbsp;and&nbsp;nested&nbsp;under&nbsp;the&nbsp;original&nbsp;file.&nbsp;</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">outputDirectoryForScss</span><span style="color:blue;">&nbsp;/&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&lt;/</span><span style="color:#a31515;">settings</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&lt;!--</span><span style="color:green;">&nbsp;The&nbsp;order&nbsp;of&nbsp;the&nbsp;&lt;file&gt;&nbsp;elements&nbsp;determines&nbsp;the&nbsp;order&nbsp;of&nbsp;the&nbsp;images&nbsp;in&nbsp;the&nbsp;sprite.&nbsp;</span><span style="color:blue;">--&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">files</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">file</span><span style="color:blue;">&gt;</span>/Content/img/arrow1.jpg<span style="color:blue;">&lt;/</span><span style="color:#a31515;">file</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">file</span><span style="color:blue;">&gt;</span>/Content/img/arrow2.png<span style="color:blue;">&lt;/</span><span style="color:#a31515;">file</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span style="color:#a31515;">file</span><span style="color:blue;">&gt;</span>/Content/img/arrow3.png<span style="color:blue;">&lt;/</span><span style="color:#a31515;">file</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&nbsp;&nbsp;&lt;/</span><span style="color:#a31515;">files</span><span style="color:blue;">&gt;</span><br /><span style="color:blue;">&lt;/</span><span style="color:#a31515;">sprite</span><span style="color:blue;">&gt;</span>
@@ -213,8 +238,13 @@
     </header>
     <div class="row">
         <div class="col-md-6">
-            <article class="panel panel-default">
-                <h3 class="panel-heading">General</h3>
+            <article id="general" class="panel panel-default">
+                <h3 class="panel-heading">
+                    <a href="#general">
+                        <span class="fa fa-link"></span>
+                    </a>
+                    General
+                </h3>
                 <div class="panel-body">
                     <ul>
                         <li>

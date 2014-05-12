@@ -19,20 +19,19 @@
     padding-top: 38px;
 }
 
-.jumbotron-internal h1 {
-    font-size: 38px;
-    color: #fff;
-    margin-bottom: 10px;
-    -webkit-text-shadow: 0 1px 1px #000;
-    text-shadow: 0 1px 1px #000;
-}
+    .jumbotron-internal h1 {
+        font-size: 38px;
+        color: #fff;
+        margin-bottom: 10px;
+        text-shadow: 0 1px 1px #000;
+    }
 
-.jumbotron-internal h2 {
-    font-size: 16px;
-    font-family: "Open Sans";
-    font-weight: 300;
-    line-height: 22px;
-}
+    .jumbotron-internal h2 {
+        font-size: 16px;
+        font-family: "Open Sans";
+        font-weight: 300;
+        line-height: 22px;
+    }
 
 /*[section-header]*/
 .section-header {
@@ -41,37 +40,37 @@
     margin-top: 30px;
 }
 
-.section-header h2 {
-    font-size: 28px;
-    margin: 0;
-    color: #e54d26;
-}
+    .section-header h2 {
+        font-size: 28px;
+        margin: 0;
+        color: #e54d26;
+    }
 
-.section-header h2 span {
-    display: inline-block;
-    border-bottom: 1px solid #e54d26;
-    position: relative;
-    top: 1px;
-}
+        .section-header h2 span {
+            display: inline-block;
+            border-bottom: 1px solid #e54d26;
+            position: relative;
+            top: 1px;
+        }
 
 /*[download-page]*/
 .download-page {
     margin-top: 30px;
 }
 
-.download-page .panel-download h3 {
-    font-size: 20px;
-}
+    .download-page .panel-download h3 {
+        font-size: 20px;
+    }
 
-.download-page .panel-download .logo-vs {
-    min-height: 150px;
-    padding: 40px 0;
-}
+    .download-page .panel-download .logo-vs {
+        min-height: 150px;
+        padding: 40px 0;
+    }
 
-.download-page .panel-download .description-vs {
-    margin-bottom: 45px;
-    min-height: 60px;
-}
+    .download-page .panel-download .description-vs {
+        margin-bottom: 45px;
+        min-height: 60px;
+    }
 
 /*[changelog-page]*/
 .changelog-page .panel-heading {
@@ -79,16 +78,16 @@
     padding: 0;
 }
 
-.changelog-page .panel-heading:hover {
-    background-color: #fff;
-}
+    .changelog-page .panel-heading:hover {
+        background-color: #fff;
+    }
 
-.changelog-page .panel-heading a[data-toggle="collapse"] {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none !important;
-    outline: none;
-}
+    .changelog-page .panel-heading a[data-toggle="collapse"] {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none !important;
+        outline: none;
+    }
 
 .changelog-page .btn-nightly-download {
     position: absolute;
@@ -117,26 +116,26 @@
         text-align: left;
     }
 
-    .features-page .panel .svgDiagram {
-        margin: auto;
+.features-page .panel .svgDiagram {
+    margin: auto;
+}
+
+    .features-page .panel .svgDiagram svg {
+        height: 310px;
+        display: block;
+        border: 1px solid #ccc;
+        position: relative;
+        background: #fff;
+        min-height: 310px;
     }
 
-        .features-page .panel .svgDiagram svg {
-            height: 310px;
-            display: block;
-            border: 1px solid #ccc;
-            position: relative;
-            background: #fff;
-            min-height: 310px;
-        }
-
-    .features-page .panel .codeAsHtml {
-        font-family: Consolas;
-        border: none;
-        padding: 0;
-        color: black;
-        background: white;
-    }
+.features-page .panel .codeAsHtml {
+    font-family: Consolas;
+    border: none;
+    padding: 0;
+    color: black;
+    background: white;
+}
 
 .features-page article[data-version]:after {
     content: "Supported in: " attr(data-version);
@@ -164,3 +163,13 @@
         display: none;
     }
 }
+
+/*#region Commons */
+h3.panel-heading a {
+    visibility: hidden;
+}
+
+h3.panel-heading:hover a {
+    visibility: visible;
+}
+/*#endregion*/
