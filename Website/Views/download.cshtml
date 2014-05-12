@@ -4,11 +4,16 @@
     Page.Description = "Download Web Essentials from the Visual Studio Gallery";
     Layout = "~/Views/_Layout.cshtml";
 }
-<div class="download-page">
+<section class="download-page">
     <section class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" id="WE2013">
             <div class="panel panel-default text-center panel-download">
-                <h3 class="panel-heading">Web Essentials 2013</h3>
+                <h3 class="panel-heading">
+                    <a href="#WE2013">
+                        <span class="fa fa-link"></span>
+                    </a>
+                    Web Essentials 2013
+                </h3>
                 <div class="panel-body">
                     <div class="logo-vs">
                         <img src="/images/visual-studio-2012.png" alt="Visual Studio 2013" />
@@ -18,9 +23,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="WE2012">
             <div class="panel panel-default text-center panel-download">
-                <h3 class="panel-heading">Web Essentials 2012</h3>
+                <h3 class="panel-heading">
+                    <a href="#WE2012">
+                        <span class="fa fa-link"></span>
+                    </a>
+                    Web Essentials 2012
+                </h3>
                 <div class="panel-body">
                     <div class="logo-vs">
                         <img src="/images/visual-studio-2012.png" alt="Visual Studio 2012" />
@@ -30,9 +40,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="WE2010">
             <div class="panel panel-default text-center panel-download">
-                <h3 class="panel-heading">Web Essentials 2010</h3>
+                <h3 class="panel-heading">
+                    <a href="#WE2010">
+                        <span class="fa fa-link"></span>
+                    </a>
+                    Web Essentials 2010
+                </h3>
                 <div class="panel-body">
                     <div class="logo-vs">
                         <img src="/images/visual-studio-2010.png" alt="Visual Studio 2010" />
@@ -42,10 +57,17 @@
                 </div>
             </div>
         </div>
+    </section>
 
+    <section class="row">
         <div class="col-md-4" id="old">
             <div class="panel panel-default">
-                <h3 class="panel-heading">Older versions</h3>
+                <h3 class="panel-heading">
+                    <a href="#old">
+                        <span class="fa fa-link"></span>
+                    </a>
+                    Older versions
+                </h3>
                 <div class="panel-body">
                     <p>
                         If you want to install an older version of Web Essentials 2013, please visit the
@@ -67,7 +89,12 @@
 
         <div class="col-md-8" id="nightly">
             <div class="panel panel-default">
-                <h3 class="panel-heading">Nightly builds</h3>
+                <h3 class="panel-heading">
+                    <a href="#nightly">
+                        <span class="fa fa-link"></span>
+                    </a>
+                    Nightly builds
+                </h3>
                 <div class="panel-body">
                     <p class="description-vs">
                         You can now get the latest nightly builds of Web Essentials 2013 automatically delivered
@@ -137,4 +164,4 @@
             </div>
         </div>
     </section>
-</div>
+</section>
