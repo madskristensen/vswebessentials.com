@@ -29,15 +29,15 @@
 
   <xs:complexType name="settingsType">
     <xs:all>
-      <xs:element name="optimize" type="boolType" default="true" />
-      <xs:element name="orientation" type="orientationType" default="vertical" />
-      <xs:element name="outputType" type="imageType" default="png" />
-      <xs:element name="runOnBuild" type="boolType" default="false" />
-      <xs:element name="fullPathForIdentifierName" type="boolType" default="true" />
-      <xs:element name="useAbsoluteUrl" type="boolType" default="false" />
-      <xs:element name="outputDirectoryForCss" type="xs:string" />
-      <xs:element name="outputDirectoryForLess" type="xs:string" />
-      <xs:element name="outputDirectoryForScss" type="xs:string" />
+      <xs:element name="optimize" maxOccurs="1" type="boolType" default="true" />
+      <xs:element name="orientation" maxOccurs="1" type="orientationType" default="vertical" />
+      <xs:element name="outputType" maxOccurs="1" type="imageType" default="png" />
+      <xs:element name="runOnBuild" maxOccurs="1" type="boolType" default="false" />
+      <xs:element name="fullPathForIdentifierName" maxOccurs="1" type="boolType" default="true" />
+      <xs:element name="useAbsoluteUrl" maxOccurs="1" type="boolType" default="false" />
+      <xs:element name="outputDirectoryForCss" maxOccurs="1" type="xs:string" />
+      <xs:element name="outputDirectoryForLess" maxOccurs="1" type="xs:string" />
+      <xs:element name="outputDirectoryForScss" maxOccurs="1" type="xs:string" />
     </xs:all>
   </xs:complexType>
 
