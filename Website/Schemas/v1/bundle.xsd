@@ -10,10 +10,10 @@
 
   <xs:complexType name="settingsType">
     <xs:all>
-      <xs:element name="minify" type="boolType" default="true" />
-      <xs:element name="runOnBuild" type="boolType" default="false" />
-      <xs:element name="adjustRelativePaths" type="boolType" default="true" />
-      <xs:element name="outputDirectory" type="xs:string" />
+      <xs:element name="minify" maxOccurs="1" type="boolType" default="true" />
+      <xs:element name="runOnBuild" maxOccurs="1" type="boolType" default="false" />
+      <xs:element name="adjustRelativePaths" minOccurs="0" maxOccurs="1" type="boolType" default="true" />
+      <xs:element name="outputDirectory" maxOccurs="1" type="xs:string" />
     </xs:all>
   </xs:complexType>
 
