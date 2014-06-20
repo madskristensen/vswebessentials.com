@@ -14,10 +14,10 @@
 
 	string downloadUrl = "http://visualstudiogallery.msdn.microsoft.com/56633663-6799-41d7-9df7-0f2a504ca361";
 
-	if (we < new Version(2, 2))
+	if (we < new Version("2.1.8.3"))
 	{
 		Response.Write(downloadUrl);
 	}
-
+	
 	Response.End();
 }
