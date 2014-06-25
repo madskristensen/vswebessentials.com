@@ -35,6 +35,7 @@
       <xs:element name="runOnBuild" maxOccurs="1" type="boolType" default="false" />
       <xs:element name="fullPathForIdentifierName" maxOccurs="1" type="boolType" default="true" />
       <xs:element name="useAbsoluteUrl" maxOccurs="1" type="boolType" default="false" />
+      <xs:element name="outputDirectory" maxOccurs="1" type="xs:string" />
       <xs:element name="outputDirectoryForCss" maxOccurs="1" type="xs:string" />
       <xs:element name="outputDirectoryForLess" maxOccurs="1" type="xs:string" />
       <xs:element name="outputDirectoryForScss" maxOccurs="1" type="xs:string" />
