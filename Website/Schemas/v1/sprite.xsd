@@ -31,6 +31,7 @@
     <xs:all>
       <xs:element name="optimize" maxOccurs="1" type="boolType" default="true" />
       <xs:element name="orientation" maxOccurs="1" type="orientationType" default="vertical" />
+      <xs:element name="margin" minOccurs="0" maxOccurs="1" type="xs:integer" default="0" />
       <xs:element name="outputType" maxOccurs="1" type="imageType" default="png" />
       <xs:element name="runOnBuild" maxOccurs="1" type="boolType" default="false" />
       <xs:element name="fullPathForIdentifierName" maxOccurs="1" type="boolType" default="true" />
