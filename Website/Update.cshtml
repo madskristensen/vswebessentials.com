@@ -18,10 +18,10 @@
 	{
 		Response.Write(downloadUrl);
 	}
-	//else if (we == new Version(2, 3))// && vs == new Version(12, 0, 30714, 00))
-	//{
-	//	Response.Write("http://supervisorjoost.com");
-	//}
+	else if (we < new Version(2, 4) && vs == new Version(12, 0, 31010, 00))
+	{
+		Response.Write("https://github.com/madskristensen/WebEssentials2013/releases/tag/v2.4");
+	}
 
 	Response.End();
 }
