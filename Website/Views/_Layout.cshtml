@@ -1,13 +1,13 @@
 ﻿@{
     if (!Request.IsLocal)
     {
-    Response.Cache.SetValidUntilExpires(true);
-    Response.Cache.SetExpires(DateTime.Now.AddDays(1));
-    Response.Cache.SetCacheability(HttpCacheability.Public);
+        Response.Cache.SetValidUntilExpires(true);
+        Response.Cache.SetExpires(DateTime.Now.AddDays(1));
+        Response.Cache.SetCacheability(HttpCacheability.Public);
 
-    string file = Server.MapPath(Request.CurrentExecutionFilePath);
-    Response.AddFileDependency(file);
-	Response.Cache.SetLastModifiedFromFileDependencies();
+        string file = Server.MapPath(Request.CurrentExecutionFilePath);
+        Response.AddFileDependency(file);
+        Response.Cache.SetLastModifiedFromFileDependencies();
     }
 
     string title = Page.Title.Contains("Web Essentials") ? Page.Title : Page.Title + " - Web Essentials";
@@ -28,7 +28,6 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
     <!-- facebook info -->
     <meta name="og:title" content="@title" />
     <meta name="og:type" content="website" />
@@ -154,6 +153,8 @@
         $('.navbar-custom .navbar-nav > li >  a[href*="' + window.location.pathname + '"]').parent().addClass("active");
         $('.navbar-custom .dropdown-menu > li a[href*="' + window.location.pathname + '"]').parent().addClass("active");
         $('.navbar-custom .dropdown-menu > li a[href*="' + window.location.pathname + '"]').parent().parent().parent().addClass("active");
+
     </script>
+    @RenderSection("scripts", false)
 </body>
 </html>

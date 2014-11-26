@@ -1,0 +1,125 @@
+﻿@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="features-page">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-sm-push-8 col-md-push-9 col-md-3" style="margin: 0 0 10px 0; text-align:right;">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" id="filterMenuItem" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    Filter
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a class="filterVersion" data-filter-version="WE2015" role="menuitem" tabindex="-1" href="#">Web Essentials 2015</a></li>
+                    <li role="presentation"><a class="filterVersion" data-filter-version="WE2013" role="menuitem" tabindex="-1" href="#">Web Essentials 2013</a></li>
+                    <li role="presentation"><a class="filterVersion" data-filter-version="WE2012" role="menuitem" tabindex="-1" href="#">Web Essentials 2012</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-sm-pull-4 col-md-pull-3 col-md-9">
+            @RenderSection("highlight", false)
+        </div>
+    </div>
+    <div id="noArticleAvailableWarning" class="alert alert-warning" style="display:none;">
+        <p>This features is not available for the selected version. </p>
+    </div>
+    @RenderBody()
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1);
+                if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+            }
+            return "";
+        }
+
+        function applyFilter(version) {
+
+            $(".section-header").each(function () {
+                if ($(this).data("version") && $(this).data("version").indexOf(version) == -1) {
+                    $(this).hide();
+                }
+                else {
+                    $(this).show();
+                }
+            });
+
+            var nbArticle = $('article').length;
+            $("article").each(function () {
+                if ($(this).data("version") && $(this).data("version").indexOf(version) == -1) {
+                    $(this).hide();
+                    nbArticle--;
+                }
+                else {
+                    $(this).show();
+                }
+            });
+
+            if (nbArticle === 0) {
+                $(".section-header").each(function () {
+                    if (!$(this).data("version")) {
+                        $(this).hide();
+                    }
+                });
+                $('#noArticleAvailableWarning').show();
+            }
+            else {
+                $(".section-header").each(function () {
+                    if (!$(this).data("version")) {
+                        $(this).show();
+                    }
+                });
+                $('#noArticleAvailableWarning').hide();
+            }
+
+            var fullVersionName;
+            switch (version.trim()) {
+                case "WE2015":
+                    fullVersionName = "Web Essentials 2015";
+                    break;
+                case "WE2013":
+                    fullVersionName = "Web Essentials 2013";
+                    break;
+                case "WE2012":
+                    fullVersionName = "Web Essentials 2012";
+                    break;
+            }
+
+            $("#filterMenuItem").html("Filter: " + fullVersionName + '&nbsp;<b class="caret"></b>');
+        }
+
+        $(function () {
+
+            var f = getCookie('we-filter-version');
+            if (!f) {
+                f = "WE2013";
+                setCookie('we-filter-version', f, 30);
+            }
+            applyFilter(f);
+
+            $("a.filterVersion").click(function () {
+                var f = $(this).data("filter-version");
+
+                setCookie('we-filter-version', f, 30);
+
+                applyFilter(f);
+            });
+        });
+
+    </script>
+}

@@ -207,8 +207,7 @@ img {
 /*[section-header]*/
 .section-header {
     border-bottom: 1px solid #EEE;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    margin: 0 0 20px 0;
 }
 
     .section-header h2 {

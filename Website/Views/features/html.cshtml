@@ -1,458 +1,457 @@
 ﻿@{
     Page.Title = "HTML";
     Page.Description = "The HTML editor has been extended with extra functionality.";
-    Layout = "~/Views/_Layout.cshtml";
+    Layout = "~/Views/_LayoutFilter.cshtml";
 }
-<div class="features-page">
+@section highlight {
     <div class="alert alert-info">
         <p>The HTML editor has been extended with extra functionality.</p>
     </div>
-    <header class="section-header">
-        <h2><span>Features</span></h2>
-    </header>
-    <div class="row">
-        <div class="col-md-6">
-            <article id="minify-selection" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#minify-selection">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Minify Selection
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        Right-click your selection in the editor and select to have it minified.
-                    </p>
-                </div>
-            </article>
-            <article id="minify-html" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#minify-html">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Minify HTML file
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        Right-click one or more .html file in Solution Explorer and click Minify HTML File(s).
-                        It will create a *.min.html file and automatically keep it in sync when the source file changes.
-                    </p>
-                </div>
-            </article>
-            <article id="bundle-html" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#bundle-html">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Bundle HTML
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        Select 2 or more HTML files in Solution Explorer, then right-click and select
-                        <mark>Create HTML Bundle File</mark>.
-                    </p>
-                    <p>This feature makes it easy to bundle multiple HTML templates for use in SPA's.</p>
-                </div>
-            </article>
-        </div>
-        <div class="col-md-6">
-            <article id="image-hover" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#image-hover">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Image hover preview
-                </h3>
-                <div class="panel-body">
-                    <p>See the image when the mouse hovers the &lt;img&gt; tag</p>
-                    <img src="/Images/html/imagehover.png" alt="" />
-                </div>
-            </article>
-        </div>
+}
+<header class="section-header">
+    <h2><span>Features</span></h2>
+</header>
+<div class="row">
+    <div class="col-md-6">
+        <article id="minify-selection" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#minify-selection">
+                    <span class="fa fa-link"></span>
+                </a>
+                Minify Selection
+            </h3>
+            <div class="panel-body">
+                <p>
+                    Right-click your selection in the editor and select to have it minified.
+                </p>
+            </div>
+        </article>
+        <article id="minify-html" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#minify-html">
+                    <span class="fa fa-link"></span>
+                </a>
+                Minify HTML file
+            </h3>
+            <div class="panel-body">
+                <p>
+                    Right-click one or more .html file in Solution Explorer and click Minify HTML File(s).
+                    It will create a *.min.html file and automatically keep it in sync when the source file changes.
+                </p>
+            </div>
+        </article>
+        <article id="bundle-html" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#bundle-html">
+                    <span class="fa fa-link"></span>
+                </a>
+                Bundle HTML
+            </h3>
+            <div class="panel-body">
+                <p>
+                    Select 2 or more HTML files in Solution Explorer, then right-click and select
+                    <mark>Create HTML Bundle File</mark>.
+                </p>
+                <p>This feature makes it easy to bundle multiple HTML templates for use in SPA's.</p>
+            </div>
+        </article>
     </div>
-
-    <header class="section-header">
-        <h2><span>ZenCoding</span></h2>
-    </header>
-    <div class="row">
-        <div class="col-md-6">
-            <article id="zen-syntax" class="panel panel-default" data-version="WE2012, WE2013">
-                <h3 class="panel-heading">
-                    <a href="#zen-syntax">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    ZenCoding syntax
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        Watch this short&nbsp;demo video and <a href="http://www.johnpapa.net/zen-coding-in-visual-studio-2012/">read more about the ZenCoding syntax</a>.
-                    </p>
-                    <div class="video-container">
-                        <iframe width="420" height="280" title="ZenCoding Presentation" src="http://www.youtube.com/embed/1gHsxlDQ5TE" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <p>
-                        ZenCoding is open source. Find the <a href="https://github.com/madskristensen/ZenCoding">code on GitHub</a>
-                    </p>
-                </div>
-            </article>
-            <article id="lorem" class="panel panel-default" data-version="WE2012, WE2013">
-                <h3 class="panel-heading">
-                    <a href="#lorem">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Lorem Ipsum generator
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        As part of ZenCoding, you can now generate Lorem Ipsum code directly in the HTML editor.
-                        Simply type <code>lorem</code> and hit TAB and a 30 word Lorem Ipsum text is inserted.
-                        Type <code>lorem10</code> and a 10 word Lorem Ipsum text is inserted.
-                    </p>
-                    <p>This can be used in conjuction with ZenCoding like so: <code>ul>li*5>lorem3</code></p>
-                </div>
-            </article>
-        </div>
-        <div class="col-md-6">
-            <article id="lorem-pixel" class="panel panel-default" data-version="WE2012, WE2013">
-                <h3 class="panel-heading">
-                    <a href="#lorem-pixel">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Lorem Pixel generator
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        As part of ZenCoding, you can also generate
-                        <a href="http://lorempixel.com">Lorem Pixel</a> code directly in the HTML
-                        editor. Simply type <code>pix-200x200-animals</code> and hit TAB and a img
-                        tag with a 200x200 image of an animal is inserted.
-                    </p>
-                    <div class="video-container">
-                        <p>
-                            This video will demonstrate more options available with the ZenCoding
-                            Lorem Pixel generator:
-                        </p>
-                        <iframe width="420" height="236" title="Support for LoremPixel with ZenCoding" src="//www.youtube.com/embed/p64xyAk0R9s" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </article>
-            <article id="placehold" class="panel panel-default" data-version="WE2012, WE2013">
-                <h3 class="panel-heading">
-                    <a href="#placehold">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    PlaceHold.it generator
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        ZenCoding also support <a href="http://placehold.it/">PlaceHold.it</a> if you
-                        prefer <i>blank</i> images. Type <code>place-50</code> and hit TAB to have a
-                        50 pixels square image. Use <code>place-200x100</code> to insert a rectangular
-                        image.
-                    </p>
-                    <p>
-                        You can choose the background color by adding the hexadecimal value after the
-                        size like this <code>place-150x240-EEEDDD</code>. You can even add text to the
-                        image by using <code>place-150x240-EEE-t=This%20is%20some%20text.</code>
-                    </p>
-                </div>
-            </article>
-        </div>
+    <div class="col-md-6">
+        <article id="image-hover" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#image-hover">
+                    <span class="fa fa-link"></span>
+                </a>
+                Image hover preview
+            </h3>
+            <div class="panel-body">
+                <p>See the image when the mouse hovers the &lt;img&gt; tag</p>
+                <img src="/Images/html/imagehover.png" alt="" />
+            </div>
+        </article>
     </div>
+</div>
 
-    <header class="section-header">
-        <h2><span>Commands</span></h2>
-    </header>
-    <div class="row">
-        <div class="col-md-6">
-            <article id="surround-with" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#surround-with">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Surround with tag
-                </h3>
-                <div class="panel-body">
-                    <p>In the HTML editor, click <code>Shift+Alt+W</code> to surround the selection with a new tag</p>
+<header class="section-header">
+    <h2><span>ZenCoding</span></h2>
+</header>
+<div class="row">
+    <div class="col-md-6">
+        <article id="zen-syntax" class="panel panel-default" data-version="WE2012, WE2013">
+            <h3 class="panel-heading">
+                <a href="#zen-syntax">
+                    <span class="fa fa-link"></span>
+                </a>
+                ZenCoding syntax
+            </h3>
+            <div class="panel-body">
+                <p>
+                    Watch this short&nbsp;demo video and <a href="http://www.johnpapa.net/zen-coding-in-visual-studio-2012/">read more about the ZenCoding syntax</a>.
+                </p>
+                <div class="video-container">
+                    <iframe width="420" height="280" title="ZenCoding Presentation" src="http://www.youtube.com/embed/1gHsxlDQ5TE" frameborder="0" allowfullscreen></iframe>
                 </div>
-            </article>
-            <article id="region" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#region">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    #Region support
-                </h3>
-                <div class="panel-body">
-                    <p>Collapsable regions</p>
-                    <img src="/Images/html/regions.png" alt="" />
-                </div>
-            </article>
-            <article id="expand" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#expand">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Expand selection
-                </h3>
-                <div class="panel-body">
-                    <p>Hit <code>Alt+1</code> to expand the selection and <code>Alt+2</code> to contract it.</p>
-                </div>
-            </article>
-            <article id="format" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#format">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Format on ENTER
-                </h3>
-                <div class="panel-body">
-                    <p>Hit <code>ENTER</code> and your HTML is automatically formatted with new lines etc.</p>
-                </div>
-            </article>
-            <article id="references" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#references">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Find all references
-                </h3>
-                <div class="panel-body">
+                <p>
+                    ZenCoding is open source. Find the <a href="https://github.com/madskristensen/ZenCoding">code on GitHub</a>
+                </p>
+            </div>
+        </article>
+        <article id="lorem" class="panel panel-default" data-version="WE2012, WE2013">
+            <h3 class="panel-heading">
+                <a href="#lorem">
+                    <span class="fa fa-link"></span>
+                </a>
+                Lorem Ipsum generator
+            </h3>
+            <div class="panel-body">
+                <p>
+                    As part of ZenCoding, you can now generate Lorem Ipsum code directly in the HTML editor.
+                    Simply type <code>lorem</code> and hit TAB and a 30 word Lorem Ipsum text is inserted.
+                    Type <code>lorem10</code> and a 10 word Lorem Ipsum text is inserted.
+                </p>
+                <p>This can be used in conjuction with ZenCoding like so: <code>ul>li*5>lorem3</code></p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-6">
+        <article id="lorem-pixel" class="panel panel-default" data-version="WE2012, WE2013">
+            <h3 class="panel-heading">
+                <a href="#lorem-pixel">
+                    <span class="fa fa-link"></span>
+                </a>
+                Lorem Pixel generator
+            </h3>
+            <div class="panel-body">
+                <p>
+                    As part of ZenCoding, you can also generate
+                    <a href="http://lorempixel.com">Lorem Pixel</a> code directly in the HTML
+                    editor. Simply type <code>pix-200x200-animals</code> and hit TAB and a img
+                    tag with a 200x200 image of an animal is inserted.
+                </p>
+                <div class="video-container">
                     <p>
-                        Hit <code>Shift+F12</code> when the cursor is located inside a class attribute.
-                        Web Essentials will search all CSS, LESS and SASS files for the class name.
+                        This video will demonstrate more options available with the ZenCoding
+                        Lorem Pixel generator:
                     </p>
+                    <iframe width="420" height="236" title="Support for LoremPixel with ZenCoding" src="//www.youtube.com/embed/p64xyAk0R9s" frameborder="0" allowfullscreen></iframe>
                 </div>
-            </article>
-        </div>
-        <div class="col-md-6">
-            <article id="definition" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#definition">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Go To Definition
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        Hit <code>F12</code> when the cursor is located inside a class attribute.
-                        Web Essentials will jump to the location inside CSS, LESS and SASS files.
-                    </p>
-                </div>
-            </article>
-            <article id="meta" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#meta">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Meta tags
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        Full Intellisense provided for:
-                    </p>
+            </div>
+        </article>
+        <article id="placehold" class="panel panel-default" data-version="WE2012, WE2013">
+            <h3 class="panel-heading">
+                <a href="#placehold">
+                    <span class="fa fa-link"></span>
+                </a>
+                PlaceHold.it generator
+            </h3>
+            <div class="panel-body">
+                <p>
+                    ZenCoding also support <a href="http://placehold.it/">PlaceHold.it</a> if you
+                    prefer <i>blank</i> images. Type <code>place-50</code> and hit TAB to have a
+                    50 pixels square image. Use <code>place-200x100</code> to insert a rectangular
+                    image.
+                </p>
+                <p>
+                    You can choose the background color by adding the hexadecimal value after the
+                    size like this <code>place-150x240-EEEDDD</code>. You can even add text to the
+                    image by using <code>place-150x240-EEE-t=This%20is%20some%20text.</code>
+                </p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<header class="section-header">
+    <h2><span>Commands</span></h2>
+</header>
+<div class="row">
+    <div class="col-md-6">
+        <article id="surround-with" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#surround-with">
+                    <span class="fa fa-link"></span>
+                </a>
+                Surround with tag
+            </h3>
+            <div class="panel-body">
+                <p>In the HTML editor, click <code>Shift+Alt+W</code> to surround the selection with a new tag</p>
+            </div>
+        </article>
+        <article id="region" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#region">
+                    <span class="fa fa-link"></span>
+                </a>
+                #Region support
+            </h3>
+            <div class="panel-body">
+                <p>Collapsable regions</p>
+                <img src="/Images/html/regions.png" alt="" />
+            </div>
+        </article>
+        <article id="expand" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#expand">
+                    <span class="fa fa-link"></span>
+                </a>
+                Expand selection
+            </h3>
+            <div class="panel-body">
+                <p>Hit <code>Alt+1</code> to expand the selection and <code>Alt+2</code> to contract it.</p>
+            </div>
+        </article>
+        <article id="format" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#format">
+                    <span class="fa fa-link"></span>
+                </a>
+                Format on ENTER
+            </h3>
+            <div class="panel-body">
+                <p>Hit <code>ENTER</code> and your HTML is automatically formatted with new lines etc.</p>
+            </div>
+        </article>
+        <article id="references" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#references">
+                    <span class="fa fa-link"></span>
+                </a>
+                Find all references
+            </h3>
+            <div class="panel-body">
+                <p>
+                    Hit <code>Shift+F12</code> when the cursor is located inside a class attribute.
+                    Web Essentials will search all CSS, LESS and SASS files for the class name.
+                </p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-6">
+        <article id="definition" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#definition">
+                    <span class="fa fa-link"></span>
+                </a>
+                Go To Definition
+            </h3>
+            <div class="panel-body">
+                <p>
+                    Hit <code>F12</code> when the cursor is located inside a class attribute.
+                    Web Essentials will jump to the location inside CSS, LESS and SASS files.
+                </p>
+            </div>
+        </article>
+        <article id="meta" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#meta">
+                    <span class="fa fa-link"></span>
+                </a>
+                Meta tags
+            </h3>
+            <div class="panel-body">
+                <p>
+                    Full Intellisense provided for:
+                </p>
+                <ul>
+                    <li>Apple iOS</li>
+                    <li>Twitter Cards</li>
+                    <li>Facebook/OpenGraph</li>
+                    <li>Windows 8</li>
+                    <li>Internet Explorer 9+</li>
+                    <li>Viewport</li>
+                </ul>
+            </div>
+        </article>
+        <article id="intellisense" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#intellisense">
+                    <span class="fa fa-link"></span>
+                </a>
+                Dynamic Intellisense
+            </h3>
+            <div class="panel-body">
+                <p>Dynamic Intellisense is where Intellisense is based on other tags and attributes etc.</p>
+                <ul>
+                    <li>&lt;label for=&quot;here&quot;&gt;</li>
+                    <li>&lt;input id=&quot;here&quot; /&gt; based on &lt;label&gt; tags</li>
+                    <li>&lt;datalist&gt; IDs</li>
+                </ul>
+                <img src="/Images/html/dynamicintellisense.png" alt="" />
+            </div>
+        </article>
+    </div>
+</div>
+<!-- / -->
+
+<header class="section-header">
+    <h2><span>Smart Tags</span></h2>
+</header>
+<div class="row">
+    <div class="col-md-6">
+        <article id="base64" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#base64">
+                    <span class="fa fa-link"></span>
+                </a>
+                Base64 decoding
+            </h3>
+            <div class="panel-body">
+                <p>Any base64 image can be easily converted back to a file on disk.</p>
+            </div>
+        </article>
+        <article id="extract-javascript" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#extract-javascript">
+                    <span class="fa fa-link"></span>
+                </a>
+                Extract JavaScript to file
+            </h3>
+            <div class="panel-body">
+                <p>&lt;script&gt; tags can easily be extracted to a .js file on disk.</p>
+            </div>
+        </article>
+        <article id="tags" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#tags">
+                    <span class="fa fa-link"></span>
+                </a>
+                Remove parent tags
+            </h3>
+            <div class="panel-body">
+                <p>Any HTML element containting child elements can easily be removed while keeping the children.</p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-6">
+        <article id="extract-stylesheet" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#extract-stylesheet">
+                    <span class="fa fa-link"></span>
+                </a>
+                Extract Stylesheets to file
+            </h3>
+            <div class="panel-body">
+                <p>&lt;style&gt; tags can easily be extracted to a .css/.less file on disk.</p>
+            </div>
+        </article>
+        <article id="angular" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#angular">
+                    <span class="fa fa-link"></span>
+                </a>
+                AngularJS controller generation
+            </h3>
+            <div class="panel-body">
+                <p>Any HTML element with a <code>ng-controller</code> attribute has a Smart Tag for generating the .js controller file.</p>
+            </div>
+        </article>
+        <article id="minify" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#minify">
+                    <span class="fa fa-link"></span>
+                </a>
+                Minify CSS and JavaScript
+            </h3>
+            <div class="panel-body">
+                <p>An easy way to minify embedded CSS and JavaScript.</p>
+            </div>
+        </article>
+    </div>
+</div>
+<!-- / -->
+
+<header class="section-header">
+    <h2><span>Validation</span></h2>
+</header>
+<div class="row">
+    <div class="col-md-6">
+        <article id="missing-angular" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#missing-angular">
+                    <span class="fa fa-link"></span>
+                </a>
+                Missing Angular attribute
+            </h3>
+            <div class="panel-body">
+                <p>If you're using certain AngularJS specific attributes, but forgot the <code>ng-app</code> attribute, then you'll be notified by this validator.</p>
+            </div>
+        </article>
+        <article id="opengraph" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#opengraph">
+                    <span class="fa fa-link"></span>
+                </a>
+                OpenGraph prefix
+            </h3>
+            <div class="panel-body">
+                <p>
+                    When working with Facebook/OpenGraph integration, we need to remember to add the
+                    <code>prefix</code> attribute to the <code>&lt;head&gt;</code> element.
+                </p>
+            </div>
+        </article>
+        <article id="foundation" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#foundation">
+                    <span class="fa fa-link"></span>
+                </a>
+                Foundation column validations
+            </h3>
+            <div class="panel-body">
+                <p>
+                    Zurb Foundation grid system allows you to quickly set a responsive grid design. This
+                    validator makes sure you easily have everything at the right place.
                     <ul>
-                        <li>Apple iOS</li>
-                        <li>Twitter Cards</li>
-                        <li>Facebook/OpenGraph</li>
-                        <li>Windows 8</li>
-                        <li>Internet Explorer 9+</li>
-                        <li>Viewport</li>
+                        <li>
+                            Checks for the presence of <code>columns</code> (or <code>column</code>)
+                            class if you define a <code>small-*, medium-* or large-*</code> class, and
+                            vice versa.
+                        </li>
+                        <li>
+                            Checks for the sum of each column's width that you set in order to ensure you do not
+                            exceed 12.
+                        </li>
+                        <li>
+                            If you define less than 12 columns, makes sure that the last column contains
+                            the <code>end</code> class.
+                        </li>
                     </ul>
-                </div>
-            </article>
-            <article id="intellisense" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#intellisense">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Dynamic Intellisense
-                </h3>
-                <div class="panel-body">
-                    <p>Dynamic Intellisense is where Intellisense is based on other tags and attributes etc.</p>
-                    <ul>
-                        <li>&lt;label for=&quot;here&quot;&gt;</li>
-                        <li>&lt;input id=&quot;here&quot; /&gt; based on &lt;label&gt; tags</li>
-                        <li>&lt;datalist&gt; IDs</li>
-                    </ul>
-                    <img src="/Images/html/dynamicintellisense.png" alt="" />
-                </div>
-            </article>
-        </div>
+                    Read more at <a href="http://foundation.zurb.com/">foundation.zurb.com</a>
+                </p>
+            </div>
+        </article>
     </div>
-    <!-- / -->
+    <div class="col-md-6">
+        <article id="missing-bootstrap" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#missing-bootstrap">
+                    <span class="fa fa-link"></span>
+                </a>
+                Missing Bootstrap class
+            </h3>
+            <div class="panel-body">
+                <p>
+                    In Twitter Bootstrap you need to chain certain class names. For instance, when using
+                    <code>btn-primary</code> you also need to include the <code>btn</code> class name.
+                    This validator makes sure you don't forget that. It also checks for the presence of
+                    the required Bootstrap <code>row</code> class on a parent element of your column
+                    declarations. Read more at <a href="http://getbootstrap.com/">getbootstrap.com</a>
+                </p>
+                <p>This validator also checks for missing dependant class names for <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome</a>.</p>
 
-    <header class="section-header">
-        <h2><span>Smart Tags</span></h2>
-    </header>
-    <div class="row">
-        <div class="col-md-6">
-            <article id="base64" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#base64">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Base64 decoding
-                </h3>
-                <div class="panel-body">
-                    <p>Any base64 image can be easily converted back to a file on disk.</p>
-                </div>
-            </article>
-            <article id="extract-javascript" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#extract-javascript">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Extract JavaScript to file
-                </h3>
-                <div class="panel-body">
-                    <p>&lt;script&gt; tags can easily be extracted to a .js file on disk.</p>
-                </div>
-            </article>
-            <article id="tags" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#tags">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Remove parent tags
-                </h3>
-                <div class="panel-body">
-                    <p>Any HTML element containting child elements can easily be removed while keeping the children.</p>
-                </div>
-            </article>
-        </div>
-        <div class="col-md-6">
-            <article id="extract-stylesheet" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#extract-stylesheet">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Extract Stylesheets to file
-                </h3>
-                <div class="panel-body">
-                    <p>&lt;style&gt; tags can easily be extracted to a .css/.less file on disk.</p>
-                </div>
-            </article>
-            <article id="angular" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#angular">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    AngularJS controller generation
-                </h3>
-                <div class="panel-body">
-                    <p>Any HTML element with a <code>ng-controller</code> attribute has a Smart Tag for generating the .js controller file.</p>
-                </div>
-            </article>
-            <article id="minify" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#minify">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Minify CSS and JavaScript
-                </h3>
-                <div class="panel-body">
-                    <p>An easy way to minify embedded CSS and JavaScript.</p>
-                </div>
-            </article>
-        </div>
+            </div>
+        </article>
+
+        <article id="microdata" class="panel panel-default" data-version="WE2013">
+            <h3 class="panel-heading">
+                <a href="#microdata">
+                    <span class="fa fa-link"></span>
+                </a>
+                Microdata
+            </h3>
+            <div class="panel-body">
+                <p>Validates that the <code>itemtype</code> attribute is a valid absolute URL.</p>
+            </div>
+        </article>
     </div>
-    <!-- / -->
-
-    <header class="section-header">
-        <h2><span>Validation</span></h2>
-    </header>
-    <div class="row">
-        <div class="col-md-6">
-            <article id="missing-angular" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#missing-angular">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Missing Angular attribute
-                </h3>
-                <div class="panel-body">
-                    <p>If you're using certain AngularJS specific attributes, but forgot the <code>ng-app</code> attribute, then you'll be notified by this validator.</p>
-                </div>
-            </article>
-            <article id="opengraph" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#opengraph">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    OpenGraph prefix
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        When working with Facebook/OpenGraph integration, we need to remember to add the
-                        <code>prefix</code> attribute to the <code>&lt;head&gt;</code> element.
-                    </p>
-                </div>
-            </article>
-            <article id="foundation" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#foundation">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Foundation column validations
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        Zurb Foundation grid system allows you to quickly set a responsive grid design. This
-                        validator makes sure you easily have everything at the right place.
-                        <ul>
-                            <li>
-                                Checks for the presence of <code>columns</code> (or <code>column</code>)
-                                class if you define a <code>small-*, medium-* or large-*</code> class, and
-                                vice versa.
-                            </li>
-                            <li>
-                                Checks for the sum of each column's width that you set in order to ensure you do not
-                                exceed 12.
-                            </li>
-                            <li>
-                                If you define less than 12 columns, makes sure that the last column contains
-                                the <code>end</code> class.
-                            </li>
-                        </ul>
-                        Read more at <a href="http://foundation.zurb.com/">foundation.zurb.com</a>
-                    </p>
-                </div>
-            </article>
-        </div>
-        <div class="col-md-6">
-            <article id="missing-bootstrap" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#missing-bootstrap">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Missing Bootstrap class
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        In Twitter Bootstrap you need to chain certain class names. For instance, when using
-                        <code>btn-primary</code> you also need to include the <code>btn</code> class name.
-                        This validator makes sure you don't forget that. It also checks for the presence of
-                        the required Bootstrap <code>row</code> class on a parent element of your column
-                        declarations. Read more at <a href="http://getbootstrap.com/">getbootstrap.com</a>
-                    </p>
-                    <p>This validator also checks for missing dependant class names for <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome</a>.</p>
-
-                </div>
-            </article>
-
-            <article id="microdata" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#microdata">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Microdata
-                </h3>
-                <div class="panel-body">
-                    <p>Validates that the <code>itemtype</code> attribute is a valid absolute URL.</p>
-                </div>
-            </article>
-        </div>
-    </div>
-    <!-- / -->
 </div>
