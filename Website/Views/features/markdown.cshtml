@@ -1,83 +1,83 @@
 ﻿@{
     Page.Title = "Markdown";
     Page.Description = "Web Essentials ships with a Markdown editor.";
-    Layout = "~/Views/_Layout.cshtml";
+    Layout = "~/Views/_LayoutFilter.cshtml";
 }
 
-<div class="features-page">
+@section highlight {
     <div class="alert alert-info">
         <p>Web Essentials ships with a Markdown editor.</p>
     </div>
-    <header class="section-header">
-        <h2><span>Features</span></h2>
-    </header>
-    <div class="row">
-        <div class="col-md-6">
-            <article id="syntax" class="panel panel-default" data-version="WE2012, WE2013">
-                <h3 class="panel-heading">
-                    <a href="#syntax">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Syntax highlighting
-                </h3>
-                <div class="panel-body">
-                    <p>Full colorization for Markdown syntax.</p>
-                </div>
-            </article>
+}
+<header class="section-header">
+    <h2><span>Features</span></h2>
+</header>
+<div class="row">
+    <div class="col-md-6">
+        <article id="syntax" class="panel panel-default" data-version="WE2012, WE2013, WE2015">
+            <h3 class="panel-heading">
+                <a href="#syntax">
+                    <span class="fa fa-link"></span>
+                </a>
+                Syntax highlighting
+            </h3>
+            <div class="panel-body">
+                <p>Full colorization for Markdown syntax.</p>
+            </div>
+        </article>
 
-            <article id="intellisense" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#intellisense">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Intellisense for embedded languages
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        GitHub's embedded language feature is fully supported by the <code>```language</code> syntax.
-                    </p>
-                    <img src="/Images/markdown/embedded-intellisense.png" alt="Embedded languages Intellisense" />
-                </div>
-            </article>
-        </div>
-        <div class="col-md-6">
-            <article id="preview" class="panel panel-default" data-version="WE2012, WE2013">
-                <h3 class="panel-heading">
-                    <a href="#preview">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Preview window
-                </h3>
-                <div class="panel-body">
-                    <p>See a side-by-side preview window of the rendered HTML.</p>
-                </div>
-            </article>
-            <article id="compile" class="panel panel-default" data-version="WE2013">
-                <h3 class="panel-heading">
-                    <a href="#compile">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Compile to HTML
-                </h3>
-                <div class="panel-body">
-                    <p>
-                        Right-click any Markdown file and select <mark>Compile Markdown to HTML</mark>.
-                        This will generate a .html file nested under the Markdown file and it will stay in sync as the Markdown
-                        file changes.
-                    </p>
-                </div>
-            </article>
-            <article id="custom" class="panel panel-default" data-version="WE2012, WE2013">
-                <h3 class="panel-heading">
-                    <a href="#custom">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Custom Stylesheet
-                </h3>
-                <div class="panel-body">
-                    <p>You can add a solution specific Stylesheet to control the styles of the preview window.</p>
-                </div>
-            </article>
-        </div>
+        <article id="intellisense" class="panel panel-default" data-version="WE2013, WE2015">
+            <h3 class="panel-heading">
+                <a href="#intellisense">
+                    <span class="fa fa-link"></span>
+                </a>
+                Intellisense for embedded languages
+            </h3>
+            <div class="panel-body">
+                <p>
+                    GitHub's embedded language feature is fully supported by the <code>```language</code> syntax.
+                </p>
+                <img src="/Images/markdown/embedded-intellisense.png" alt="Embedded languages Intellisense" />
+            </div>
+        </article>
+    </div>
+    <div class="col-md-6">
+        <article id="preview" class="panel panel-default" data-version="WE2012, WE2013, WE2015">
+            <h3 class="panel-heading">
+                <a href="#preview">
+                    <span class="fa fa-link"></span>
+                </a>
+                Preview window
+            </h3>
+            <div class="panel-body">
+                <p>See a side-by-side preview window of the rendered HTML.</p>
+            </div>
+        </article>
+        <article id="compile" class="panel panel-default" data-version="WE2013, WE2015">
+            <h3 class="panel-heading">
+                <a href="#compile">
+                    <span class="fa fa-link"></span>
+                </a>
+                Compile to HTML
+            </h3>
+            <div class="panel-body">
+                <p>
+                    Right-click any Markdown file and select <mark>Compile Markdown to HTML</mark>.
+                    This will generate a .html file nested under the Markdown file and it will stay in sync as the Markdown
+                    file changes.
+                </p>
+            </div>
+        </article>
+        <article id="custom" class="panel panel-default" data-version="WE2012, WE2013, WE2015">
+            <h3 class="panel-heading">
+                <a href="#custom">
+                    <span class="fa fa-link"></span>
+                </a>
+                Custom Stylesheet
+            </h3>
+            <div class="panel-body">
+                <p>You can add a solution specific Stylesheet to control the styles of the preview window.</p>
+            </div>
+        </article>
     </div>
 </div>

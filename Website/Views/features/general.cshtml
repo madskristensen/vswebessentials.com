@@ -2,134 +2,137 @@
     Page.Title = "General";
     Page.Keywords = "bundling, bundle, minification, build, compile, minify";
     Page.Description = "General features of Web Essentials";
-    Layout = "~/Views/_Layout.cshtml";
+    Layout = "~/Views/_LayoutFilter.cshtml";
 }
 
-<div class="features-page">
-    <header class="section-header">
-        <h2><span>Features</span></h2>
-    </header>
-    <div class="row">
-        <div class="col-md-6">
-            <article id="settings" class="panel panel-default">
-                <h3 class="panel-heading">
-                    <a href="#settings">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Settings
-                </h3>
-                <div class="panel-body">
-                    <p>All settings can be found by going to Tools -> Options -> Web Essentials.</p>
-                    <img src="/images/general/settings.png" alt="Options dialog" width="460" height="266" />
-                </div>
-            </article>
-            <article id="solution" class="panel panel-default">
-                <h3 class="panel-heading">
-                    <a href="#solution">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Solution scoped settings
-                </h3>
-                <div class="panel-body">
-                    <p>Settings can either be global or specific to any solution. By scoping settings to individual solution, you can ensure that all team members  are using the same settings. </p>
-                    <p>To enable solution settings, right-click any item in Solution Explorer and click "Create solution settings".</p>
-                </div>
-            </article>
-        </div>
-        <div class="col-md-6">
-            <article id="commands" class="panel panel-default">
-                <h3 class="panel-heading">
-                    <a href="#commands">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    Solution wide commands
-                </h3>
-                <div class="panel-body">
-                    <p>These menu items are shortcuts to solution wide commands.</p>
-                    <p>They can be found under Build -> Web Essentials.</p>
-                    <img src="/images/general/build.png" alt="Build menu" width="361" height="130" />
-                </div>
-            </article>
-            <article id="weignore" class="panel panel-default">
-                <h3 class="panel-heading">
-                    <a href="#weignore">
-                        <span class="fa fa-link"></span>
-                    </a>
-                    WEIgnore
-                </h3>
-                <div class="panel-body">
-                    <p><code>.weignore</code> document is a file containing the list of linefeed-separated file-path patterns to prevent compilers and linters used in Web Essentials. It accepts all styles supported by .jshintignore and both Unix-like and Windows-like file paths.</p>
-                    <h4>Discoverability</h4>
-                    <p>It works just like <code>.jscs</code>,<code>.jshintrc</code>, <code>coffee.json</code>, <code>coffeelint.js</code> and <code>tslint.json</code>. For each request, it looks for <code>.weignore</code> file in the current directory, then its parent until the drive's root. After that, it will look into user's HOME directory (<code>C:\Users\&lt;your-name&gt;</code>). The first config file that is found in the chain takes effect. All the file-path patterns inside the .weignore file are relative to the source file being processed, not the .weignore file itself.</p>
-                    <h4>How it works</h4>
-                    <p>Each line must respect this pattern : <code>exclusion-pattern [compiler/linter-to-exclude]</code></p>
-                    <p>Here is the list of all the (node-based) compilers and linters currently supported by WebEssentials:</p>
-                    <ul>
-                        <li>
-                            compiler
-                            <ul>
-                                <li>autoprefixer</li>
-                                <li>coffeescript</li>
-                                <li>icedcoffeescript</li>
-                                <li>less</li>
-                                <li>livescript</li>
-                                <li>scss</li>
-                                <li>sweetjs</li>
-                            </ul>
-                        </li>
-                        <li>
-                            linter
-                            <ul>
-                                <li>jscs</li>
-                                <li>jshint</li>
-                                <li>tslint</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <h4>Basic Usage</h4>
+@section highlight {
+    <div class="alert alert-info">
+        <p>General features that apply to many aspects.</p>
+    </div>
+}
+<header class="section-header">
+    <h2><span>Features</span></h2>
+</header>
+<div class="row">
+    <div class="col-md-6">
+        <article id="settings" class="panel panel-default" data-version="WE2012, WE2013, WE2015">
+            <h3 class="panel-heading">
+                <a href="#settings">
+                    <span class="fa fa-link"></span>
+                </a>
+                Settings
+            </h3>
+            <div class="panel-body">
+                <p>All settings can be found by going to Tools -> Options -> Web Essentials.</p>
+                <img src="/images/general/settings.png" alt="Options dialog" width="460" height="266" />
+            </div>
+        </article>
+        <article id="solution" class="panel panel-default" data-version="WE2012, WE2013, WE2015">
+            <h3 class="panel-heading">
+                <a href="#solution">
+                    <span class="fa fa-link"></span>
+                </a>
+                Solution scoped settings
+            </h3>
+            <div class="panel-body">
+                <p>Settings can either be global or specific to any solution. By scoping settings to individual solution, you can ensure that all team members  are using the same settings. </p>
+                <p>To enable solution settings, right-click any item in Solution Explorer and click "Create solution settings".</p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-6">
+        <article id="commands" class="panel panel-default" data-version="WE2012, WE2013, WE2015">
+            <h3 class="panel-heading">
+                <a href="#commands">
+                    <span class="fa fa-link"></span>
+                </a>
+                Solution wide commands
+            </h3>
+            <div class="panel-body">
+                <p>These menu items are shortcuts to solution wide commands.</p>
+                <p>They can be found under Build -> Web Essentials.</p>
+                <img src="/images/general/build.png" alt="Build menu" width="361" height="130" />
+            </div>
+        </article>
+        <article id="weignore" class="panel panel-default" data-version="WE2012, WE2013">
+            <h3 class="panel-heading">
+                <a href="#weignore">
+                    <span class="fa fa-link"></span>
+                </a>
+                WEIgnore
+            </h3>
+            <div class="panel-body">
+                <p><code>.weignore</code> document is a file containing the list of linefeed-separated file-path patterns to prevent compilers and linters used in Web Essentials. It accepts all styles supported by .jshintignore and both Unix-like and Windows-like file paths.</p>
+                <h4>Discoverability</h4>
+                <p>It works just like <code>.jscs</code>,<code>.jshintrc</code>, <code>coffee.json</code>, <code>coffeelint.js</code> and <code>tslint.json</code>. For each request, it looks for <code>.weignore</code> file in the current directory, then its parent until the drive's root. After that, it will look into user's HOME directory (<code>C:\Users\&lt;your-name&gt;</code>). The first config file that is found in the chain takes effect. All the file-path patterns inside the .weignore file are relative to the source file being processed, not the .weignore file itself.</p>
+                <h4>How it works</h4>
+                <p>Each line must respect this pattern : <code>exclusion-pattern [compiler/linter-to-exclude]</code></p>
+                <p>Here is the list of all the (node-based) compilers and linters currently supported by WebEssentials:</p>
+                <ul>
+                    <li>
+                        compiler
+                        <ul>
+                            <li>autoprefixer</li>
+                            <li>coffeescript</li>
+                            <li>icedcoffeescript</li>
+                            <li>less</li>
+                            <li>livescript</li>
+                            <li>scss</li>
+                            <li>sweetjs</li>
+                        </ul>
+                    </li>
+                    <li>
+                        linter
+                        <ul>
+                            <li>jscs</li>
+                            <li>jshint</li>
+                            <li>tslint</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4>Basic Usage</h4>
 <pre>
 <code># To ignore file path including the word &quot;style&quot;:<br />**/**style**
-                    <br /><br /># To ignore path with .min.js at the end:
-                    <br />**/**.min.js
-                    <br /><br /># To ignore file path including the folder name &quot;slug&quot;:
-                    <br />**\slug\**
-                    <br /><br /># or
-                    <br />**/slug/**
-                    <br /><br /># To ignore the absolute path:
-                    <br />C:\temp\foo.ts
-                    <br /># or
-                    <br />C:/temp/foo.ts
+                <br /><br /># To ignore path with .min.js at the end:
+                <br />**/**.min.js
+                <br /><br /># To ignore file path including the folder name &quot;slug&quot;:
+                <br />**\slug\**
+                <br /><br /># or
+                <br />**/slug/**
+                <br /><br /># To ignore the absolute path:
+                <br />C:\temp\foo.ts
+                <br /># or
+                <br />C:/temp/foo.ts
 </code></pre>
 
-                    <h4>Intermediate Complexity:</h4>
+                <h4>Intermediate Complexity:</h4>
 <pre><code># To negate the ignore, use ! before the path:
-                    <br />!**/**Content
-                    <br /><br /># To ignore the file from any kind of compilation (only), 
-                    <br /># specify the term &quot;compiler&quot; after the pattern, separated by TAB:
-                    <br />**/doodle.less  compiler
-                    <br /><br /># To ignore the file from being processed by LESS compiler, 
-                    <br /># use the word less:
-                    <br />**/doodle.less  less
-                    <br /><br /># To ignore the file from being processed by Autoprefixer, 
-                    <br /># use the word autoprefixer:
-                    <br />**/bug.scss autoprefixer
-                    <br /><br /># To ignore the file from being processed by a linter, 
-                    <br /># use the word linter:
-                    <br />**/*.js linter
-                    <br /><br /># You can also specify a linter's name:
-                    <br />**/random.js    jscs
-                    <br /><br /># If there a case which requires specifying multiple service names,
-                    <br /># use comma-separated list:
-                    <br />**/doodle.less  less, autoprefixer
+                <br />!**/**Content
+                <br /><br /># To ignore the file from any kind of compilation (only), 
+                <br /># specify the term &quot;compiler&quot; after the pattern, separated by TAB:
+                <br />**/doodle.less  compiler
+                <br /><br /># To ignore the file from being processed by LESS compiler, 
+                <br /># use the word less:
+                <br />**/doodle.less  less
+                <br /><br /># To ignore the file from being processed by Autoprefixer, 
+                <br /># use the word autoprefixer:
+                <br />**/bug.scss autoprefixer
+                <br /><br /># To ignore the file from being processed by a linter, 
+                <br /># use the word linter:
+                <br />**/*.js linter
+                <br /><br /># You can also specify a linter's name:
+                <br />**/random.js    jscs
+                <br /><br /># If there a case which requires specifying multiple service names,
+                <br /># use comma-separated list:
+                <br />**/doodle.less  less, autoprefixer
 </code></pre>
 
-                    <h4>Limitations</h4>
-                    <p>Currently it only targets node.js pipeline services, meaning TypeScript compilation and Markdown are out.</p>
+                <h4>Limitations</h4>
+                <p>Currently it only targets node.js pipeline services, meaning TypeScript compilation and Markdown are out.</p>
 
-                    <br/>
-                    <p>More information about .weignore can be find <a href="https://github.com/madskristensen/WebEssentials2013/pull/1250">here</a>.</p>
-                </div>
-            </article>
-        </div>
+                <br />
+                <p>More information about .weignore can be find <a href="https://github.com/madskristensen/WebEssentials2013/pull/1250">here</a>.</p>
+            </div>
+        </article>
     </div>
 </div>

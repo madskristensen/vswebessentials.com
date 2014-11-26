@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="features-page">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-sm-push-8 col-md-push-9 col-md-3" style="margin: 0 0 10px 0; text-align:right;">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" id="filterMenuItem" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    Filter
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a class="filterVersion" data-filter-version="WE2015" role="menuitem" tabindex="-1" href="#">Web Essentials 2015</a></li>
+                    <li role="presentation"><a class="filterVersion" data-filter-version="WE2013" role="menuitem" tabindex="-1" href="#">Web Essentials 2013</a></li>
+                    <li role="presentation"><a class="filterVersion" data-filter-version="WE2012" role="menuitem" tabindex="-1" href="#">Web Essentials 2012</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-sm-pull-4 col-md-pull-3 col-md-9">
+            @RenderSection("highlight", false)
+        </div>
+    </div>
+    <div id="noArticleAvailableWarning" class="alert alert-warning" style="display:none;">
+        <p>This feature is not available for the selected version.</p>
+    </div>
+    @RenderBody()
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        $(function () {
+            var f = getCookie('we-filter-version');
+            if (!f) {
+                f = "WE2013";
+                setCookie('we-filter-version', f, 30);
+            }
+            applyFilter(f);
+
+            $("a.filterVersion").click(function () {
+                var f = $(this).data("filter-version");
+                setCookie('we-filter-version', f, 30);
+                applyFilter(f);
+            });
+        });
+    </script>
+}
