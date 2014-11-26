@@ -146,15 +146,7 @@
         _gaq.push(['_trackPageview']);
     </script>
     <script src="/ga.js" async="async" defer="defer"></script>
-    <script src="/Content/js/jquery-1.10.2.min.js"></script>
-    <script src="/Content/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $(".footer a, .kristensen").tooltip();
-        $('.navbar-custom .navbar-nav > li >  a[href*="' + window.location.pathname + '"]').parent().addClass("active");
-        $('.navbar-custom .dropdown-menu > li a[href*="' + window.location.pathname + '"]').parent().addClass("active");
-        $('.navbar-custom .dropdown-menu > li a[href*="' + window.location.pathname + '"]').parent().parent().parent().addClass("active");
-
-    </script>
+    <script src="/Content/js/vswebessentials.min.js"></script>
     @RenderSection("scripts", false)
 </body>
 </html>

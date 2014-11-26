@@ -29,82 +29,7 @@
 
 @section scripts {
     <script type="text/javascript">
-
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toUTCString();
-            document.cookie = cname + "=" + cvalue + "; " + expires;
-        }
-
-        function getCookie(cname) {
-            var name = cname + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1);
-                if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
-            }
-            return "";
-        }
-
-        function applyFilter(version) {
-
-            $(".section-header").each(function () {
-                if ($(this).data("version") && $(this).data("version").indexOf(version) == -1) {
-                    $(this).hide();
-                }
-                else {
-                    $(this).show();
-                }
-            });
-
-            var nbArticle = $('article').length;
-            $("article").each(function () {
-                if ($(this).data("version") && $(this).data("version").indexOf(version) == -1) {
-                    $(this).hide();
-                    nbArticle--;
-                }
-                else {
-                    $(this).show();
-                }
-            });
-
-            if (nbArticle === 0) {
-                $(".section-header").each(function () {
-                    if (!$(this).data("version")) {
-                        $(this).hide();
-                    }
-                });
-                $('#noArticleAvailableWarning').show();
-            }
-            else {
-                $(".section-header").each(function () {
-                    if (!$(this).data("version")) {
-                        $(this).show();
-                    }
-                });
-                $('#noArticleAvailableWarning').hide();
-            }
-
-            var fullVersionName;
-            switch (version.trim()) {
-                case "WE2015":
-                    fullVersionName = "Web Essentials 2015";
-                    break;
-                case "WE2013":
-                    fullVersionName = "Web Essentials 2013";
-                    break;
-                case "WE2012":
-                    fullVersionName = "Web Essentials 2012";
-                    break;
-            }
-
-            $("#filterMenuItem").html("Filter: " + fullVersionName + '&nbsp;<b class="caret"></b>');
-        }
-
         $(function () {
-
             var f = getCookie('we-filter-version');
             if (!f) {
                 f = "WE2013";
@@ -114,12 +39,9 @@
 
             $("a.filterVersion").click(function () {
                 var f = $(this).data("filter-version");
-
                 setCookie('we-filter-version', f, 30);
-
                 applyFilter(f);
             });
         });
-
     </script>
 }

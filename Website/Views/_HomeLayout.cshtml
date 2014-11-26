@@ -1,13 +1,13 @@
 ﻿@{
     if (!Request.IsLocal)
     {
-    Response.Cache.SetValidUntilExpires(true);
-    Response.Cache.SetExpires(DateTime.Now.AddDays(1));
-    Response.Cache.SetCacheability(HttpCacheability.Public);
+        Response.Cache.SetValidUntilExpires(true);
+        Response.Cache.SetExpires(DateTime.Now.AddDays(1));
+        Response.Cache.SetCacheability(HttpCacheability.Public);
 
-    string file = Server.MapPath(Request.CurrentExecutionFilePath);
-    Response.AddFileDependency(file);
-	Response.Cache.SetLastModifiedFromFileDependencies();
+        string file = Server.MapPath(Request.CurrentExecutionFilePath);
+        Response.AddFileDependency(file);
+        Response.Cache.SetLastModifiedFromFileDependencies();
     }
 
     string title = Page.Title.Contains("Web Essentials") ? Page.Title : Page.Title + " - Web Essentials";
@@ -177,10 +177,6 @@
         _gaq.push(['_trackPageview']);
     </script>
     <script src="/ga.js" async="async" defer="defer"></script>
-    <script src="/Content/js/jquery-1.10.2.min.js"></script>
-    <script src="/Content/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $(".footer a, .kristensen").tooltip();
-    </script>
+    <script src="/Content/js/vswebessentials.min.js"></script>
 </body>
 </html>
