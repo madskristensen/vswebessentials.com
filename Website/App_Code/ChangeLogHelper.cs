@@ -5,6 +5,8 @@ using Octokit;
 
 public class ChangeLogHelper
 {
+    private const int _monthsBack = 10;
+
     public static string GetChangeLog(string name)
     {
         try
@@ -81,7 +83,7 @@ public class ChangeLogHelper
             IReadOnlyList<Release> lst = github.Release.GetAll("madskristensen", name).Result;
 
             // Only display releases from the last 6 months
-            var sixMonthAgoDate = DateTime.Now.AddMonths(-6);
+            var sixMonthAgoDate = DateTime.Now.AddMonths(-_monthsBack);
             // Display an link for the full list on GitHub if older releases found
             bool isMoreReleasesAvailable = false;
 
@@ -97,9 +99,9 @@ public class ChangeLogHelper
                 string publishedAt = "[Unknow published date]";
                 if (r.PublishedAt.HasValue)
                 {
-                    publishedAt = r.PublishedAt.Value.Date.ToLongDateString();
+                    publishedAt = r.PublishedAt.Value.Date.ToString("MMM dd. yyyy");
                 }
-                s.AppendFormat("{0} - {1}", r.Name, publishedAt);
+                s.AppendFormat("{0} <em style=\"float:right;margin-right:6em\">{1}</em>", r.Name, publishedAt);
                 s.AppendFormat("<a class='btn btn-success btn-nightly-download' href='{0}'><i class='fa fa-download'></i>Download</a>", r.HtmlUrl);
                 s.Append("</a></h4></div>");
                 var collapseClass = i == 0 ? "in" : "collapse";
