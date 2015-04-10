@@ -54,12 +54,101 @@
                 <img src="/images/general/build.png" alt="Build menu" width="361" height="130" />
             </div>
         </article>
+    </div>
+</div>
+
+<header class="section-header">
+    <h2><span>Shortcuts</span></h2>
+</header>
+<div class="row">
+    <div class="col-md-4">
+        <h3 class="shortcut">Css</h3>
+        <dl class="shortcut">
+            <dt>Sort Properties</dt>
+            <dd>Shift+Alt+S</dd>
+            <dt>Remove Duplicates</dt>
+            <dd>Shift+Alt+R</dd>
+            <dt>Add Missing Standard</dt>
+            <dd>Shift+Alt+P</dd>
+            <dt>Add Missing Vendor</dt>
+            <dd>Shift+Alt+V</dd>
+        </dl>
+
+        <h3 class="shortcut">Extract</h3>
+        <dl class="shortcut">
+            <dt>Extract Selection</dt>
+            <dd>Shift+Alt+E</dd>
+            <dt>Extract Variable</dt>
+            <dd>Shift+Alt+J</dd>
+            <dt>Extract Mixin</dt>
+            <dd>Shift+Alt+K</dd>
+        </dl>
+
+    </div>
+    <div class="col-md-4">
+        <h3 class="shortcut">Build</h3>
+        <dl class="shortcut">
+            <dt>Build Bundles</dt>
+            <dd>Shift+Alt+I</dd>
+            <dt>Build Sprites</dt>
+            <dd>Shift+Alt+G</dd>
+            <dt>Build Less</dt>
+            <dd>Shift+Alt+Y</dd>
+            <dt>Build Sass</dt>
+            <dd>Shift+Alt+Q</dd>
+            <dt>Build Minify</dt>
+            <dd>Shift+Alt+F</dd>
+            <dt>Build CoffeeScript</dt>
+            <dd>Shift+Alt+Z</dd>
+            <dt>Build SweetJs</dt>
+            <dd>Shift+Alt+J</dd>
+        </dl>
+    </div>
+    <div class="col-md-4">
+        <h3 class="shortcut">Minify</h3>
+        <dl class="shortcut">
+            <dt>Minify Selection</dt>
+            <dd>Shift+Alt+X</dd>
+        </dl>
+
+        <h3 class="shortcut">Formating</h3>
+        <dl class="shortcut">
+            <dt>Surround With</dt>
+            <dd>Shift+Alt+W</dd>
+            <dt>Expand Selection</dt>
+            <dd>Alt+1</dd>
+            <dt>Contract Selection</dt>
+            <dd>Alt+2</dd>
+        </dl>
+
+        <h3 class="shortcut">Editor Lines</h3>
+        <dl class="shortcut">
+
+            <dt>Sort Ascending</dt>
+            <dd>Alt+3</dd>
+            <dt>Sort Descending</dt>
+            <dd>Alt+4</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="margin-bottom:1em;font-weight :bold;">
+        Want more shortcuts? <a href="http://visualstudioshortcuts.com/">Check the complete list of all Visual Studio keyboard shortcuts.</a>
+    </div>
+</div>
+
+<header class="section-header" data-version="WE2012, WE2013">
+    <h2><span>WEIgnore</span></h2>
+</header>
+<div class="row">
+    <div class="col-md-6">
         <article id="weignore" class="panel panel-default" data-version="WE2012, WE2013">
             <h3 class="panel-heading">
                 <a href="#weignore">
                     <span class="fa fa-link"></span>
                 </a>
-                WEIgnore
+                Description
             </h3>
             <div class="panel-body">
                 <p><code>.weignore</code> document is a file containing the list of linefeed-separated file-path patterns to prevent compilers and linters used in Web Essentials. It accepts all styles supported by .jshintignore and both Unix-like and Windows-like file paths.</p>
@@ -90,6 +179,25 @@
                         </ul>
                     </li>
                 </ul>
+
+                <h4>Limitations</h4>
+                <p>Currently it only targets node.js pipeline services, meaning TypeScript compilation and Markdown are out.</p>
+
+                <br />
+                <p>More information about .weignore can be find <a href="https://github.com/madskristensen/WebEssentials2013/pull/1250">here</a>.</p>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-md-6">
+        <article id="weignore-usage" class="panel panel-default" data-version="WE2012, WE2013">
+            <h3 class="panel-heading">
+                <a href="#weignore">
+                    <span class="fa fa-link"></span>
+                </a>
+                Usage
+            </h3>
+            <div class="panel-body">
                 <h4>Basic Usage</h4>
 <pre>
 <code># To ignore file path including the word &quot;style&quot;:<br />**/**style**
@@ -126,12 +234,6 @@
                 <br /># use comma-separated list:
                 <br />**/doodle.less  less, autoprefixer
 </code></pre>
-
-                <h4>Limitations</h4>
-                <p>Currently it only targets node.js pipeline services, meaning TypeScript compilation and Markdown are out.</p>
-
-                <br />
-                <p>More information about .weignore can be find <a href="https://github.com/madskristensen/WebEssentials2013/pull/1250">here</a>.</p>
             </div>
         </article>
     </div>
