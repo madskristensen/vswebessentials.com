@@ -344,3 +344,26 @@ h3.panel-heading:hover a {
 }
 /*#endregion*/
 
+/* To display shortcuts on the general page. 'Stolen' from visualstudioshortcuts.com to have the same look for the link at the bottom. */
+ h3.shortcut {
+        font-size: 1.2em;
+        border-bottom: 1px solid #1e90ff;
+        color: #228b22;
+        margin: 0 0 1em 0;
+        font-weight: bold;
+    }
+
+    dl.shortcut {
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+        dl.shortcut dd {
+            margin-left: 10px;
+            font-weight: normal;
+        }
+
+            dl.shortcut dd:before {
+                content: '→ ';
+                color: #1e90ff;
+            }
