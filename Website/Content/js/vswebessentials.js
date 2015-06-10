@@ -42,9 +42,11 @@ function getCookie(cname) {
 ///#source 1 1 /Content/js/filter.js
 function applyFilter(version) {
 
+    var nbSectionHeader = $('.section-header').length;
     $(".section-header").each(function () {
         if ($(this).data("version") && $(this).data("version").indexOf(version) == -1) {
             $(this).hide();
+            nbSectionHeader--;
         }
         else {
             $(this).show();
@@ -62,7 +64,7 @@ function applyFilter(version) {
         }
     });
 
-    if (nbArticle === 0) {
+    if (nbArticle === 0 && nbSectionHeader === 0) {
         $(".section-header").each(function () {
             if (!$(this).data("version")) {
                 $(this).hide();
