@@ -101,7 +101,15 @@ public class ChangeLogHelper
                 {
                     publishedAt = r.PublishedAt.Value.Date.ToString("MMM dd. yyyy");
                 }
-                s.AppendFormat("{0} <em style=\"float:right;margin-right:6em\">{1}</em>", r.Name, publishedAt);
+
+                string releaseName = r.Name;
+                // At least will display tagName (usually release version)
+                if (string.IsNullOrWhiteSpace(r.Name))
+                {
+                    releaseName = r.TagName;
+                }
+
+                s.AppendFormat("{0} <em style=\"float:right;margin-right:6em\">{1}</em>", releaseName, publishedAt);
                 s.AppendFormat("<a class='btn btn-success btn-nightly-download' href='{0}'><i class='fa fa-download'></i>Download</a>", r.HtmlUrl);
                 s.Append("</a></h4></div>");
                 var collapseClass = i == 0 ? "in" : "collapse";
