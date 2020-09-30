@@ -1,4 +1,4 @@
-Official website of Web Essentials
+Official website for Web Essentials:
 ===================
 
 The official website of Web Essentials for Visual Studio.
